@@ -1,8 +1,9 @@
 from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponseRedirect
-from .models import Product
+from .models import Product 
 from .scraper.jumia import get_jumia_product
 from django.db.models import Q
+from django.views.generic import ListView
 
 #  ************product views*****************
 

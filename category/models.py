@@ -10,7 +10,7 @@ from django.urls import reverse
 # displayed to the customer with the needed
 # information on the product(s)
 
-lass Product(models.Model):
+class Product(models.Model):
     CATEGORY_CHOICES = (
         ('smartphones', 'Smartphones'),
         ('laptops','Laptops'),

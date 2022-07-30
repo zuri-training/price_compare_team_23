@@ -24,17 +24,17 @@
                    <li class="nav-item">
                   {% endif %}
                   <li class="nav-item">
-                    <a class="nav-link" href="{% url 'price_compare:landing' %}"><span size="20" class="alert alert-success" role="alert">Home</span></a>
+                    <a class="nav-link" href="{% url 'category:landing' %}"><span size="20" class="alert alert-success" role="alert">Home</span></a>
                   </li>
                     {% if user.is_authenticated %}
                     <li>
-                      <a class="nav-link" href="{% url 'price_compare:logout' %}"><span>Logout</span></a>
+                      <a class="nav-link" href="{% url 'accounts:logout' %}"><span>Logout</span></a>
                     </li>
                     {% else %}
                       <li class="nav-item">
-                        <a class="nav-link" href="{% url 'price_compare:register' %}"><span>Register</span></a> 
+                        <a class="nav-link" href="{% url 'accounts:register' %}"><span>Register</span></a> 
                       </li>
-                      <a class="nav-link" href="{% url 'price_compare:login'%}"><span>Login</span></a>
+                      <a class="nav-link" href="{% url 'accounts:login'%}"><span>Login</span></a>
                     </li>
                     {% endif %}
                   </ul>

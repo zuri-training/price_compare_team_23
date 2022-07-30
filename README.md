@@ -49,23 +49,23 @@ Shopmore a web application used to compare prices of products from different onl
 * [ahdeyy](github.com/Ahdeyyy) || adeala.adegb@gmail.com
 * [imrvon](github.com/imrvon) || hi@imrvon.com
 * [Zara-Ray](github.com/Zara-Ray) || zararaymond05@gmail.com
-* [enyene](github.com/enyene) || akpanenyene@gmail.com
-* [Ydanladi](github.com/Ydanladi) || ydanladi2021@gmail.com
-* [addexdi](github.com/addexdi) || onelordad@gmail.com
-* [deinbofa](github.com/deinbofa) || peregbadeinbofa@gmail.com
-* [Bdayo90](github.com/Bdayo90) || bdayo90@gmail.com
-* [Bgail-ranu](github.com/Bgail-ranu) || abigailarans5@gmail.com
-* [Kossy-a](github.com/Kossy-a)|| kossyfidel@gmail.com
-* [Slenzy2](github.com/Slenzy2) || tobiikupolati33@gmail.com
-* [Offiongwhilley](github.com/Offiongwhilley) || offiongwhilley@gmail.com
-* [Busayo-Ak](github.com/Busayo-Ak) || busayoflourish@gmail.com 
-* [Imarnuel](github.com/Imarnuel) || emmanuelibrahim199@gmail.com 
-* [ibrahimadeyemi](github.com/ibrahimadeyemi) || ibrahimadeyemi88@gmail.com 
-* [katheey](github.com/katheey) || kajokatheey@gmail.com 
-* [thecybergeneral](github.com/thecybergeneral) || nwosuchinemerem01@gmail.com
-* [mario0070](github.com/mario0070) || ganiujamiu03@gmail.com 
-* [Vix1209](github.com/Vix1209) || ucheofor2015@gmail.com 
-* [Rackiey](github.com/Rackiey) ll nnannaoluchukwu@gmail.com
+* [enyene](https://github.com/enyene) || akpanenyene@gmail.com
+* [Ydanladi](https://github.com/Ydanladi) || ydanladi2021@gmail.com
+* [addexdi](https://github.com/addexdi) || onelordad@gmail.com
+* [deinbofa](https://github.com/deinbofa) || peregbadeinbofa@gmail.com
+* [Bdayo90](https://github.com/Bdayo90) || bdayo90@gmail.com
+* [Bgail-ranu](https://github.com/Bgail-ranu) || abigailarans5@gmail.com
+* [Kossy-a](https://github.com/Kossy-a)|| kossyfidel@gmail.com
+* [Slenzy2](https://github.com/Slenzy2) || tobiikupolati33@gmail.com
+* [Offiongwhilley](https://github.com/Offiongwhilley) || offiongwhilley@gmail.com
+* [Busayo-Ak](https://github.com/Busayo-Ak) || busayoflourish@gmail.com 
+* [Imarnuel](https://github.com/Imarnuel) || emmanuelibrahim199@gmail.com 
+* [ibrahimadeyemi](https://github.com/ibrahimadeyemi) || ibrahimadeyemi88@gmail.com 
+* [katheey](https://github.com/katheey) || kajokatheey@gmail.com 
+* [thecybergeneral](https://github.com/thecybergeneral) || nwosuchinemerem01@gmail.com
+* [mario0070](https://github.com/mario0070) || ganiujamiu03@gmail.com 
+* [Vix1209](https://github.com/Vix1209) || ucheofor2015@gmail.com 
+* [Rackiey](https://github.com/Rackiey) ll nnannaoluchukwu@gmail.com
 
 # How to Contribute
 

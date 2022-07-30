@@ -16,7 +16,7 @@
   <form class="form-control" method="post">
   {{ form.as_p }}
   {% csrf_token %}
-  <p><input type="submit" value="Log-in"><span> <a href="{% url 'category:password_reset' %}">Forgot Password</span></p>
+  <p><input type="submit" value="Log-in"><span> <a href="{% url 'accounts:password_reset' %}">Forgot Password</span></p>
   </form>
   </div>
   {% endblock %}

@@ -72,9 +72,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'price_compare_team_23.wsgi.application'
 
-LOGIN_REDIRECT_URL = 'price_compare:landing'
-LOGIN_URL = 'price_compare:login'
-LOGOUT_URL = 'price_compare:logout'
+LOGIN_REDIRECT_URL = 'category:landing'
+LOGIN_URL = 'accounts:login'
+LOGOUT_URL = 'accounts:logout'
 
 
 # Database

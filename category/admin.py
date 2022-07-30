@@ -21,3 +21,6 @@ class CommentAdmin(admin.ModelAdmin):
     list_display =  ('username','product','created','active')
     list_filter = ('active' , 'created')
     search_fields = ('username', 'product','body')
+
+
+    

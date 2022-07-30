@@ -2,7 +2,7 @@ from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponseRedirect
 from .models import Product
 from .forms import CommentForm 
-from ..scraper.jumia import get_jumia_product
+from .scraper.jumia import get_jumia_product
 from django.db.models import Q
 from django.views.generic import ListView
 

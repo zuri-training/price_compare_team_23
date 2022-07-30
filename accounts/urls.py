@@ -2,7 +2,7 @@ from django.urls import path
 from .views import  register 
 from django.contrib.auth import views as auth_views
 
-app_name = 'price_compare'
+app_name = 'accounts'
 
 urlpatterns = [
 

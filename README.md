@@ -16,6 +16,7 @@ Shopmore a web application used to compare prices of products from different onl
 * CSS
 * JAVASCRIPT
 * PYTHON (DJANGO)
+* POSTGRESQL
 
 # Features
 ## Unauthenticated Users

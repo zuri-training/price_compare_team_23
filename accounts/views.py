@@ -19,6 +19,3 @@ def register(request):
         form=UserRegistrationForm()       
     return render(request,'registration/register.html',{'form':form})
               
-@login_required
-def user_logout(request):
-    logout(request)

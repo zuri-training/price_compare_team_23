@@ -7,6 +7,7 @@ from .scraper import jumia, konga
 from django.db.models import Q
 from django.views.generic import ListView
 import random
+from .product import populatedB , get_konga_product
 
 #  ************product views*****************
 
@@ -24,13 +25,15 @@ def product_detail(request,id,product):
 
     comments = product.comments.filter(active=True)
     new_comment = None
-    platforms = []
     prd = {
         'name':product.name,
         'brand':product.brand,
         'category':product.category
     }
+    platforms = []
     platforms.append(get_jumia_product(prd))
+    get_konga_product(prd)
+    #print(platform)
 
     if request.method == 'POST':
         # A comment was posted
@@ -67,6 +70,7 @@ def product_detail(request,id,product):
 
 class ProductListView(ListView):
     model = Product
+    populatedB()
     context_object_name = 'products'
     template_name = 'product/list.html'
 

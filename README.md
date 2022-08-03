@@ -1,16 +1,19 @@
 # price_compare_team_23
+
 # Price compare
 
 # General Information
+
 Shopmore a web application used to compare prices of products from different online stores and lead the user to the purchasing page from the store.
 
-# Project Documentation 
+# Project Documentation
 
 [Documentation](https://docs.google.com/document/d/1LwY4xf3l5XciiLNhw41vyeaFBxyWQHW0W8_FRE-xsR4/edit)
 
 # Table of Content
 
 # Technology used
+
 * FIGMA
 * HTML
 * CSS
@@ -19,21 +22,26 @@ Shopmore a web application used to compare prices of products from different onl
 * POSTGRESQL
 
 # Features
+
 ## Unauthenticated Users
-- They would be able to access the platform and view what it’s all about.
-- They would be able to browse through available products.
-- They would be able to sign up/register using their emails and password.
-- view and interact with the documentation
+
+* They would be able to access the platform and view what it’s all about.
+
+* They would be able to browse through available products.
+* They would be able to sign up/register using their emails and password.
+* view and interact with the documentation
 
 ## Authenticated Users
--   They would have full access to every feature the platform has.
--   They would be able to view details about each specific product.
--   They would be able to leave comments and view other users’ comments.
--   They would be able to access the links to the purchase pages of these products.
--   Ability to share on social media and send by email.
 
+* They would have full access to every feature the platform has.
+
+* They would be able to view details about each specific product.
+* They would be able to leave comments and view other users’ comments.
+* They would be able to access the links to the purchase pages of these products.
+* Ability to share on social media and send by email.
 
 # Categories
+
 * smartphones
 * laptops
 * desktop-computers
@@ -44,8 +52,8 @@ Shopmore a web application used to compare prices of products from different onl
 
 # Using the Platform
 
-
 # Collaborators
+
 * [fhayvy](github.com/fhayvy) || ezefavourchiamaka01@gmail.com
 * [ahdeyy](github.com/Ahdeyyy) || adeala.adegb@gmail.com
 * [imrvon](github.com/imrvon) || hi@imrvon.com
@@ -59,17 +67,16 @@ Shopmore a web application used to compare prices of products from different onl
 * [Kossy-a](https://github.com/Kossy-a)|| kossyfidel@gmail.com
 * [Slenzy2](https://github.com/Slenzy2) || tobiikupolati33@gmail.com
 * [Offiongwhilley](https://github.com/Offiongwhilley) || offiongwhilley@gmail.com
-* [Busayo-Ak](https://github.com/Busayo-Ak) || busayoflourish@gmail.com 
-* [Imarnuel](https://github.com/Imarnuel) || emmanuelibrahim199@gmail.com 
-* [ibrahimadeyemi](https://github.com/ibrahimadeyemi) || ibrahimadeyemi88@gmail.com 
-* [katheey](https://github.com/katheey) || kajokatheey@gmail.com 
+* [Busayo-Ak](https://github.com/Busayo-Ak) || busayoflourish@gmail.com
+* [Imarnuel](https://github.com/Imarnuel) || emmanuelibrahim199@gmail.com
+* [ibrahimadeyemi](https://github.com/ibrahimadeyemi) || ibrahimadeyemi88@gmail.com
+* [katheey](https://github.com/katheey) || kajokatheey@gmail.com
 * [thecybergeneral](https://github.com/thecybergeneral) || nwosuchinemerem01@gmail.com
-* [mario0070](https://github.com/mario0070) || ganiujamiu03@gmail.com 
-* [Vix1209](https://github.com/Vix1209) || ucheofor2015@gmail.com 
+* [mario0070](https://github.com/mario0070) || ganiujamiu03@gmail.com
+* [Vix1209](https://github.com/Vix1209) || ucheofor2015@gmail.com
 * [Rackiey](https://github.com/Rackiey) ll nnannaoluchukwu@gmail.com
 
 # How to Contribute
-
 
 # Installing the requirements
 
@@ -79,11 +86,7 @@ pip install -r requirements.txt
 
 ```
 
-  
-
 ### Running the project
-
-  
 
 1. Clone the repository
 
@@ -96,8 +99,6 @@ python -m venv [environment name]
 ```
 
 3. Install the requirements
-
-  
 
 ```bash
 

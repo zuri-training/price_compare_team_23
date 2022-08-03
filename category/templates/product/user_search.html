@@ -22,7 +22,7 @@
       <div class='card product col-md-2 col-xs-5 '>
         <a href={{product.link}}>
           <div class="product__info">
-            <p>{{product.title}}</p>
+            <p>{{product.properties}}</p>
             <p class="product__price">
               <!-- <small>$</small> -->
               <strong>{{product.price}}</strong>
@@ -33,7 +33,7 @@
           </div>
         </a>
         {% if product.from == "jumia" %}
-        <button class="product__button jumia"> {{product.from}}</button>
+        <button class="product__button jumia"> {{product.vendor}}</button>
         {% elif product.from == "konga" %}
         <button class="product__button konga"> {{product.from}}</button>
         {% elif product.from == "asos" %}

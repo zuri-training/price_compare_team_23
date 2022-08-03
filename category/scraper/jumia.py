@@ -51,27 +51,28 @@ def get_jumia_product(product):
         URL = f"https://www.jumia.com.ng/{prd_category}/?q={query_slugify(product['name'])}&sort=lowest-price&page={page}"
         response = requests.get(URL)
         parsed_response = BeautifulSoup(response.text,'html.parser')
-        for tag in parsed_response.find_all(class_="prd"):
+        for tag in parsed_response.find_all(class_="prd _fb col c-prd"):
+            link = 'https://www.jumia.com.ng/'
             phones.append(
                 {
                     'name': tag.a.find(class_='name').get_text(),
-                    'brand': tag.a.get('data-brand'),
-                    'price': tag.a.find(class_='prc').get_text(),
-                    'link': tag.a.get('href'),
+                    'properties': tag.a.get('data-brand'),
+                    'price': tag.find('div', attrs={'class': 'prc'}).text,
+                    'link': link+tag.find('a')['href'],
                     'img_src': tag.a.find('img')['data-src'],
                     'platform_name': 'jumia'
                 }
             )
         page += 1
     for phone in phones:
-        if product['name'].lower() in phone['name'].lower() and product['brand'].lower() in phone['brand'].lower():
+        if product['name'].lower() in phone['name'].lower() and product['properties'].lower() in phone['properties'].lower():
             return phone
 
 
 
 def jumia_scraper_bot(key):
-    link = "https://kol.jumia.com/api/click/link/29315728-22fa-420d-94a9-2a87c22ca25c/16a93b99-b499-4fab-b4e7-60d8f58dd09f"
-    url = "https://www.jumia.ng/catalog/?q=" + key
+    link = "https://jumia.com.ng/"
+    url = "https://www.jumia.com.ng/mobile-phones/"+key
 
     reponse_page = requests.get(url)
 
@@ -87,6 +88,8 @@ def jumia_scraper_bot(key):
         item['image'] = article.find('img')['data-src']
         item['title'] = article.find('h3', attrs={'class': 'name'}).text
         item['price'] = article.find('div', attrs={'class': 'prc'}).text
+        item['category']= article.find('a')['data-category']
+        item['name'] = article.find('a')['data-brand']
         item['from'] = 'jumia'
         if item['price']:
             items.append(item)

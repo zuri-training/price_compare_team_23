@@ -3,10 +3,12 @@ from django.http import HttpResponseRedirect
 from .models import Product
 from .forms import CommentForm 
 from .scraper.jumia import get_jumia_product
-from .scraper import jumia, konga
+from .scraper import jumia, scraper,konga,asos
 from django.db.models import Q
 from django.views.generic import ListView
 import random
+import time
+import schedule
 
 #  ************product views*****************
 
@@ -27,8 +29,9 @@ def product_detail(request,id,product):
     platforms = []
     prd = {
         'name':product.name,
-        'brand':product.brand,
-        'category':product.category
+        'brand':product.properties,
+        'category':product.category,
+        
     }
     platforms.append(get_jumia_product(prd))
 
@@ -78,7 +81,7 @@ class SearchResultView(ListView):
     def get_queryset(self):
         query = self.request.GET.get('search')
         list = Product.objects.filter(
-            Q(name__icontains=query) | Q(brand__icontains=query)
+            Q(name__icontains=query) | Q(category__icontains=query)
         )
         return list
 
@@ -86,18 +89,21 @@ def user_search(request):
     if request.GET.get('search'):
         q = request.GET.get('search')
         products = []
-        #products.extend(asos.asos_scraper_bot(q))
-        #products.extend(ebay.ebay_scraper_bot(q))
-        products.extend(jumia.jumia_scraper_bot(q))
+        products.extend(asos.asos_scraper_bot(q))
+        products.extend(scraper.jumia_scraper_bot(q))
+        #products.extend(jumia.jumia_scraper_bot(q))
         #products.extend(konga.konga_scraper_bot(q))
         #products.extend(payporte.payporte_scraper_bot(q))
-        random.shuffle(products)
+        #random.shuffle(products)
+        for i in range(len(products)):
 
-        #objects = Product.objects.create(title=products[0]['title'], price=products[0]['price'], vendor=products[0]['from'])
-        #objects.save()
+            objects = Product.objects.create(properties=products[i]['properties'], price=products[i]['price'],
+                    vendor=products[i]['from'],image=products[i]['image'],name=products[i]['name'],category=products[i]['category'])
+            objects.save()
         return render(request, 'product/user_search.html', {'products': products})
      
     else:
         products = Product.objects.all()
+        
         return render(request, 'product/user_search.html', {'products': products})
-    
+

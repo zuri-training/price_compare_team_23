@@ -10,7 +10,7 @@ from .models import Product, Comment
 # + are registered here
 
 
-admin.register(Product)
+@admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
     list_display = ('id','name')
     search_fields = ('name','id')

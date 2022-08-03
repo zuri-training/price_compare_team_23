@@ -2,6 +2,7 @@ from django.db import models
 from django.utils.text import slugify
 from uuid import uuid4
 from django.urls import reverse
+from django.contrib.auth.models import User
 
 
 # ************** Product Model ***********
@@ -22,13 +23,14 @@ class Product(models.Model):
     )
     id = models.UUIDField(default=uuid4,unique=True,primary_key=True)
     name = models.CharField(max_length=614)
-    brand = models.CharField(max_length=256)
-    img_src = models.CharField(max_length=614)
+    properties=models.CharField(max_length=300,null=True)
+    category = models.CharField(max_length=256)
+    image = models.CharField(max_length=614)
 
-
-    #price = models.CharField(max_length=600)
+    vendor=models.CharField(max_length=100, null=True)
+    price = models.CharField(max_length=600, null=True)
     slug = models.SlugField(blank=True,max_length=124)
-    category = models.CharField(max_length=32,choices=CATEGORY_CHOICES)
+    #category = models.CharField(max_length=32,choices=CATEGORY_CHOICES)
 
     def save(self,*args,**kwargs):
         self.slug = slugify(self.name)
@@ -36,7 +38,7 @@ class Product(models.Model):
 
     def get_absolute_url(self):
         #product_detail is the view
-        return reverse("price_compare:product_detail", args=[
+        return reverse("category:product_detail", args=[
             self.id,
             self.slug
         ])
@@ -56,3 +58,4 @@ class Comment(models.Model):
 
     def __str__(self):
         return f'Comment by {self.username} on {self.product}'
+

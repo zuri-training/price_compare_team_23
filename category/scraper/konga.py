@@ -15,7 +15,7 @@ def konga_scraper_bot(key):
 
     articles = page_web.find(
         'script', attrs={'id': '__NEXT_DATA__'})
-    json_data = json.loads(articles.string)
+    json_data = json.loads(articles.text)
 
     articles = json_data['props']['initialProps']['pageProps']['resultsState']['_originalResponse']['results'][0]['hits']
 
@@ -26,7 +26,7 @@ def konga_scraper_bot(key):
         item['image'] = image_link + article['image_thumbnail_path']
         item['title'] = article['name']
         item['price'] = '₦' + str(article['price'])
-        item['from'] = 'konga'
+        
         items.append(item)
 
     print(len(items))

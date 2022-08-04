@@ -42,8 +42,8 @@ class Product(models.Model):
     name = models.CharField(max_length=255)
     brand = models.CharField(max_length=256)
     image_src = models.CharField(max_length=614)
-    rom_size = models.CharField(max_length=5, choices=ROM_SIZES)
-    ram_size = models.CharField(max_length=5, choices=RAM_SIZES)
+    rom_size = models.CharField(max_length=10, choices=ROM_SIZES)
+    ram_size = models.CharField(max_length=10, choices=RAM_SIZES)
 
     # should just be called brand
     # properties=models.CharField(max_length=300,null=True)
@@ -53,7 +53,7 @@ class Product(models.Model):
     # we get the price directly from the store
     # price = models.CharField(max_length=600, null=True)
     slug = models.SlugField(blank=True, max_length=255)
-    category = models.CharField(max_length=32, choices=CATEGORY_CHOICES)
+    category = models.CharField(max_length=64, choices=CATEGORY_CHOICES)
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.name)

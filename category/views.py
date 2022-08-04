@@ -99,7 +99,7 @@ def user_search(request):
     if request.GET.get("search"):
         q = request.GET.get("search")
         products = []
-        products.extend(asos.asos_scraper_bot(q))
+        #products.extend(asos.asos_scraper_bot(q))
         products.extend(scraper.jumia_scraper_bot(q))
         # products.extend(jumia.jumia_scraper_bot(q))
         # products.extend(konga.konga_scraper_bot(q))
@@ -108,10 +108,10 @@ def user_search(request):
         for i in range(len(products)):
 
             objects = Product.objects.create(
-                properties=products[i]["properties"],
+                brand=products[i]["brand"],
                 price=products[i]["price"],
-                vendor=products[i]["from"],
-                image=products[i]["image"],
+                # vendor=products[i]["from"],
+                image_src=products[i]["image"],
                 name=products[i]["name"],
                 category=products[i]["category"],
             )

@@ -55,12 +55,9 @@ def get_jumia_products():
         parsed_response = BeautifulSoup(response.text,'html.parser')
         for tag in parsed_response.find_all(class_="prd"):
             if tag.a.get('data-brand') != None:
-                name = tag.a.find(class_='name').get_text().split()
-                name = name[:5]
-                name = " ".join(name)
                 phones.append(
                     {
-                        'name': name,
+                        'name': tag.a.find(class_='name').get_text(),
                         'brand': tag.a.get('data-brand'),
                         'price': tag.a.find(class_='prc').get_text(),
                         'link': tag.a.get('href'),

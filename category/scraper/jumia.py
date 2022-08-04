@@ -64,7 +64,7 @@ def get_jumia_products():
                         'brand': tag.a.get('data-brand'),
                         'price': tag.a.find(class_='prc').get_text(),
                         'link': tag.a.get('href'),
-                        'img_src': tag.a.find('img')['data-src'],
+                        'image_src': tag.a.find('img')['data-src'],
                         'platform_name': 'jumia'
                     }
                 )
@@ -104,16 +104,16 @@ def get_jumia_product(product):
         URL = f"https://www.jumia.com.ng/{prd_category}/?page={page}"
         response = requests.get(URL)
         parsed_response = BeautifulSoup(response.text,'html.parser')
-        # for tag in parsed_response.find_all(class_="prd"):
-        #     if product['name'].lower() in tag.a.find(class_='name').get_text().lower() and product['brand'].lower() in tag.a.get('data-brand').lower():
-        #         return {
-        #                 'name': tag.a.find(class_='name').get_text(),
-        #                 'brand': tag.a.get('data-brand'),
-        #                 'price': tag.a.find(class_='prc').get_text(),
-        #                 'link': tag.a.get('href'),
-        #                 'img_src': tag.a.find('img')['data-src'],
-        #                 'platform_name': 'jumia'
-        #             }
+        for tag in parsed_response.find_all(class_="prd"):
+            if product['name'].lower() in tag.a.find(class_='name').get_text().lower() and product['brand'].lower() in tag.a.get('data-brand').lower():
+                return {
+                        'name': tag.a.find(class_='name').get_text(),
+                        'brand': tag.a.get('data-brand'),
+                        'price': tag.a.find(class_='prc').get_text(),
+                        'link': "https://jumia.com.ng" + tag.a.get('href'),
+                        'image_src': tag.a.find('img')['data-src'],
+                        'platform_name': 'jumia'
+                    }
 
 
     #         phones.append(
@@ -131,22 +131,22 @@ def get_jumia_product(product):
     #     print(phone)
     #     if product['name'].lower() in phone['name'].lower() and product['brand'].lower() in phone['brand'].lower():
     #         return phone
-        for tag in parsed_response.find_all(class_="prd _fb col c-prd"):
-            link = 'https://www.jumia.com.ng/'
-            phones.append(
-                {
-                    'name': tag.a.find(class_='name').get_text(),
-                    'properties': tag.a.get('data-brand'),
-                    'price': tag.find('div', attrs={'class': 'prc'}).text,
-                    'link': link+tag.find('a')['href'],
-                    'img_src': tag.a.find('img')['data-src'],
-                    'platform_name': 'jumia'
-                }
-            )
-        page += 1
-    for phone in phones:
-        if product['name'].lower() in phone['name'].lower() and product['brand'].lower() in phone['brand'].lower():
-            return phone
+    #     for tag in parsed_response.find_all(class_="prd _fb col c-prd"):
+    #         link = 'https://www.jumia.com.ng/'
+    #         phones.append(
+    #             {
+    #                 'name': tag.a.find(class_='name').get_text(),
+    #                 'brand': tag.a.get('data-brand'),
+    #                 'price': tag.find('div', attrs={'class': 'prc'}).text,
+    #                 'link': link+tag.find('a')['href'],
+    #                 'img_src': tag.a.find('img')['data-src'],
+    #                 'platform_name': 'jumia'
+    #             }
+    #         )
+    #     page += 1
+    # for phone in phones:
+    #     if product['name'].lower() in phone['name'].lower() and product['brand'].lower() in phone['brand'].lower():
+    #         return phone
 
 
 

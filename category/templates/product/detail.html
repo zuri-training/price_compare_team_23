@@ -7,12 +7,12 @@
 {% block content %}
 <br><br>
     <h1>{{product.name}}</h1>
-    <img src="{{product.image}}" alt="{{product.name}}">
+    <img src="{{product.image_src}}" alt="{{product.name}}">
     {% for platform in platforms %}
 
         <h2>
             <h3>{{platform.platform_name}} :
-            <a href="https://jumia.com.ng{{platform.link}}" target="blank">
+            <a href="{{platform.link}}" target="blank">
                 Buy
             </a>
         </h3>
@@ -49,5 +49,5 @@
         <p><input type="submit" value="Add comment"></p>
     </form>
 {% endif %}
-{% post_to_twitter "New Song: baby. Check it out!" twitter.com "Post to Twitter" %}
+{% post_to_twitter "Check out this product! " twitter.com "Post to Twitter" %}
 {% endblock %}

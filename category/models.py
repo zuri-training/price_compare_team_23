@@ -24,20 +24,18 @@ class Product(models.Model):
     )
 
     RAM_SIZES = (
-        None,
-        ("2gb",),
-        ("4gb",),
-        ("6gb",),
-        ("8gb",),
+        ("2gb","2GB"),
+        ("4gb","4GB"),
+        ("6gb","6GB"),
+        ("8gb","8GB"),
     )
 
     ROM_SIZES = (
-        None,
-        ("16gb",),
-        ("32gb",),
-        ("64gb",),
-        ("128gb",),
-        ("256gb",),
+        ("16gb","16GB"),
+        ("32gb","32GB"),
+        ("64gb","64GB"),
+        ("128gb","128GB"),
+        ("256gb","256GB"),
     )
 
     id = models.UUIDField(default=uuid4, unique=True, primary_key=True)

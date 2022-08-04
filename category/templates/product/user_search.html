@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}Product List{% endblock %}
-{% block body_block %}<br><br>
+{% block content %}<br><br>
   <div class="header">
     <img src="/images/kassim.jpg" alt="">
   </div>
@@ -29,7 +29,7 @@
             </p>
           </div>
           <div>
-            <img class="product__image" src={{product.image}} alt={{product.title}} />
+            <img class="product__image" src={{product.image_src}} alt={{product.title}} />
           </div>
         </a>
         {% if product.from == "jumia" %}

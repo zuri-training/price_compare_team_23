@@ -36,7 +36,7 @@ def product_detail(request, id, product):
     }
     platforms = []
     platforms.append(get_jumia_product(prd))
-    # get_konga_product(prd)
+    platforms.append(get_konga_product(prd))
     # print(platform)
 
     if request.method == "POST":
@@ -77,7 +77,7 @@ def product_detail(request, id, product):
 
 class ProductListView(ListView):
     model = Product
-    # populatedB()
+    populatedB()
     context_object_name = "products"
     template_name = "product/list.html"
 

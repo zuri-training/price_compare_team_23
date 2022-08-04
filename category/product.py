@@ -22,5 +22,5 @@ def get_konga_product(product):
     #print(list)
     for item in list :
         if product['brand'].lower() in item['brand'].lower():
-            print(item)
+            #print(item)
             return item

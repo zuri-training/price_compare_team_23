@@ -36,7 +36,7 @@ def product_detail(request, id, product):
     }
     platforms = []
     platforms.append(get_jumia_product(prd))
-    platforms.append(get_konga_product(prd))
+    #platforms.append(get_konga_product(prd))
     # print(platform)
 
     if request.method == "POST":

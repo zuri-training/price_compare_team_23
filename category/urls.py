@@ -12,4 +12,5 @@ urlpatterns = [
     path('search/',SearchResultView.as_view(),name = 'search_results'),
     path('', views.index_view, name='home'),
     path('faq', views.faq_view, name='faq'),
+    path('contact', views.contact_page, name='contact_page')
     ]   

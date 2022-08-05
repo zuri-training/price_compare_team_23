@@ -2,20 +2,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charsaet="UTF-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frequently Asked Questions · ShopMore</title>
-    <link rel="stylesheet" href="{% static 'category/js/app.js' %}">
-    <link rel="stylesheet" href={% static 'category/css/style.css' %}>
+    <link rel="stylesheet" href="{% static 'category/css/style.css' %}">
     <link rel="shortcut icon" href="{% static 'category/images/favicon.svg' %}" type="image/x-icon">
 </head>
 <body>
     <header id="main-header">
         <div class="img-search">
-            <img src="{% static 'category/images/favicon.svg' %} alt="mobile logo" class="shopmore-mobile-logo">
+            <img src="{% static 'category/images/favicon.svg' %}" alt="mobile logo" class="shopmore-mobile-logo">
             <img src="{% static 'category/images/logo.svg' %}" alt="shopmore logo" class="shopmore-logo">
-            <input type="text" placeholder="Search">
+            <form id="form" role="search" aria-label="Search Site" class="header-form">
+                <input type="search" placeholder="Search">
+                <button><svg viewBox="0 0 1024 1024"><path class="path1" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path></svg></button>
+            </form>
         </div>
         <nav>
             <a href="javascript:void(0);" class="hamburger">
@@ -25,8 +27,7 @@
             </a>
 
             <div class="menu">
-                <a href="{% url 'category:home' %}" class="active">Home</a>
-
+                <a href="" class="active">Home</a>
                 <a href="" class="inactive">Product</a>
                 <a href="" class="inactive">About</a>
                 <a href="" class="inactive">Contact</a>
@@ -34,7 +35,7 @@
                 <span>|</span>
                 <a href="" class="header-status">Sign In</a>
                 <a href="" class="header-status header-myaccount">My Account</a>
-            
+
                 <hr>
                 <div class="mobile-only">
                     <div class="mobile-icons">
@@ -174,7 +175,7 @@
                 <a href="">Privacy Notice</a>
                 <a href="">Terms of Service</a>
                 <a href="">Usage Guidlines</a>
-            </div> 
+            </div>
         </div>
         <div class="copyright"><p>Copyright 2022: Zuri Team 23</p></div>
     </footer>

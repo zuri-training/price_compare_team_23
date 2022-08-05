@@ -38,22 +38,45 @@ body {
     width: 50%;
 }
 
-#main-header input[type=text] {
+#main-header .header-form {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    height: 2.57rem;
+    border-radius: 0.3125rem;
+    color: #65696A;
+    background-color: #E4EDED;
+    transition: box-shadow 0.1s ease-in-out 0s, color 0.1s ease-in-out 0s;
+    border: 0;
+    outline: 0;
+}
+
+#main-header input[type=search] {
+    all: unset;
     display: block;
-    background: transparent url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'><path fill='rgb(54,57,59)' d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z' ></path></svg>") no-repeat 95% center;
     font-size: 1rem;
     font-weight: 600;
     line-height: 1.5rem;
     padding: 0 2rem;
-    color: #65696A;
-    background-color: #E4EDED;
-    transition: box-shadow 0.1s ease-in-out 0s, color 0.1s ease-in-out 0s;
-    border-radius: 0.3125rem;
-    border: 0;
-    outline: 0;
-    height: 2.57rem;
-    width: 60%;
+    width: 100%;
+    height: 100%;
 }
+
+#main-header .img-search button {
+    all: unset;
+    cursor: pointer;
+    width: 2.57rem;
+    height: 2.57rem;
+  }
+  
+  #main-header .img-search svg {
+    display: flex;
+    color: #65696A;
+    fill: currentColor;
+    width: 24px;
+    height: 24px;
+    margin-right: 0.5rem;
+  }
 
 #main-header nav {
     display: flex;
@@ -514,7 +537,7 @@ body {
 
 /* FAQ Page */
 #faq-main {
-    margin-top: 2rem;
+    margin-top: 3rem;
     width: 100%;
 }
 
@@ -589,8 +612,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* background: url(images/faq-bottom-bg.svg) no-repeat; */
-    background: url("../images/faq-bottom-bg.svg") no-repeat;
+    background: url(../images/faq-bottom-bg.svg) no-repeat;
     padding: 5rem 0 5rem;
     text-align: center;
 }
@@ -616,7 +638,7 @@ body {
         display: flex;
         flex-wrap: wrap;
     }
-    #main-header .img-search input {
+    #main-header .img-search .header-form {
         display: none;
     }
 
@@ -635,7 +657,7 @@ body {
 
     #main-header .img-search .shopmore-mobile-logo {
         display: block;
-        width: 100%;
+        width: 70%;
     }
 }
 
@@ -659,7 +681,7 @@ body {
         width: 2.75rem;
     }
 
-    #main-header .img-search input {
+    #main-header .img-search .header-form {
         display: none;
     }
 
@@ -765,7 +787,7 @@ body {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin-top: 15%;
+        margin-top: 20%;
         padding: 0 2rem;
     }
 
@@ -1166,6 +1188,9 @@ body {
 
 /* FAQ Mobile */
 @media screen and (max-width:719px) {
+    #faq-main {
+        margin-top: 25%;
+    }
     
     #faq-main .faq-header h3 {
         font-size: 2rem;
@@ -1234,3 +1259,140 @@ body {
         color: #5CCEEB;
     }
 }
+
+
+/* Contact Page */
+#contact-container #contact-heading-paragraph {
+    margin-bottom: 3em;
+  }
+  
+  #contact-container .contact-border {
+    border-left:2px solid pink;
+    padding-left: 1em;
+    margin-bottom: 1rem;
+  }
+  
+  /* Style inputs */
+  #contact-container .contact-form input[type=text],
+  #contact-container .contact-form  [type=tel],
+  #contact-container .contact-form [type=email],
+  #contact-container .contact-form textarea {
+    width: 100%;
+    padding: 30px 40px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    border-radius:5px;
+  }
+
+  #contact-container .contact-form {
+    width: 100%;
+  }
+  
+  #contact-container .contact-form input[type=submit] {
+    font-size: 16px;
+    line-height: 1.5rem;
+    font-weight: 600;
+    background-color: #5CCEEB;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 1.5rem 25%;
+    color: #475252;
+  }
+
+  #contact-container .contact-form label {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 600;
+    color: #475252;
+  }
+
+  #contact-container .contact-form ::placeholder {
+    color: #898E8F;
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+  
+  #contact-container .contact-form input[type=submit]:hover {
+    background-color: #5CCEEB;
+  }
+  
+  #contact-container {
+    border-radius: 5px;
+    padding: 0 6.25rem;
+  }
+  
+  #contact-container .contact-column {
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
+  }
+
+  #contact-container .contact-column h2 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+    color: #12292F;
+  }
+
+  #contact-container .contact-column p {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 400;
+    color: #475252;
+  }
+  
+  #contact-container .contact-row {
+    display: flex;
+  }
+  
+  #contact-container #contact-main-img {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  #contact-container .contact-icon-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  #contact-container .contact-icon-wrapper span {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 600;
+    color: #475252;
+  }
+  
+  #contact-container .contact-icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  /* Contact Page Media Query */
+  @media screen and (max-width: 720px) {
+    #contact-container  {
+        margin-top: 20%;
+    }
+    #contact-container .contact-row {
+      flex-direction: column;
+    }
+  
+    #contact-container .contact-column {
+      width: 100%;
+      margin-top: 6px;
+      padding: 20px;
+    }
+  
+    #contact-container .contact-form input[type=submit] {
+      width: 100%;
+    }
+
+    #contact-container {
+        padding: 0 1.25rem;
+      }
+  }

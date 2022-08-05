@@ -18,12 +18,13 @@ import time
 #   @ Results of the search made by the customers
 
 def faq_view(request):
-    # my_app/templates/my_app/example.html
     return render(request, 'category/faq.html')
 
 def index_view(request):
-    # my_app/templates/my_app/example.html
     return render(request, 'category/index.html')
+
+def contact_page(request):
+    return render(request, 'category/contact.html')
 
 def product_detail(request,id,product):
     product = get_object_or_404(

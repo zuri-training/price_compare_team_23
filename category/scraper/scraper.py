@@ -1,7 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
 from category.models import Product
-
 # import schedule
 import time
 

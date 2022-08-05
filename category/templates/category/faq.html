@@ -1,0 +1,185 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions · ShopMore</title>
+    <link rel="stylesheet" href="{% static 'category/css/style.css' %}">
+    <link rel="shortcut icon" href="{% static 'category/images/favicon.svg' %}" type="image/x-icon">
+</head>
+<body>
+    <header id="main-header">
+        <div class="img-search">
+            <img src="{% static 'category/images/favicon.svg' %}" alt="mobile logo" class="shopmore-mobile-logo">
+            <img src="{% static 'category/images/logo.svg' %}" alt="shopmore logo" class="shopmore-logo">
+            <form id="form" role="search" aria-label="Search Site" class="header-form">
+                <input type="search" placeholder="Search">
+                <button><svg viewBox="0 0 1024 1024"><path class="path1" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path></svg></button>
+            </form>
+        </div>
+        <nav>
+            <a href="javascript:void(0);" class="hamburger">
+                <div class="line line-one"></div>
+                <div class="line line-two"></div>
+                <div class="line line-three"></div>
+            </a>
+
+            <div class="menu">
+                <a href="{% url 'category:home' %}" class="active">Home</a>
+                <a href="" class="inactive">Product</a>
+                <a href="" class="inactive">About</a>
+                <a href="{% url 'category:contact_page' %}" class="inactive">Contact</a>
+                <a href="" class="inactive">FAQ</a>
+                <span>|</span>
+                <a href="" class="header-status">Sign In</a>
+                <a href="" class="header-status header-myaccount">My Account</a>
+
+                <hr>
+                <div class="mobile-only">
+                    <div class="mobile-icons">
+                        <a href="">Settings</a>
+                        <img src="{% static 'category/images/setting.svg' %}" alt="">
+                    </div>
+                    <div class="mobile-icons">
+                        <a href="">Name</a>
+                        <img src="{% static 'category/images/user.svg' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="faq-main">
+        <section class="faq-header">
+            <div class="faq-header-wrapper">
+                <h3>FAQ</h3>
+                <img src="{% static 'category/images/faq-head.png' %}" alt="faq header image">
+                <h6>Here are some of the ShopMore frequently asked questions.</h6>
+            </div>
+        </section>
+
+        <section class="faq-qna">
+            <div class="faq-wrapper">
+                <div class="faq-img"><img src="{% static 'category/images/message-question.svg' %}" alt=""></div>
+                <div class="faq-questions">
+                    <h5>Q: Is Your Website Secure?</h5>
+                    <p>A: Our website is secured with SSL certificate. This means
+                        that the information you input is encrypted and will not
+                        be available for third parties.</p>
+                </div>
+            </div>
+
+            <div class="faq-wrapper">
+                <div><img src="{% static 'category/images/message-question.svg' %}" alt=""></div>
+                <div>
+                    <h5>Q: Why should I buy on ShopMore?</h5>
+                    <p>A: Saves you the stress. By ordering online, 
+                        you will get prices faster and you will be able 
+                        to go through order confirmation and payment 
+                        process much faster.</p>
+                </div>
+            </div>
+
+            <div class="faq-wrapper">
+                <div class="faq-img"><img src="{% static 'category/images/message-question.svg' %}" alt=""></div>
+                <div class="faq-questions">
+                    <h5>Q: How to contact customer service?</h5>
+                    <p>A: If you have questions regarding our online 
+                        store (account questions, technical questions) please 
+                        contact support@shopmore.com or call +234 464 8128.</p>
+                </div>
+            </div>
+
+            <div class="faq-wrapper">
+                <div class="faq-img"><img src="{% static 'category/images/message-question.svg' %}" alt=""></div>
+                <div class="faq-questions">
+                    <h5>Q: Do you have the product in stock?</h5>
+                    <p>A: All products shown on our site are available. Pending 
+                        the time of your order is dependent on the products 
+                        and quantities.</p>
+                </div>
+            </div>
+
+            <div class="faq-wrapper">
+                <div class="faq-img"><img src="{% static 'category/images/message-question.svg' %}" alt=""></div>
+                <div class="faq-questions">
+                    <h5>Q: How can I order?</h5>
+                    <p>A: You can order easily using our 
+                        online platform. When you find a product you need,
+                        you will be linked to the site of purchase where 
+                        you can order with ease.</p>
+                </div>
+            </div>
+
+            <div class="faq-wrapper">
+                <div class="faq-img"><img src="{% static 'category/images/message-question.svg' %}" alt=""></div>
+                <div class="faq-questions">
+                    <h5>Q: Are the brands authentic?</h5>
+                    <p>A: Our brands are authentic and sourced from trust-worthy 
+                        sites. If you are buying from websites that you are not
+                         familiar with, research the products they offer.</p>
+                </div>
+            </div>
+
+            <div class="faq-wrapper">
+                <div class="faq-img"><img src="{% static 'category/images/message-question.svg' %}" alt=""></div>
+                <div class="faq-questions">
+                    <h5>Q: How do I change my personal details?</h5>
+                    <p>A: You can easily change all your information 
+                        on your account. When you login to ShopMore, go 
+                        to your account and edit. This will allow you 
+                        change all your contact information.</p>
+                </div>
+            </div>
+
+            <div class="faq-wrapper">
+                <div class="faq-img"><img src="{% static 'category/images/message-question.svg' %}" alt=""></div>
+                <div class="faq-questions">
+                    <h5>Q: How can I save when shopping?</h5>
+                    <p>A: One of the benefits of shopping online is that 
+                        you are able to find products at lower prices due 
+                        to the economics of E-commerce. We recommend signing 
+                        up to our newsletter for updates on sales and new products.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-bottom">
+            <h5>Still have questions?</h5>
+            <p>If you cannot find an answer to your question in our FAQ, 
+                you can always <span>Contact Us</span>. We will attend to you shortly!</p>
+        </section>
+    </main>
+
+    <footer id="main-footer">
+        <div class="main-footer">
+            <div class="foot-item footer-main-logo"><img src="{% static 'category/images/footer-logo.svg' %}" alt="footer logo"></div>
+            <div class="foot-item footer-mobile"><img src="{% static 'category/images/logo.svg' %}" alt="footer logo"></div>
+            <div class="footer-item foot-item">
+                <h5>Company</h5>
+                <a href="">About Us</a>
+                <a href="">Contact Us</a>
+                <a href="">Help & Support</a>
+                <a href="">FAQ</a>
+            </div>
+            <div class="footer-item foot-item">
+                <h5>Community</h5>
+                <a href="">Join Our Facebook Community</a>
+                <a href="">Join our Affiliate Program</a>
+                <a href="">Follow Us On Twitter</a>
+            </div>
+            <div class="footer-item foot-item">
+                <h5>Terms & Policies</h5>
+                <a href="">Privacy Notice</a>
+                <a href="">Terms of Service</a>
+                <a href="">Usage Guidlines</a>
+            </div>
+        </div>
+        <div class="copyright"><p>Copyright 2022: Zuri Team 23</p></div>
+    </footer>
+
+    <script src="{% static 'category/js/app.js' %}"></script>
+</body>
+</html>

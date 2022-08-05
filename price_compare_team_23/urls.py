@@ -21,3 +21,4 @@ urlpatterns = [
     path('user/',include('accounts.urls',namespace='accounts')),
     path('',include('category.urls',namespace='category')),
 ]
+#category/

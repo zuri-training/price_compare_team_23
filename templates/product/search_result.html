@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}Product List{% endblock %}
-{% block body_block %}<br><br>
+{% block content %}<br><br>
 {% if user.is_authenticated %}
         <h1> Welcome {{ user.username }}</h1><br>
 {% else %}
@@ -22,7 +22,7 @@
 <div class="container">
         <div class="product">
                 <a href="{{ product.get_absolute_url }}" >
-                    <img src="{{ product.img_src }}" alt="{{ product.name }}">
+                    <img src="{{ product.image_src }}" alt="{{ product.name }}">
                    <h2> {{ product.name }} </h2>
                 </a>
         </div>

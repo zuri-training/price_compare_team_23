@@ -8,7 +8,7 @@ from django.db.models import Q
 from django.views.generic import ListView
 import random
 import time
-import schedule
+# import schedule
 
 #  ************product views*****************
 
@@ -16,6 +16,14 @@ import schedule
 #   @ Details about the product
 #   @ Products Listing when potential customers make a search
 #   @ Results of the search made by the customers
+
+def faq_view(request):
+    # my_app/templates/my_app/example.html
+    return render(request, 'category/faq.html')
+
+def index_view(request):
+    # my_app/templates/my_app/example.html
+    return render(request, 'category/index.html')
 
 def product_detail(request,id,product):
     product = get_object_or_404(

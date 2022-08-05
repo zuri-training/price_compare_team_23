@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Product List{% endblock %}
+{% block content %}<br><br>
+{% if user.is_authenticated %}
+        <h1> Welcome {{ user.username }}</h1><br>
+{% else %}
+        <h1>Welcome To Phones Price Compare Page</h1>
+        <p>Use the search box below to search for the products</p>
+{% endif %}
+        <div class="search_container">
+          <div class="container__search">
+            <div class="container__searchContainer">
+              <form action="{% url 'category:search_results' %}" method="get">
+                <input value="{{ request.GET.query }}" type="text" name="search" placeholder="Search ... Laptop " />
+                <input type="submit" value="Submit">
+              </form>
+            </div>
+          </div>
+        </div>
+{% for product in products %}
+<div class="container">
+        <div class="product">
+                <a href="{{ product.get_absolute_url }}" >
+                    <img src="{{ product.image_src }}" alt="{{ product.name }}">
+                   <h2>{{ product.name }}</h2>
+                </a>
+        </div>
+</div>
+{% endfor %}
+{% endblock %}

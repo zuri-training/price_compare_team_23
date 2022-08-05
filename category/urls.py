@@ -3,7 +3,8 @@ from django.urls import path
 from . import views
 from .views import ProductListView , product_detail , SearchResultView,user_search
 
-app_name = 'category'
+
+app_name = "category"
 
 urlpatterns = [
     path('search',user_search, name='search'),

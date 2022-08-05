@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Product List{% endblock %}
+{% block content %}<br><br>
+  <div class="header">
+    <img src="/images/kassim.jpg" alt="">
+  </div>
+  <div class="search_container">
+    <div class="container__search">
+      <div class="container__searchContainer">
+        <form action="" method="get">
+          <input value="{{keyword}}" type="text" name="search" placeholder="Search ... Laptop " />
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
+  </div>
+  {% if products %}
+  <div class="container">
+    <div class="row products">
+      {%for product in products%}
+      <div class='card product col-md-2 col-xs-5 '>
+        <a href={{product.link}}>
+          <div class="product__info">
+            <p>{{product.properties}}</p>
+            <p class="product__price">
+              <!-- <small>$</small> -->
+              <strong>{{product.price}}</strong>
+            </p>
+          </div>
+          <div>
+            <img class="product__image" src={{product.image_src}} alt={{product.title}} />
+          </div>
+        </a>
+        {% if product.from == "jumia" %}
+        <button class="product__button jumia"> {{product.vendor}}</button>
+        {% elif product.from == "konga" %}
+        <button class="product__button konga"> {{product.from}}</button>
+        {% elif product.from == "asos" %}
+        <button class="product__button asos"> {{product.from}}</button>
+        {% elif product.from == "payporte" %}
+        <button class="product__button asos"> {{product.from}}</button>
+        {% endif %}
+      </div>
+      {%endfor%}
+    </div>
+  </div> {% endif %}
+{% endblock %}

@@ -23,7 +23,7 @@ def faq_view(request):
     return render(request, 'category/faq.html')
 
 def index_view(request):
-    products = Product.objects.all()[12:18]
+    products = Product.objects.all()[1:7]
     top = Product.objects.all()[0:1]
     context = {
         'products': products,

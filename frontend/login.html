@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+</head>
+<body>
+    <header id="main-header">
+        <div class="img-search">
+            <img src="img/favicon.svg" alt="mobile logo" class="shopmore-mobile-logo">
+            <img src="img/logo.svg" alt="shopmore logo" class="shopmore-logo">
+            <form id="form" role="search" aria-label="Search Site" class="header-form">
+                <input type="search" placeholder="Search">
+                <button><svg viewBox="0 0 1024 1024"><path class="path1" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path></svg></button>
+            </form>
+        </div>
+        <nav>
+            <a href="javascript:void(0);" class="hamburger">
+                <div class="line line-one"></div>
+                <div class="line line-two"></div>
+                <div class="line line-three"></div>
+            </a>
+  
+            <div class="menu">
+                <a href="" class="active">Home</a>
+                <a href="" class="inactive">Product</a>
+                <a href="" class="inactive">About</a>
+                <a href="" class="inactive">Contact</a>
+                <a href="" class="inactive">FAQ</a>
+                <span>|</span>
+                <a href="" class="header-status">Sign In</a>
+                <a href="" class="header-status header-myaccount">My Account</a>
+  
+                <hr>
+                <div class="mobile-only">
+                    <div class="mobile-icons">
+                        <a href="">Settings</a>
+                        <img src="img/setting.svg" alt="">
+                    </div>
+                    <div class="mobile-icons">
+                        <a href="">Name</a>
+                        <img src="img/user.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="login-page">
+        <form method="post">
+            <div class="containerL">
+                <div class="container_1">
+                    <img src="img/login-page.png" alt="">
+                </div>
+        
+                <div class="container_2">
+                    <h2>Login to ShopMore</h2>
+                    <div>
+                        <p>
+                        <label for="email">Email</label><br>
+                        <input type="email" placeholder="john.does@gmail.com" autocapitalize="none" autocomplete="email" required="" id="email" class="field">
+                        </p>
+                    </div><br>
+                    <div>
+                        <p>
+                        <label for="password">Password</label><br>
+                        <input type="password" placeholder="***************" name="password" autocomplete="current-password" required="" id="password" class="field">
+                        <i class="bi-eye-slash" id="togglePassword"></i>
+                        </p>
+                        <div class="text"><input type="radio" class="radio"><p>&nbsp;&nbsp;Remember me <span>Forgot password?</span></p></div>
+                    </div><br>
+                    <div class="btn">
+                        <button type="submit" class="loginbtn">Log in</button>
+                        <p>Don't have an account yet? <a href="signUp.html">Create account</a></p>
+                    </div><br>
+                </div>
+            </div>
+          </form>
+        </main>
+
+        <footer id="main-footer">
+            <div class="main-footer">
+                <div class="foot-item footer-main-logo"><img src="img/footer-logo.svg" alt="footer logo"></div>
+                <div class="foot-item footer-mobile"><img src="img/logo.svg" alt="footer logo"></div>
+                <div class="footer-item foot-item">
+                    <h5>Company</h5>
+                    <a href="">About Us</a>
+                    <a href="">Contact Us</a>
+                    <a href="">Help & Support</a>
+                    <a href="">FAQ</a>
+                </div>
+                <div class="footer-item foot-item">
+                    <h5>Community</h5>
+                    <a href="">Join Our Facebook Community</a>
+                    <a href="">Join our Affiliate Program</a>
+                    <a href="">Follow Us On Twitter</a>
+                </div>
+                <div class="footer-item foot-item">
+                    <h5>Terms & Policies</h5>
+                    <a href="">Privacy Notice</a>
+                    <a href="">Terms of Service</a>
+                    <a href="">Usage Guidlines</a>
+                </div>
+            </div>
+            <div class="copyright"><p>Copyright 2022: Zuri Team 23</p></div>
+        </footer>
+      <script src="script.js"></script>
+</body>
+</html>

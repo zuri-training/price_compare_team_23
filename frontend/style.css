@@ -1396,3 +1396,360 @@ body {
         padding: 0 1.25rem;
       }
   }
+
+  /* Product Page */
+  #product-page-main h4 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    font-weight: 700;
+    color: #12292F;
+  }
+  
+  #product-page-main {
+    padding: 2% 5% 0;
+  }
+  
+  /* First section  */
+  #product-page-header .new-arrivals {
+    position: relative;
+    overflow: hidden;
+    padding: 0 6%;
+  }
+  
+  #product-page-header .slides-container {
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    border-radius: 8px;
+  }
+  
+  .slide {
+    width: 100%;
+    height: 100%;
+    flex: 1 0 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+  }
+  
+  .one {
+    background-color: rgb(128, 128, 128, 0.5);
+  }
+  
+  #product-page-main .slides-container {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+  }
+  
+  #product-page-main .slides-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  #product-page-main .slide-arrow {
+    position: absolute;
+    display: flex;
+    top: 0;
+    bottom: 0;
+    margin: auto 1%;
+    height: 4rem;
+    background-color: white;
+    border: none;
+    width: 2rem;
+    font-size: 3rem;
+    padding: 0;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 100ms;
+  }
+  
+  #product-page-main .slide-arrow:hover,
+  #product-page-main .slide-arrow:focus {
+    opacity: 1;
+  }
+  
+  #product-page-main #slide-arrow-prev {
+    left: 0;
+    padding-left: 0.45rem;
+    border-radius: 0 2rem 2rem 0;
+  }
+  
+  #product-page-main #slide-arrow-next {
+    right: 0;
+    padding-left: 0.75rem;
+    border-radius: 2rem 0 0 2rem;
+  }
+  
+  /*********** second section  ***********/
+  #product-page-main .categories-text {
+    font-size: 2.1rem;
+    margin: 2% 0;
+    font-weight: bold;
+  }
+  
+  #product-page-main .categories {
+    margin: 2% 0;
+    border-radius: 8px;
+  }
+  
+  .single-category {
+    margin: 2% 0 3%;
+  }
+  
+  .category-text {
+    font-size: 1.7rem;
+    margin-bottom: 1%;
+  }
+  .category-images {
+    display: flex;
+    width: 100%;
+    max-width: 100vw;
+    white-space: nowrap;
+    gap: 20px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none; /* hiding the scrollbar for Internet Explorer, Edge */
+    scrollbar-width: none; /* hiding the scrollbar for Firefox */
+  }
+  .category-images::-webkit-scrollbar {
+    display: none; /* hiding the scrollbar for Chrome, Safari, and Opera */
+  }
+  .single-product {
+    width: 20%;
+    flex: 1 0 18%;
+  }
+  
+  .single-product:hover {
+    cursor: pointer;
+  }
+  
+  .single-product img {
+    width: 100%;
+  }
+  
+  #product-page-main .find-more {
+    display: flex;
+    justify-content: center;
+    padding: 0 0 5%;
+  }
+  #product-page-main .find-more a {
+    color: grey;
+    font-size: 2rem;
+  }
+
+  /* Login Page and Sign Up Page*/
+  #login-page,
+  #signup-page {
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+  }
+
+  #login-page .containerS,
+  #signup-page .containerS{
+    display: inline-flex;
+    margin: auto;
+    margin-top: auto;
+}
+
+#login-page .containerL,
+#signup-page .containerL{
+    display: inline-flex;
+    width: 100%;
+    gap: 3rem;
+}
+
+#login-page .container_1,
+#signup-page .container1 {
+    width: 50%;
+}
+
+#login-page .container_2 h2,
+#signup-page .container_2 h2 {
+    font-size: xx-large;
+    margin-bottom: 70px;
+}
+
+#login-page .container_2,
+#signup-page .container_2{
+    display: inline-block;
+    width: 50%;
+}
+#login-page .container_1 img,
+#signup-page .container1 img{
+    width: 100%;
+}
+
+#login-page form,
+#signup-page form {
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+#login-page .container_2 input,
+#signup-page .container2 input {
+    width: 100%;
+    height: 50px;
+    font-size: medium;
+}
+
+#login-page button,
+#signup-page button{
+    width: 100%;
+    height: 50px;
+    font-size: medium;
+}
+
+#login-page .text .radio,
+#signup-page .text .radio{
+    width: 20px;
+}
+
+#login-page input,
+#signup-page input{
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding-left: 30px;
+}
+#login-page input::placeholder,
+#signup-page input::placeholder {
+    color: rgb(196, 190, 190);
+}
+
+#login-page #togglePassword,
+#signup-page #togglePassword{
+    color: rgb(147, 138, 138);
+}
+
+#login-page span,
+#signup-page span,
+#login-page a,
+#signup-page a {
+    color: #5CCEEB;
+    text-decoration: none;
+}
+
+#login-page span,
+#signup-page span{
+    padding-left: 166px;
+}
+
+#login-page .containerS h2,
+#signup-page .containerS h2{
+    color: #5CCEEB;
+    font-size:xx-large;
+}
+
+#login-page .signupbtn,
+#signup-page .signupbtn,
+#login-page .loginbtn,
+#signup-page .loginbtn {
+    background-color: #5CCEEB;
+    color: white;
+    border: transparent;
+    cursor: pointer;
+}
+
+#login-page .googlebtn,
+#signup-page .googlebtn {
+    background-color: white;
+    color: #5CCEEB;
+    border: 1px solid #5CCEEB;
+    cursor: pointer;
+}
+
+#login-page .googlebtn a,
+#signup-page .googlebtn a {
+    text-decoration: none;
+}
+
+#login-page form i,
+#signup-page form i{
+    margin-left: -30px;
+    cursor: pointer;
+}
+
+#login-page .text,
+#signup-page .text,
+#login-page .sign,
+#signup-page .sign {
+    display: flex;
+    align-items: center;
+}
+
+#login-page .btn p,
+#signup-page .btn p {
+    text-align: center;
+}
+
+#login-page h3,
+#signup-page h3 {
+    font-size: x-large;
+    margin-bottom: 50px;
+}
+
+#login-page .sign span,
+#signup-page .sign span{
+    padding: 0px;
+}
+
+#login-page .sign .radio,
+#signup-page .sign .radio {
+    width: 20px;
+}
+
+
+@media (max-width: 700px) {
+    #login-page .containerL,
+    #signup-page .containerL,
+    #login-page .containerS,
+    #signup-page .containerS {   
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #login-page .container_1,
+    #signup-page .container1 {
+        display: flex;
+        justify-content: center;
+        width: 90%;
+    }
+
+    #login-page .container_2,
+    #signup-page .container2 {
+        width: 90%;
+    }
+
+    #login-page .sign span,
+    #signup-page .sign span {
+        padding: 0px;
+    }
+    
+    #login-page .sign .radio,
+    #signup-page .sign .radio{
+        width: 20px;
+        margin: 0px;
+    }
+
+    #login-page .text,
+    #signup-page .text,
+    #login-page .sign,
+    #signup-page .sign {
+    display: flex;
+    }
+
+    #login-page,
+    #signup-page {
+        margin-top: 30%;
+    }
+
+    #signup-page .container1 {
+        flex-direction: column;
+    }
+}

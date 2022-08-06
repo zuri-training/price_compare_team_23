@@ -98,7 +98,7 @@ DATABASES = {
 }
 
 DATABASES['default'] = dj_database_url.config(conn_max_age=600,ssl_require=True)
-if True:
+if (env('DEBUG')):
     DATABASES['default'] = dj_database_url.config(default='sqlite:///db.sqlite3')
 else:
     DATABASES['default'] = dj_database_url.config(default=env('DATABASE_URL'))

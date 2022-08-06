@@ -19,10 +19,17 @@ import time
 #   @ Results of the search made by the customers
 
 def faq_view(request):
+    
     return render(request, 'category/faq.html')
 
 def index_view(request):
-    return render(request, 'category/index.html')
+    products = Product.objects.all()[12:18]
+    top = Product.objects.all()[0:1]
+    context = {
+        'products': products,
+        'top': top
+    }
+    return render(request, 'category/index.html',context)
 
 def contact_page(request):
     return render(request, 'category/contact.html')

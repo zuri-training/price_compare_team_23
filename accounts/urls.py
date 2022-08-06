@@ -1,12 +1,12 @@
 from django.contrib.auth import views as auth_views
 from django.urls import path
-from .views import register
+from .views import register , signin
 
 app_name = "accounts"
 
 urlpatterns = [
-    path("register/", register, name="register"),
-    path("login/", auth_views.LoginView.as_view(), name="login"),
+    path("signup/", register, name="signUp"),
+    path("login/", signin, name="signin"),
     path("logout/", auth_views.LogoutView.as_view(), name="logout"),
     path(
         "password_change/",

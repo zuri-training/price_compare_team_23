@@ -70,7 +70,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR, 'templates'),
+            
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -86,8 +86,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'price_compare_team_23.wsgi.application'
 
-LOGIN_REDIRECT_URL = 'category:landing'
-LOGIN_URL = 'accounts:login'
+LOGIN_REDIRECT_URL = 'category:home'
+LOGIN_URL = 'accounts:signin'
 LOGOUT_URL = 'accounts:logout'
 
 
@@ -98,7 +98,7 @@ DATABASES = {
 }
 
 DATABASES['default'] = dj_database_url.config(conn_max_age=600,ssl_require=True)
-if False:
+if True:
     DATABASES['default'] = dj_database_url.config(default='sqlite:///db.sqlite3')
 else:
     DATABASES['default'] = dj_database_url.config(default=env('DATABASE_URL'))

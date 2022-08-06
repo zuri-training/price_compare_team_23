@@ -1,3 +1,4 @@
+
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -10,46 +11,8 @@
     <link rel="shortcut icon" href="{% static 'category/images/favicon.svg' %}" type="image/x-icon">
 </head>
 <body>
-    <header id="main-header">
-        <div class="img-search">
-            <img src="{% static 'category/images/favicon.svg' %}" alt="mobile logo" class="shopmore-mobile-logo">
-            <img src="{% static 'category/images/logo.svg' %}" alt="shopmore logo" class="shopmore-logo">
-            <form id="form" role="search" aria-label="Search Site" class="header-form">
-                <input type="search" placeholder="Search">
-                <button><svg viewBox="0 0 1024 1024"><path class="path1" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path></svg></button>
-            </form>
-        </div>
-        <nav>
-            <a href="javascript:void(0);" class="hamburger">
-                <div class="line line-one"></div>
-                <div class="line line-two"></div>
-                <div class="line line-three"></div>
-            </a>
-
-            <div class="menu">
-                <a href="" class="active">Home</a>
-                <a href="" class="inactive">Product</a>
-                <a href="" class="inactive">About</a>
-                <a href="{% url 'category:contact_page' %}" class="inactive">Contact</a>
-                <a href="{% url 'category:faq' %}" class="inactive">FAQ</a>
-                <span>|</span>
-                <a href="" class="header-status">Sign In</a>
-                <a href="" class="header-status header-myaccount">My Account</a>
-
-                <hr>
-                <div class="mobile-only">
-                    <div class="mobile-icons">
-                        <a href="">Settings</a>
-                        <img src="{% static 'category/images/setting.svg' %}" alt="">
-                    </div>
-                    <div class="mobile-icons">
-                        <a href="">Name</a>
-                        <img src="{% static 'category/images/user.svg' %}" alt="">
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
+   
+    {% include "nav.html" %}
     
     <main id="landing-main">
         <section class="hero">
@@ -76,11 +39,11 @@
                 save your purchase on Konga, Jumia, Amazon and many other e-commerce websites.</p>
             <hr>
         </section>
-
+        
         <section class="best-selling">
             <h4>Best <br>Selling Product</h4>
             <div class="best-selling-container">
-                <div class="selling-head-img">
+                {% comment %} <div class="selling-head-img">
                     <img src="{% static 'category/images/best-selling.svg' %}" alt="best selling products">
                 </div>
                 <div class="selling-desc">
@@ -89,12 +52,49 @@
                         10 DrMOS power stages, 2.5 Gb Ethernet, HDMI, DisplayPort, SATA 6 Gbps,
                         USB 3.2 Gen 2 Type-A and Type-C, and Aura Sync RGB lighting support</p>
                     <a href="">Compare Price</a>
+                </div> {% endcomment %}
+                {% for t in top %}
+                <div class="selling-head-img">
+                    <img src="{{ t.image_src }}" alt="best selling products">
                 </div>
+                <div class="selling-desc">
+                    <h5>{{ t.name }}</h5>
+                    <p>AMD B550 (Ryzen AM4) ATX gaming motherboard with PCIe 4.0, dual M.2,
+                        10 DrMOS power stages, 2.5 Gb Ethernet, HDMI, DisplayPort, SATA 6 Gbps,
+                        USB 3.2 Gen 2 Type-A and Type-C, and Aura Sync RGB lighting support</p>
+                    <a href="">Compare Price</a>
+                </div>
+                {% endfor %}
             </div>
             <hr>
         </section>
 
         <section class="top-selling">
+            <h4>Top <br>Selling Product</h4>
+            <div class="top-selling-flex">
+                {% for product in products %}
+                <div class="top-product">
+                    <img src="{{ product.image_src }}" alt="{{ product.name }}" class="product-img">
+                    <div class="top-selling-details">
+                        <div class="brand-price">
+                            <h6>{{ product.name }}</h6>
+                            <p>N599,000.00</p>
+                        </div>
+                        <div class="cart-store">
+                            <img src="{% static 'category/images/shopping-cart.svg' %}" alt="shopping cart">
+                            <p>Jumia</p>
+                        </div>
+                        <div class="reviews-star">
+                            <img src="{% static 'category/images/review-1.svg' %}" alt="reviews">
+                            <a href="">Reviews</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+        </section>
+
+        {% comment %} <section class="top-selling">
             <h4>Top <br>Selling Product</h4>
             <div class="top-selling-flex">
                 <div class="top-product">
@@ -201,7 +201,7 @@
                 </div>
             </div>
             <hr>
-        </section>
+        </section> {% endcomment %}
 
         <section class="ready">
             <h2>Ready to get the best deals?</h2>
@@ -238,7 +238,7 @@
         <div class="copyright"><p>Copyright 2022: Zuri Team 23</p></div>
     </footer>
 
-    <script src="app.js"></script>
+    <script src="{% static 'category/js/app.js' %}"></script>
 </body>
 </html>
 {% comment %} <!DOCTYPE html>

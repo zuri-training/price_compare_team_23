@@ -26,15 +26,13 @@ Shopmore a web application used to compare prices of products from different onl
 ## Unauthenticated Users
 
 * They would be able to access the platform and view what it’s all about.
-
 * They would be able to browse through available products.
 * They would be able to sign up/register using their emails and password.
-* view and interact with the documentation
+* They would be able to view and interact with the website's documentation
 
 ## Authenticated Users
 
 * They would have full access to every feature the platform has.
-
 * They would be able to view details about each specific product.
 * They would be able to leave comments and view other users’ comments.
 * They would be able to access the links to the purchase pages of these products.

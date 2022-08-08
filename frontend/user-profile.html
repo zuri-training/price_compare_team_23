@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="user-profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <script src="https://kit.fontawesome.com/4d349a1f95.js" crossorigin="anonymous"></script>
+</head>
+<body>
+        
+
+    <main id="container">
+
+        <div id="profile1">
+            <img src="Frame 122.png" alt="" id="shop-img">
+
+            <h2>My Profile</h2>
+
+            <img src="../img/user-profile.png" alt="" id="prof-img">
+
+            <div id="logo">
+                <img src="notification.png" alt="" id="bell">
+                <img src="profile-circle.png" alt="" id="user">
+            </div>
+        </div>
+
+
+        <div id="profile2">
+
+            <h2>Update Your Profile Information Below.</h2>
+            <form action="" id="form">
+
+                <label for="fname">First name</label>
+                <input type="text" name="fname" placeholder="John" id="fname" onkeydown="log1()">
+                <span id="sp1"></span><br>
+
+                <label for="lname">last name</label>
+                <input type="text" name="lname" placeholder="Doe" id="lname" onkeydown="log2()">
+                <span id="sp2"></span><br>
+
+                <label for="Email">Email</label>
+                <input type="email" name="Email" placeholder="john.doe@gmail.com" id="email" onkeydown="log3()">
+                <span id="sp3"></span><br>
+
+                <label for="Username">Username</label>
+                <input type="text" name="Username" placeholder="John_Doe" id="username" onkeydown="log4()">
+                <span id="sp4"></span><br>
+
+                <div id="box">
+
+                    <label for="Change-password">Change Password</label>
+                    <input type="password" name="Change-password" placeholder="************" id="password1" onkeydown="log6()">
+                    <i class="far fa-eye" id="tg1"></i>
+                    <span id="sp6"></span><br>
+
+                </div>
+
+                <div id="box">
+
+                    <label for="Confirm-new-pass">Confirm New Password</label>
+                    <input type="password" name="Confirm-new-pass" placeholder="************" id="password2" onkeydown="log5()">
+                    <i class="far fa-eye" id="tg2" ></i>
+                    <span id="sp5"></span><br>
+
+                </div>
+
+                <button id="btn1" >Save Changes</button>
+                <button id="btn2">Log Out</button>
+
+            </form>
+
+        </div>
+
+    </main>
+
+    <footer>
+
+    </footer>
+    
+    <script src="user-profile.js"></script>
+</body>
+</html>

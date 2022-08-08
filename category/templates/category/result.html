@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,14 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Result</title>
-    <link rel="stylesheet" href="./result.css">
-    <link rel="shortcut icon" href="./result-image/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'category/css/result.css' %}">
+    <link rel="shortcut icon" href="{% static 'category/result-image/favicon.svg' %}" type="image/x-icon">
 </head>
 <body>
+
+    {% include nav.html %}
     <header id="main-header">
         <div class="img-search">
-            <img src="./result-image/favicon.svg" alt="mobile logo" class="shopmore-mobile-logo">
-            <img src="./result-image/logo.svg" alt="shopmore logo" class="shopmore-logo">
+		<img src="{% static 'category/result-image/favicon.svg' %}" alt="mobile logo" class="shopmore-mobile-logo">
+		<img src="{% static 'category/result-image/logo.svg' %}" alt="shopmore logo" class="shopmore-logo">
             <form id="form" role="search" aria-label="Search Site" class="header-form">
                 <input type="search" placeholder="Search">
                 <button><svg viewBox="0 0 1024 1024"><path class="path1" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path></svg></button>
@@ -42,11 +45,11 @@
                 <div class="mobile-only">
                     <div class="mobile-icons">
                         <a href="">Settings</a>
-                        <img src="./result-image/setting.svg" alt="">
+			<img src="{% static 'category/result-image/setting.svg' %}" alt="">
                     </div>
                     <div class="mobile-icons">
                         <a href="">Name</a>
-                        <img src="./result-image/user.svg" alt="">
+			<img src="{% static 'category/result-image/user.svg' %}" alt="">
                     </div>
                 </div>
             </div>
@@ -103,7 +106,7 @@
             <div id="sec3-0-div">
                 <div id="sec3-1-div">
                     <div id="sub-img">
-                        <img class="sub-img" src="./result-image/lenovo_thinkpad-removebg-preview 1.png" alt="">
+			    <img class="sub-img" src="{% static 'category/result-image/lenovo_thinkpad-removebg-preview 1.png' %}" alt="">
                     </div>
                     <div id="sec3-2-div">
                         <div id="sec3-3-div">
@@ -117,11 +120,11 @@
                                 <P class="free-s">Free Shipping</P>
                             </div>
                             <div class="star">
-                                <img class="img-1 star-mo" src="./result-image/star.png" alt=""></img>
-                                <img class="img-1 star-mo" src="./result-image/star.png" alt=""></img>
-                                <img class="img-1 star-mo" src="./result-image/star.png" alt=""></img>
-                                <img class="img-1 star-mo" src="./result-image/star.png" alt=""></img>
-                                <img class="img-1 star-mo" src="./result-image/star2.png" alt=""></img>
+				    <img class="img-1 star-mo" src="{% static 'category/result-image/star.png' %}" alt=""></img>
+				    <img class="img-1 star-mo" src="{% static 'category/result-image/star.png' %}" alt=""></img>
+				    <img class="img-1 star-mo" src="{% static 'category/result-image/star.png' %}" alt=""></img>
+				    <img class="img-1 star-mo" src="{% static 'category/result-image/star.png' %}" alt=""></img>
+				    <img class="img-1 star-mo" src="{% static 'category/result-image/star2.png' %}" alt=""></img>
                             </div>
                         </div>
                         <div id="sec3-4-div">
@@ -136,7 +139,7 @@
                 </div>
                 <div id="sec3-1-div">
                     <div id="sub-img">
-                        <img class="sub-img" src="./result-image/lenovo_thinkpad-removebg-preview 1.png" alt="">
+			    <img class="sub-img" src="{% static 'category/result-image/lenovo_thinkpad-removebg-preview 1.png' %}" alt="">
                     </div>
                     <div id="sec3-2-div">
                         <div id="sec3-3-div">
@@ -150,11 +153,11 @@
                                 <P class="free-s">Free Shipping</P>
                             </div>
                             <div class="star">
-                                <img class="img-1 star-mo" src="./result-image/star.png" alt=""></img>
-                                <img class="img-1 star-mo" src="./result-image/star.png" alt=""></img>
-                                <img class="img-1 star-mo" src="./result-image/star.png" alt=""></img>
-                                <img class="img-1 star-mo" src="./result-image/star.png" alt=""></img>
-                                <img class="img-1 star-mo" src="./result-image/star2.png" alt=""></img>
+				    <img class="img-1 star-mo" src="{% static 'category/result-image/star.png' %}" alt=""></img>
+				    <img class="img-1 star-mo" src="{% static 'category/result-image/star.png' %}" alt=""></img>
+				    <img class="img-1 star-mo" src="{% static 'category/result-image/star.png' %}" alt=""></img>
+				    <img class="img-1 star-mo" src="{% static 'category/result-image/star.png' %}" alt=""></img>
+				    <img class="img-1 star-mo" src="{% static 'category/result-image/star2.png' %}" alt=""></img>
                             </div>
                         </div>
                         <div id="sec3-4-div">
@@ -169,7 +172,7 @@
                 </div>
                 <div id="sec3-1-div">
                     <div id="sub-img">
-                        <img class="sub-img" src="./result-image/lenovo_thinkpad-removebg-preview 1.png" alt="">
+			    <img class="sub-img" src="{% static 'category/result-image/lenovo_thinkpad-removebg-preview 1.png' %}" alt="">
                     </div>
                     <div id="sec3-2-div">
                         <div id="sec3-3-div">
@@ -183,11 +186,11 @@
                                 <P class="free-s">Free Shipping</P>
                             </div>
                             <div class="star">
-                                <img class="img-1 star-mo" src="./result-image/star.png" alt=""></img>
-                                <img class="img-1 star-mo" src="./result-image/star.png" alt=""></img>
-                                <img class="img-1 star-mo" src="./result-image/star.png" alt=""></img>
-                                <img class="img-1 star-mo" src="./result-image/star.png" alt=""></img>
-                                <img class="img-1 star-mo" src="./result-image/star2.png" alt=""></img>
+				    <img class="img-1 star-mo" src="{% static 'category/result-image/star.png' %}" alt=""></img>
+				    <img class="img-1 star-mo" src="{% static 'category/result-image/star.png' %}" alt=""></img>
+				    <img class="img-1 star-mo" src="{% static 'category/result-image/star.png' %}" alt=""></img>
+				    <img class="img-1 star-mo" src="{% static 'category/result-image/star.png' %}" alt=""></img>
+				    <img class="img-1 star-mo" src="{% static 'category/result-image/star2.png' %}" alt=""></img>
                             </div>
                         </div>
                         <div id="sec3-4-div">
@@ -202,7 +205,7 @@
                 </div>
                 <div id="sec3-1-div">
                     <div id="sub-img">
-                        <img class="sub-img" src="./result-image/lenovo_thinkpad-removebg-preview 1.png" alt="">
+			    <img class="sub-img" src="{% static 'category/result-image/lenovo_thinkpad-removebg-preview 1.png' %}" alt="">
                     </div>
                     <div id="sec3-2-div">
                         <div id="sec3-3-div">
@@ -216,11 +219,11 @@
                                 <P class="free-s">Free Shipping</P>
                             </div>
                             <div class="star">
-                                <img class="img-1 star-mo" src="./result-image/star.png" alt=""></img>
-                                <img class="img-1 star-mo" src="./result-image/star.png" alt=""></img>
-                                <img class="img-1 star-mo" src="./result-image/star.png" alt=""></img>
-                                <img class="img-1 star-mo" src="./result-image/star.png" alt=""></img>
-                                <img class="img-1 star-mo" src="./result-image/star2.png" alt=""></img>
+				    <img class="img-1 star-mo" src="{% static 'category/result-image/star.png' %}" alt=""></img>
+				    <img class="img-1 star-mo" src="{% static 'category/result-image/star.png' %}" alt=""></img>
+				    <img class="img-1 star-mo" src="{% static 'category/result-image/star.png' %}" alt=""></img>
+				    <img class="img-1 star-mo" src="{% static 'category/result-image/star.png' %}" alt=""></img>
+				    <img class="img-1 star-mo" src="{% static 'category/result-image/star2.png' %}" alt=""></img>
                             </div>
                         </div>
                         <div id="sec3-4-div">
@@ -235,7 +238,7 @@
                 </div>
                 <div id="sec3-1-div">
                     <div id="sub-img">
-                        <img class="sub-img" src="./result-image/lenovo_thinkpad-removebg-preview 1.png" alt="">
+			    <img class="sub-img" src="{% static 'category/result-image/lenovo_thinkpad-removebg-preview 1.png' %}" alt="">
                     </div>
                     <div id="sec3-2-div">
                         <div id="sec3-3-div">
@@ -249,11 +252,11 @@
                                 <P class="free-s">Free Shipping</P>
                             </div>
                             <div class="star">
-                                <img class="img-1 star-mo" src="./result-image/star.png" alt=""></img>
-                                <img class="img-1 star-mo" src="./result-image/star.png" alt=""></img>
-                                <img class="img-1 star-mo" src="./result-image/star.png" alt=""></img>
-                                <img class="img-1 star-mo" src="./result-image/star.png" alt=""></img>
-                                <img class="img-1 star-mo" src="./result-image/star2.png" alt=""></img>
+				    <img class="img-1 star-mo" src="{% static 'category/result-image/star.png' %}" alt=""></img>
+				<img class="img-1 star-mo" src="{% static 'category/result-image/star.png' %}" alt=""></img>
+				<img class="img-1 star-mo" src="{% static 'category/result-image/star.png' %}" alt=""></img>
+				<img class="img-1 star-mo" src="{% static 'category/result-image/star.png' %}" alt=""></img>
+				<img class="img-1 star-mo" src="{% static 'category/result-image/star2.png' %}" alt=""></img>
                             </div>
                         </div>
                         <div id="sec3-4-div">
@@ -279,8 +282,8 @@
 
     <footer id="main-footer">
         <div class="main-footer">
-            <div class="foot-item footer-main-logo"><img src="./result-image/footer-logo.svg" alt="footer logo"></div>
-            <div class="foot-item footer-mobile"><img src="./result-image/logo.svg" alt="footer logo"></div>
+		<div class="foot-item footer-main-logo"><img src="{% static 'category/result-image/footer-logo.svg' %}" alt="footer logo"></div>
+	    <div class="foot-item footer-mobile"><img src="{% static 'category/result-image/logo.svg' %}" alt="footer logo"></div>
             <div class="footer-item foot-item">
                 <h5>Company</h5>
                 <a href="">About Us</a>

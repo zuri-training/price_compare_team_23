@@ -1,0 +1,161 @@
+body{
+    background-color: white;
+}
+
+.containerS{
+    display: inline-flex;
+    margin: auto;
+    margin-top: auto;
+}
+.containerL{
+    display: inline-flex;
+    margin: auto;
+    margin-top: auto 100px;
+}
+
+.container_2 h2{
+    font-size: xx-large;
+    margin-bottom: 70px;
+}
+
+.container_2{
+    display: inline-block;
+    margin: auto 100px;
+}
+.container_1 img{
+    width: 500px;
+    height: 600px;
+}
+
+.container1 img{
+    width: 500px;
+    height: 550px;
+}
+.container2{
+    display: inline-block;
+    margin: auto 100px;
+    margin-top: 0px;
+}
+
+form{
+    margin: auto 100px;
+    margin-top: 100px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.container2 input{
+    width: 400px;
+    height: 50px;
+    font-size: medium;
+}
+.container_2 input{
+    width: 400px;
+    height: 50px;
+    font-size: medium;
+}
+button{
+    width: 434px;
+    height: 50px;
+    font-size: medium;
+}
+
+.text .radio{
+    width: 20px;
+    margin: 0px;
+}
+
+input{
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding-left: 30px;
+}
+input::placeholder{
+    color: rgb(196, 190, 190);
+}
+
+#togglePassword{
+    color: rgb(147, 138, 138);
+}
+
+span,
+a{
+    color: #5CCEEB;
+    text-decoration: none;
+}
+
+span{
+    padding-left: 166px;
+}
+
+.containerS h2{
+    color: #5CCEEB;
+    font-size:xx-large;
+}
+
+.signupbtn,
+.loginbtn{
+    background-color: #5CCEEB;
+    color: white;
+    border: transparent;
+    cursor: pointer;
+}
+
+.googlebtn{
+    background-color: white;
+    color: #5CCEEB;
+    border: 1px solid #5CCEEB;
+    cursor: pointer;
+}
+
+.googlebtn a{
+    text-decoration: none;
+}
+
+form i{
+    margin-left: -30px;
+    cursor: pointer;
+}
+
+.text,
+.sign{
+    display: flex;
+}
+
+.btn p{
+    text-align: center;
+}
+
+h3{
+    font-size: x-large;
+    margin-bottom: 50px;
+}
+
+.sign span{
+    padding: 0px;
+}
+
+.sign .radio{
+    width: 20px;
+    margin: 0px;
+}
+
+
+@media (max-width: 700px) {
+    .containerL, .containerS, body {   
+      flex-direction: column;
+      align-items: center;
+    }
+    .sign span{
+        padding: 0px;
+    }
+    
+    .sign .radio{
+        width: 20px;
+        margin: 0px;
+    }
+    .text,
+.sign{
+    display: flex;
+}
+  }

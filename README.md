@@ -72,7 +72,8 @@ Shopmore a web application used to compare prices of products from different onl
 * [thecybergeneral](https://github.com/thecybergeneral) || nwosuchinemerem01@gmail.com
 * [mario0070](https://github.com/mario0070) || ganiujamiu03@gmail.com
 * [Vix1209](https://github.com/Vix1209) || ucheofor2015@gmail.com
-* [Rackiey](https://github.com/Rackiey) ll nnannaoluchukwu@gmail.com
+* [Rackiey](https://github.com/Rackiey) || nnannaoluchukwu@gmail.com
+* [askdebb](https://github.com/askdebb) || cd.jobs.w@gmail.com
 
 # How to Contribute
 
@@ -101,5 +102,5 @@ python -m venv [environment name]
 ```bash
 
  python manage.py runserver
-
- ```
+ 
+```

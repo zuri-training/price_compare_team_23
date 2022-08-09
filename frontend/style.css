@@ -1450,7 +1450,6 @@ body {
   bottom: 0;
   margin: auto 1%;
   height: 4rem;
-  background-color: white;
   border: none;
   width: 2rem;
   font-size: 3rem;
@@ -1859,289 +1858,290 @@ body {
 
 /* Documentation Section 1 */
 #documentation {
-    background-color: #F1FCFC;
+  background-color: #f1fcfc;
 }
 #documentation .documentation-1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: 2rem;
-    padding: 5rem 0;
-    background-color: #F1FCFC;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+  padding: 5rem 0;
+  background-color: #f1fcfc;
 }
 
 #documentation .documentation-1 .doc-1-head {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    width: 75%;
-    margin-bottom: 3rem;
-    margin-top: 1%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 75%;
+  margin-bottom: 3rem;
+  margin-top: 1%;
 }
 
 #documentation .documentation-1 .doc-1-head h4,
 #documentation .documentation-2 h4 {
-    font-size: 2.5rem;
-    line-height: 3rem;
-    font-weight: 700;
-    color: #1F454E;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  font-weight: 700;
+  color: #1f454e;
 }
 
 #documentation .documentation-1 .doc-1-head h6 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    font-weight: 700;
-    color: #2E6776;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  color: #2e6776;
 }
 
 #documentation .documentation-1 .doc-1-wrap {
-    display: flex;
-    gap: 3rem;
+  display: flex;
+  gap: 3rem;
 }
 
 #documentation .documentation-1 .doc-1-flex {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-    gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
 }
 
 #documentation .documentation-1 .doc-1-flex p {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-    color: #1F454E;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  color: #1f454e;
 }
 
 /* Documentation Section 2 */
 
 #documentation .documentation-2 .doc-2-head {
-    margin: 2.5rem auto;
-    width: 90%;
+  margin: 2.5rem auto;
+  width: 90%;
 }
 
 #documentation .doc-sec {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #DEF5FB;
-    padding: 2rem;
-    margin: 3rem auto;
-    width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #def5fb;
+  padding: 2rem;
+  margin: 3rem auto;
+  width: 90%;
 }
 
 #documentation .doc-sec div {
-    width: 65%;
+  width: 65%;
 }
 
 #documentation .doc-sec img {
-    width: 38%;
+  width: 38%;
 }
 
 #documentation .doc-sec h6 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    font-weight: 700;
-    color: #1F454E;
-    margin-bottom: 1rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  color: #1f454e;
+  margin-bottom: 1rem;
 }
 
 #documentation .doc-sec ul {
-    padding-left: 2rem;
+  padding-left: 2rem;
 }
 
 #documentation .doc-sec li {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-    color: #1F454E;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  color: #1f454e;
 }
 
 #documentation .documentation-4 .doc-sec {
-    background-color: #1F454E;
+  background-color: #1f454e;
 }
 
 #documentation .documentation-4 .doc-sec a {
-    text-align: center;
-    text-decoration: none;
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-    color: #DEF5FB;
-    width: 100%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  color: #def5fb;
+  width: 100%;
 }
 
 #documentation .documentation-8 {
-    display: flex;
-    justify-content: center;
-    gap: 4rem;
-    width: 80%;
-    margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  width: 80%;
+  margin: 0 auto;
 }
 
 #documentation .documentation-8 .doc-bottom {
-    flex-direction: column;
-    border: 1px solid #F1FCFC;
-    text-align: center;
+  flex-direction: column;
+  border: 1px solid #f1fcfc;
+  text-align: center;
 }
 
 #documentation .documentation-8 .doc-btm-1 {
-    width: 60%;
+  width: 60%;
 }
 
 #documentation .documentation-8 .doc-btm-2 {
-    width: 38%;
+  width: 38%;
 }
 
 #documentation .documentation-8 .doc-bottom-btns {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
 
 #documentation .documentation-8 .doc-bottom a {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    text-decoration: none;
-    border-radius: 5px;
-    padding: 1rem 3rem;
-    border: 2px solid #5CCEEB;
-    font-size: 1rem;
-    line-height: 1.5rem;
-    font-weight: 400;
-    color: #12292F;
-    height: 3.4rem;
-    white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 1rem 3rem;
+  border: 2px solid #5cceeb;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  color: #12292f;
+  height: 3.4rem;
+  white-space: nowrap;
 }
 
 #documentation .documentation-8 h6 {
-    font-size: 1rem;
-    line-height: 1.5rem;
-    margin-bottom: 2rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 @media screen and (min-width: 720px) and (max-width: 950px) {
-    #documentation .documentation-1 .doc-1-head h4,
-    #documentation .documentation-2 h4 {
-        font-size: 2rem;
-        line-height: 2.5rem;
-      }
+  #documentation .documentation-1 .doc-1-head h4,
+  #documentation .documentation-2 h4 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
 
-      #documentation .doc-sec {
-        gap: 1rem;
-      }
-    
-      #documentation .documentation-1 .doc-1-head h6 {
-        font-size: 1rem;
-        line-height: 1.5rem;
-      }
+  #documentation .doc-sec {
+    gap: 1rem;
+  }
 
-      #documentation .doc-sec h6 {
-        font-size: 1rem;
-        line-height: 1.5rem;
-      }
+  #documentation .documentation-1 .doc-1-head h6 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 
-      #documentation .doc-sec li {
-        font-size: 1rem;
-        line-height: 1.3rem;
-        color: #1F454E;
-      }
+  #documentation .doc-sec h6 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 
-      #documentation .documentation-1 .doc-1-wrap {
-        gap: 0.5rem;
-      }
+  #documentation .doc-sec li {
+    font-size: 1rem;
+    line-height: 1.3rem;
+    color: #1f454e;
+  }
 
-      #documentation .documentation-8 .doc-bottom a {
-        padding: 0.5rem 2rem;
-        height: 3rem;
-      }
+  #documentation .documentation-1 .doc-1-wrap {
+    gap: 0.5rem;
+  }
+
+  #documentation .documentation-8 .doc-bottom a {
+    padding: 0.5rem 2rem;
+    height: 3rem;
+  }
 }
 
 @media screen and (min-width: 350px) and (max-width: 719px) {
-    #documentation .documentation-1 .doc-1-head h4, #documentation .documentation-2 h4 {
-        font-size: 2rem;
-        line-height: 2.5rem;
-      }
+  #documentation .documentation-1 .doc-1-head h4,
+  #documentation .documentation-2 h4 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
 
-      #documentation .documentation-1 .doc-1-head h6 {
-        font-size: 1rem;
-        line-height: 1.5rem;
-      }
+  #documentation .documentation-1 .doc-1-head h6 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 
-      #documentation .documentation-1 .doc-1-head {
-        width: 90%;
-      }
+  #documentation .documentation-1 .doc-1-head {
+    width: 90%;
+  }
 
-      #documentation .documentation-1 .doc-1-wrap {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 3rem;
-      }
+  #documentation .documentation-1 .doc-1-wrap {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
 
-      #documentation .documentation-1 .doc-1-flex {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 1rem;
-        width: 80%;
-      }
+  #documentation .documentation-1 .doc-1-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    width: 80%;
+  }
 
-      #documentation .doc-sec {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        padding: 2rem;
-        width: 90%;
-      }
+  #documentation .doc-sec {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    width: 90%;
+  }
 
-      #documentation .doc-sec img {
-        width: 90%;
-      }
+  #documentation .doc-sec img {
+    width: 90%;
+  }
 
-      #documentation .doc-sec div {
-        width: 90%;
-      }
+  #documentation .doc-sec div {
+    width: 90%;
+  }
 
-      #documentation .doc-sec h6 {
-        font-size: 1rem;
-        line-height: 1.5rem;
-      }
+  #documentation .doc-sec h6 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 
-      #documentation .doc-sec li {
-        font-size: 1rem;
-        line-height: 1.25rem;
-        color: #1F454E;
-      }
+  #documentation .doc-sec li {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color: #1f454e;
+  }
 
-      #documentation .documentation-4 .doc-sec a {
-        font-size: 0.92rem;
-        line-height: 1.25rem;
-      }
+  #documentation .documentation-4 .doc-sec a {
+    font-size: 0.92rem;
+    line-height: 1.25rem;
+  }
 
-      #documentation .documentation-8 {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 80%;
-        margin: 0 auto;
-        gap: 1rem;
-      }
+  #documentation .documentation-8 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+    gap: 1rem;
+  }
 
-      #documentation .documentation-8 .doc-btm-1 {
-        width: 100%;
-      }
+  #documentation .documentation-8 .doc-btm-1 {
+    width: 100%;
+  }
 
-      #documentation .documentation-8 .doc-bottom-btns {
-        flex-direction: column;
-      }
+  #documentation .documentation-8 .doc-bottom-btns {
+    flex-direction: column;
+  }
 
-      #documentation .documentation-8 .doc-btm-2 {
-        width: 100%;
-      }
+  #documentation .documentation-8 .doc-btm-2 {
+    width: 100%;
+  }
 }

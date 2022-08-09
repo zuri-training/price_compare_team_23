@@ -1450,6 +1450,7 @@ body {
   bottom: 0;
   margin: auto 1%;
   height: 4rem;
+  background-color: transparent;
   border: none;
   width: 2rem;
   font-size: 3rem;

@@ -33,6 +33,7 @@ def register(request):
         try:
             user = User.objects.create_user(input['username'],email=input["email"],password=input["password"],first_name=input['first_name'],last_name=input['last_name'])
             user.save()
+            login(request, user)
         except django.db.utils.IntegrityError:
             return render(request, "registration/signUp.html",{'msg': 'user already exists'})
 

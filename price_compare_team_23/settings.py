@@ -31,7 +31,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = env('SECRET_KEY')
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = _parse_bool(env('DEBUG'))
 
@@ -152,3 +151,13 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#SMTP CONFIGURATION
+
+# EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST='smtp.gmail.com'
+# EMAIL_PORT= 587
+# EMAIL_USE_TLS=True
+# EMAIL_HOST_USER='ydanladi15@gmail.com'
+# EMAIL_HOST_PASSWORD=''
+# #prgpdcmphiszonhm ehqtsratdsmovmby

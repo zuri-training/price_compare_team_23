@@ -24,9 +24,12 @@ class Product(models.Model):
     )
 
     RAM_SIZES = (
+        ("1gb","1GB"),
         ("2gb","2GB"),
+        ("3gb","3GB"),
         ("4gb","4GB"),
         ("6gb","6GB"),
+        ("7gb","7GB"),
         ("8gb","8GB"),
     )
 

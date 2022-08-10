@@ -8,9 +8,9 @@
 
 [Develop the password reset email page](https://github.com/zuri-training/price_compare_team_23/issues/49) and [Solution](https://github.com/imrvon/michaeljordan23/tree/adam/password-email)
 
-# Adam Documentation
+# Adam Contribution Documentation
 
-I am Adam Ibrahim. I was assigned initially to develop the product details page for our website, and I visited the figma board for the product details design and I noticed that to achieve the functionality on the design I would have to use a frontend framework (React.js) which was successful and have a wonderful experience. Which I made a live server video that posted my team Whatsapp group for their opinion. 
+I am Adam Ibrahim. I was assigned initially to develop the product details page for our website, and I visited the figma board for the product details design. I noticed that to achieve the better functionality on the design I would have to use a frontend framework (React.js) which was successful and have a wonderful experience. I made a live server video and posted them to my team Whatsapp group for their opinion. 
 
 [Video before using REACT](https://github.com/zuri-training/price_compare_team_23/blob/main/addexdi/VID-20220810-WA0007.mp4) and [video after using REACT on the project](https://github.com/zuri-training/price_compare_team_23/blob/main/addexdi/VID-20220810-WA0014.mp4) which concludes me been done with the page.
 

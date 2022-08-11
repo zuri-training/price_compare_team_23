@@ -59,10 +59,8 @@
                 </div>
                 <div class="selling-desc">
                     <h5>{{ t.name }}</h5>
-                    <p>AMD B550 (Ryzen AM4) ATX gaming motherboard with PCIe 4.0, dual M.2,
-                        10 DrMOS power stages, 2.5 Gb Ethernet, HDMI, DisplayPort, SATA 6 Gbps,
-                        USB 3.2 Gen 2 Type-A and Type-C, and Aura Sync RGB lighting support</p>
-                    <a href="">Compare Price</a>
+                    <p>{{ t.name }}</p>
+                    <a href="{{t.get_absolute_url}}">Compare Price</a>
                 </div>
                 {% endfor %}
             </div>
@@ -77,12 +75,12 @@
                     <img src="{{ product.image_src }}" alt="{{ product.name }}" class="product-img">
                     <div class="top-selling-details">
                         <div class="brand-price">
-                            <h6>{{ product.name }}</h6>
+                            <h6>{{ product.name | truncatechars:15}}</h6>
                             <p>N599,000.00</p>
                         </div>
                         <div class="cart-store">
                             <img src="{% static 'category/images/shopping-cart.svg' %}" alt="shopping cart">
-                            <p>Jumia</p>
+                            <p>ShopMore</p>
                         </div>
                         <div class="reviews-star">
                             <img src="{% static 'category/images/review-1.svg' %}" alt="reviews">

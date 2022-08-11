@@ -1,6 +1,7 @@
+<<<<<<< HEAD
 from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponseRedirect
-from .models import Product
+from .models import Comment, Product
 from .forms import CommentForm
 from .scraper.jumia import get_jumia_product
 from .scraper import jumia, scraper, konga, asos
@@ -10,6 +11,7 @@ import random
 from .product import populatedB
 import time
 
+
 # import schedule
 
 #  ************product views*****************
@@ -18,6 +20,7 @@ import time
 #   @ Details about the product
 #   @ Products Listing when potential customers make a search
 #   @ Results of the search made by the customers
+
 
 
 def faq_view(request):
@@ -37,7 +40,7 @@ def documentation(request):
 
 
 def index_view(request):
-    products = Product.objects.all()[12:18]
+    products = Product.objects.all()[1:7]
     top = Product.objects.all()[0:1]
     context = {"products": products, "top": top}
     return render(request, "category/index.html", context)
@@ -68,10 +71,10 @@ def product_detail(request, id, product):
 
     if request.method == "POST":
         # A comment was posted
-        comment_form = CommentForm(data=request.POST)
-        if comment_form.is_valid():
+        comment_body = request.POST["body"]
+        if comment_body != None:
             # Create Comment object but don't save to database yet
-            new_comment = comment_form.save(commit=False)
+            new_comment = Comment(body=comment_body)
             # Assign the current post to the comment
             new_comment.product = product
             new_comment.username = request.user.username
@@ -82,29 +85,29 @@ def product_detail(request, id, product):
                     "product": product,
                     "comments": comments,
                     "platforms": platforms,
+                    "jumia": jumia,
                     "new_comment": new_comment,
-                    "comment_form": comment_form,
+                    "specs": specs,
                 },
             )
-    else:
-        comment_form = CommentForm()
 
     return render(
         request,
-        "product/detail.html",
+        "category/product-details.html",
         {
             "product": product,
             "comments": comments,
             "platforms": platforms,
             "new_comment": new_comment,
-            "comment_form": comment_form,
+            "jumia": jumia,
+            "specs": specs,
         },
     )
 
 
 class ProductListView(ListView):
     model = Product
-    # populatedB()
+    #  populatedB()
     context_object_name = "products"
     template_name = "category/product_page.html"
 
@@ -126,7 +129,7 @@ def user_search(request):
     if request.GET.get("search"):
         q = request.GET.get("search")
         products = []
-        # products.extend(asos.asos_scraper_bot(q))
+        #  products.extend(asos.asos_scraper_bot(q))
         products.extend(scraper.jumia_scraper_bot(q))
         # products.extend(jumia.jumia_scraper_bot(q))
         # products.extend(konga.konga_scraper_bot(q))
@@ -149,3 +152,4 @@ def user_search(request):
         products = Product.objects.all()
 
         return render(request, "product/user_search.html", {"products": products})
+>>>>>>> main

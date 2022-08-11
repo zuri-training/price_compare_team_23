@@ -2287,7 +2287,7 @@ body {
   /* About Us */
 
   .about_hero {
-    background-image: url("images/hero_background.png");
+    background-image: url("../images/hero_background.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

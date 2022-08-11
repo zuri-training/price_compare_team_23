@@ -381,6 +381,7 @@ body {
 #landing-main .top-selling .reviews-star {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
 }
 
@@ -389,7 +390,9 @@ body {
   display: flex;
   justify-content: space-between;
   margin-bottom: 0.3rem;
-  word-break: break-all;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 #landing-main .top-selling .brand-price h6 {
@@ -430,9 +433,6 @@ body {
 }
 
 /* Reviews and Star Section */
-#landing-main .top-selling .reviews-star {
-  margin-bottom: 1rem;
-}
 
 #landing-main .top-selling .reviews-star img {
   width: 30%;
@@ -849,9 +849,6 @@ body {
     margin-top: 7rem;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    text-align: left;
   }
 
   #landing-main .best-prices h2 {
@@ -937,11 +934,18 @@ body {
   #landing-main .top-selling .brand-price h6 {
     font-size: 0.875rem;
     line-height: 1.5rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
   }
 
   #landing-main .top-selling .brand-price p {
     font-size: 0.875rem;
     line-height: 1.5rem;
+    justify-content: unset;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
   }
 
   /* Store and Cart */

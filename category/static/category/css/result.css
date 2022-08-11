@@ -693,23 +693,8 @@ hr{
         font-weight: 700;
         color: #000000;
     }
-=======
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 *,
-*::after,
-*::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
-}
-
-body {
-    width: 1100px;
-    width: 100%;
-    margin: 0 auto;
-}
 
 /* Header Section */
 
@@ -878,7 +863,7 @@ body {
     flex-direction: column;
     align-items: center;
     height: 400px;
-    background-image: url(./result-image/image\ 6.png);
+    background-image: url(../images/result-image/image\ 6.png);
 }
 
 .sec1-1-div h1{

@@ -21,8 +21,23 @@ import time
 
 
 def faq_view(request):
-
     return render(request, "category/faq.html")
+
+
+def privacy(request):
+    return render(request, "category/privacy.html")
+
+
+def terms_of_service(request):
+    return render(request, "category/terms_of_service.html")
+
+
+def documentation(request):
+    return render(request, "category/documentation.html")
+
+
+def user_profile(request):
+    return render(request, "product/user_profile.html")
 
 
 def index_view(request):

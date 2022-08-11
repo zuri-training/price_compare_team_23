@@ -12,4 +12,8 @@ urlpatterns = [
     path("", views.index_view, name="home"),
     path("faq", views.faq_view, name="faq"),
     path("contact", views.contact_page, name="contact_page"),
+    path("privacy", views.privacy, name="privacy"),
+    path("terms_of_service", views.terms_of_service, name="terms_of_service"),
+    path("documentation", views.documentation, name="documentation"),
+    path("user_profile", views.user_profile, name="user_profile"),
 ]

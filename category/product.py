@@ -17,10 +17,14 @@ def populatedB():
             prd.save()
 
 
-def get_konga_product(product):
-    list = konga_scraper_bot(product["name"])
-    #print(list)
-    for item in list :
-        if product['brand'].lower() in item['brand'].lower():
-            #print(item)
-            return item
+def get_konga_products(product_name):
+    _products = [
+        {
+            "name": "Samsung Galaxy S22 ultra",
+            "brand": "Samsung",
+            "category": "smartphones",
+            "link": "https://www.konga.com/product/samsung-s22-ultra-12gb-ram-256gb-rom-dual-sim-blue-5807738",
+            "price": "₦827,500",
+            "platform_name": "Konga",
+        },
+    ]

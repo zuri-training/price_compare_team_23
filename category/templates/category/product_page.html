@@ -1,0 +1,167 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'category/css/style.css'%}" />
+    <link
+      rel="shortcut icon"
+      href="{%static 'category/images/favicon.svg'%}"
+      type="image/x-icon"
+    />
+    <title>Product Page</title>
+  </head>
+  <body>
+    <header id="main-header">
+      <div class="img-search">
+        <img
+          src="{% static 'category/images/favicon.svg' %}"
+          alt="mobile logo"
+          class="shopmore-mobile-logo"
+        />
+        <img
+          src="{% static 'category/images/logo.svg' %}"
+          alt="shopmore logo"
+          class="shopmore-logo"
+        />
+        <form
+          id="form"
+          role="search"
+          aria-label="Search Site"
+          class="header-form"
+          action="{% url 'category:search_results' %}"
+          method="get"
+        >
+          {% csrf_token %}
+          <input
+            type="search"
+            placeholder="Search"
+            name="search"
+            value="{{ request.GET.query }}"
+          />
+          <button type="submit">
+            <svg viewBox="0 0 1024 1024">
+              <path
+                class="path1"
+                d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"
+              ></path>
+            </svg>
+          </button>
+        </form>
+      </div>
+      <nav>
+        <a href="javascript:void(0);" class="hamburger">
+          <div class="line line-one"></div>
+          <div class="line line-two"></div>
+          <div class="line line-three"></div>
+        </a>
+
+        <div class="menu">
+          <a href="{% url 'category:home' %}" class="inactive">Home</a>
+          <a href="" class="active">Product</a>
+          <a href="" class="inactive">About</a>
+          <a href="{% url 'category:contact_page' %}" class="inactive"
+            >Contact</a
+          >
+          <a href="{% url 'category:faq' %}" class="inactive">FAQ</a>
+          <span>|</span>
+          {% if not user.is_authenticated %}
+          <a href="{% url 'accounts:signin' %}" class="header-status"
+            >Sign In</a
+          >
+          {% else %}
+          <a
+            href="{% url 'accounts:user_profile' %}"
+            class="header-status header-myaccount"
+            >{{ user.username }}</a
+          >
+          {% endif %}
+
+          <hr />
+          <div class="mobile-only">
+            <div class="mobile-icons">
+              <a href="">Settings</a>
+              <img src="{% static 'category/images/setting.svg' %}" alt="" />
+            </div>
+            <div class="mobile-icons">
+              <a href="">Name</a>
+              <img src="{% static 'category/images/user.svg' %}" alt="" />
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main id="product-page">
+      <section class="new-arrivals">
+        <button class="slide-arrow" id="slide-arrow-prev">&#8249;</button>
+        <button class="slide-arrow" id="slide-arrow-next">&#8250;</button>
+        <ul class="slides-container" id="slides-container"></ul>
+      </section>
+
+      <section>
+        <h4 class="categories-text">Categories</h4>
+        <div id="categories" class="categories"></div>
+        <div class="find-more">
+          {% for product in products %}
+          <div class="product-card categories">
+            <div class="product-image">
+              <img src="{{ product.image_src }}" alt="product image" />
+            </div>
+            <div class="product-info">
+              <h5>{{ product.name }}</h5>
+              <p>{{ product.price }}</p>
+              <a href="{{ product.get_absolute_url }}">View Product</a>
+            </div>
+          </div>
+          <style>
+            /* product card in grid of 4 rows and are mobile responsive*/
+            /* display the product card 4 in a row */
+          </style>
+          {% endfor %}
+        </div>
+        {% comment %} <a href="#">Find more items</a> {% endcomment %}
+      </section>
+    </main>
+
+    <footer id="main-footer">
+      <div class="main-footer">
+        <div class="foot-item footer-main-logo">
+          <img
+            src="{% static 'category/images/footer-logo.svg' %}"
+            alt="footer logo"
+          />
+        </div>
+        <div class="foot-item footer-mobile">
+          <img
+            src="{% static 'category/images/logo.svg' %}"
+            alt="footer logo"
+          />
+        </div>
+        <div class="footer-item foot-item">
+          <h5>Company</h5>
+          <a href="">About Us</a>
+          <a href="{% url 'category:contact_page' %}">Contact Us</a>
+          <a href="">Help & Support</a>
+          <a href="{% url 'category:faq' %}">FAQ</a>
+        </div>
+        <div class="footer-item foot-item">
+          <h5>Community</h5>
+          <a href="">Join Our Facebook Community</a>
+          <a href="">Join our Affiliate Program</a>
+          <a href="">Follow Us On Twitter</a>
+        </div>
+        <div class="footer-item foot-item">
+          <h5>Terms & Policies</h5>
+          <a href="{% url 'category:privacy' %}">Privacy Notice</a>
+          <a href="{% url 'category:terms_of_service' %}">Terms of Service</a>
+          <a href="{% url 'category:documentation' %}">Usage Guidlines</a>
+        </div>
+      </div>
+      <div class="copyright"><p>Copyright 2022: Zuri Team 23</p></div>
+    </footer>
+    <script src="{% static 'category/js/app.js' %}"></script>
+  </body>
+</html>

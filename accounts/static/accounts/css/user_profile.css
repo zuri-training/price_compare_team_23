@@ -1,0 +1,434 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+#container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#profile1 h2 {
+  text-align: left;
+  margin-bottom: 1em;
+  font-weight: 1000;
+  margin-left: 2em;
+  font-size: 2.5em;
+}
+
+#profile2 h2 {
+  text-align: left;
+  margin-bottom: 1em;
+  font-weight: 200;
+  line-height: 35px;
+  margin-right: 2em;
+  width: 50%;
+}
+
+#profile1 #prof-img {
+  height: 80vh;
+  width: 60vh;
+  margin-left: 2em;
+}
+
+#profile1 #shop-img {
+  /* height:90vh ; */
+  width: 25vh;
+  margin-bottom: 1.5em;
+}
+
+#profile1 {
+  margin-top: 2em;
+  margin-left: 3em;
+}
+
+#profile2 {
+  width: 80vh;
+  padding: 2em;
+  margin-top: 0.1em;
+  margin-right: 6em;
+}
+
+label {
+  display: block;
+  margin: 0.4em;
+}
+
+input {
+  outline: none;
+  padding: 1em;
+  border-radius: 0.3em;
+  border: 1px solid;
+  opacity: 0.7;
+  background-color: rgb(247, 252, 252, 0.9);
+  width: 90%;
+  position: relative;
+}
+
+#profile2 #box {
+  position: relative;
+}
+
+#togglePassword,
+#tg1,
+#tg2 {
+  position: absolute;
+  top: 2.4em;
+  left: 0;
+  font-size: 15px;
+  margin-left: 23em;
+  opacity: 0.5;
+}
+
+#togglePassword:hover,
+#tg1:hover,
+#tg2:hover {
+  cursor: pointer;
+}
+
+#profile2 button {
+  display: block;
+  width: 40%;
+  padding: 1em;
+  border-radius: 0.3em;
+  margin-left: 7em;
+  margin-bottom: 0.5em;
+  border: 1px solid;
+}
+
+#profile2 #btn1 {
+  border: 1.6px solid rgb(81, 162, 212);
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  font-weight: 600;
+}
+
+#profile2 #btn2 {
+  background-color: rgba(85, 206, 254, 0.954);
+  font-weight: 600;
+  border: none;
+}
+
+#profile2 #btn2:hover {
+  cursor: pointer;
+  background-color: rgb(56, 103, 133);
+  color: whitesmoke;
+}
+
+#profile2 #btn1:hover {
+  cursor: pointer;
+  background-color: rgb(5, 33, 51);
+  color: whitesmoke;
+}
+
+#logo {
+  display: none;
+}
+
+#profile2 #btn2:active,
+#profile2 #btn1:active {
+  cursor: pointer;
+  background-color: rgb(8, 56, 86);
+}
+
+#form span {
+  color: red;
+  font-size: 0.9em;
+  display: flex;
+  margin-top: 0.4em;
+}
+
+span img {
+  height: 15px;
+  margin-top: 0em;
+  margin-left: 0.3em;
+  color: red;
+}
+
+#fname.valid {
+  border: 2px solid green;
+}
+
+#fname.invalid {
+  border: 2px solid red;
+}
+
+#lname.valid {
+  border: 2px solid green;
+}
+
+#lname.invalid {
+  border: 2px solid red;
+}
+
+#email.valid {
+  border: 2px solid green;
+}
+
+#email.invalid {
+  border: 2px solid red;
+}
+
+#username.valid {
+  border: 2px solid green;
+}
+
+#username.invalid {
+  border: 2px solid red;
+}
+
+#password1.valid {
+  border: 2px solid green;
+}
+#password.valid {
+  border: 2px solid green;
+}
+
+#password1.invalid {
+  border: 2px solid red;
+}
+#password.invalid {
+  border: 2px solid red;
+}
+
+#password2.valid {
+  border: 2px solid green;
+}
+
+#password2.invalid {
+  border: 2px solid red;
+}
+
+@media only screen and (max-width: 500px) {
+  body {
+    width: 90%;
+  }
+
+  #container {
+    display: block;
+  }
+
+  #profile1 #prof-img,
+  #profile1 h2 {
+    display: none;
+  }
+
+  #profile1 #shop-img {
+    margin-bottom: 0px;
+    margin-left: -2em;
+  }
+
+  #profile1 {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #logo {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #bell {
+    height: 20px;
+  }
+
+  #user {
+    height: 25px;
+    margin-left: 13px;
+    margin-top: -0.2em;
+  }
+
+  #profile2 {
+    margin-right: 2em;
+    width: 100%;
+    margin-left: 0em;
+  }
+
+  #profile2 h2 {
+    margin-right: 0em;
+    margin-left: -1.5em;
+    padding-right: 1em;
+    width: 130%;
+    text-align: center;
+    font-size: 2em;
+    padding: 1em;
+    line-height: 39px;
+  }
+
+  #profile2 input {
+    padding: 1.2em;
+    width: 110%;
+    margin-left: 1em;
+    margin-right: 0em;
+  }
+
+  label {
+    margin-left: 1em;
+  }
+
+  #togglePassword,
+  #tg1,
+  #tg2 {
+    top: 2.8em;
+    left: 0;
+    margin-left: 25.5em;
+  }
+
+  #profile2 button {
+    margin-left: 12.5em;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    width: 90%;
+  }
+
+  #profile1 #shop-img {
+    margin-bottom: 0px;
+    margin-left: -2em;
+  }
+
+  #logo {
+    display: none;
+  }
+
+  #profile1 #prof-img {
+    margin-left: 0;
+  }
+
+  #profile2 {
+    margin-right: 2em;
+    width: 130%;
+    margin-left: 2em;
+  }
+
+  #profile2 h2 {
+    margin-right: 0em;
+    margin-left: -1.5em;
+    padding-right: -1em;
+    width: 130%;
+    font-size: 2em;
+    padding: 1em;
+    line-height: 39px;
+  }
+
+  #profile2 input {
+    padding: 1.2em;
+    width: 140%;
+    margin-left: 1em;
+    margin-right: 0em;
+  }
+
+  label {
+    margin-left: 1em;
+  }
+
+  #togglePassword,
+  #tg1,
+  #tg2 {
+    top: 2.8em;
+    left: 0;
+    margin-left: 25.9em;
+  }
+
+  #profile2 button {
+    margin-left: 7.5em;
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  #profile2 input {
+    padding: 1.2em;
+    width: 120%;
+    margin-left: 1em;
+    margin-right: 2em;
+  }
+
+  #togglePassword,
+  #tg1,
+  #tg2 {
+    top: 2.8em;
+    left: 0;
+    margin-left: 21.9em;
+  }
+
+  #profile2 button {
+    margin-left: 5.5em;
+    width: 60%;
+  }
+
+  #profile2 {
+    margin-left: 8em;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  body {
+    background: white;
+  }
+
+  input {
+    outline: none;
+    padding: 1em;
+    border-radius: 0.3em;
+    border: 1px solid;
+    opacity: 0.7;
+    background-color: rgb(247, 252, 252, 0.9);
+    width: 90%;
+    position: relative;
+  }
+
+  #togglePassword,
+  #tg1,
+  #tg2 {
+    margin-left: -28em;
+    opacity: 0.5;
+  }
+
+  #profile2 button {
+    margin-left: 9.5em;
+    width: 60%;
+  }
+
+  #profile2 {
+    width: 35%;
+    margin-left: 2em;
+    margin-right: 5em;
+  }
+
+  #profile2 h2 {
+    margin-left: -1em;
+    margin-bottom: 0em;
+  }
+
+  #profile1 {
+    margin-left: 6em;
+    margin-top: 4em;
+  }
+
+  #form span {
+    margin-left: 1em;
+  }
+
+  #profile1 #shop-img {
+    display: none;
+  }
+
+  #togglePassword,
+  #tg1,
+  #tg2 {
+    top: 2.8em;
+    left: 0;
+    margin-left: 24em;
+  }
+}

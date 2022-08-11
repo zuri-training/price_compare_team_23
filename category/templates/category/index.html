@@ -218,9 +218,9 @@
             <div class="footer-item foot-item">
                 <h5>Company</h5>
                 <a href="">About Us</a>
-                <a href="">Contact Us</a>
+                <a href="{% url 'category:contact_page' %}">Contact Us</a>
                 <a href="">Help & Support</a>
-                <a href="">FAQ</a>
+                <a href="{% url 'category:faq' %}">FAQ</a>
             </div>
             <div class="footer-item foot-item">
                 <h5>Community</h5>
@@ -230,9 +230,9 @@
             </div>
             <div class="footer-item foot-item">
                 <h5>Terms & Policies</h5>
-                <a href="">Privacy Notice</a>
-                <a href="">Terms of Service</a>
-                <a href="">Usage Guidlines</a>
+                <a href="{% url 'category:privacy' %}">Privacy Notice</a>
+                <a href="{% url 'category:terms_of_service' %}">Terms of Service</a>
+                <a href="{% url 'category:documentation' %}">Usage Guidlines</a>
             </div>
         </div>
         <div class="copyright"><p>Copyright 2022: Zuri Team 23</p></div>

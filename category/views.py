@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponseRedirect
 from .models import Comment, Product
@@ -7,8 +8,9 @@ from .scraper import jumia, scraper, konga, asos
 from django.db.models import Q
 from django.views.generic import ListView
 import random
-from .product import populatedB, get_konga_product
+from .product import populatedB
 import time
+
 
 # import schedule
 
@@ -20,9 +22,21 @@ import time
 #   @ Results of the search made by the customers
 
 
-def faq_view(request):
 
+def faq_view(request):
     return render(request, "category/faq.html")
+
+
+def privacy(request):
+    return render(request, "category/privacy.html")
+
+
+def terms_of_service(request):
+    return render(request, "category/terms_of_service.html")
+
+
+def documentation(request):
+    return render(request, "category/documentation.html")
 
 
 def index_view(request):
@@ -51,13 +65,8 @@ def product_detail(request, id, product):
         "category": product.category,
     }
     platforms = []
-    jumia = []
+    platforms.append(get_jumia_product(prd))
     # platforms.append(get_konga_product(prd))
-    jumia.append(get_jumia_product(prd))
-    specs = {
-        "ram_size": product.ram_size,
-        "rom_size": product.rom_size,
-    }
     # print(platform)
 
     if request.method == "POST":
@@ -98,14 +107,14 @@ def product_detail(request, id, product):
 
 class ProductListView(ListView):
     model = Product
-    # populatedB()
+    #  populatedB()
     context_object_name = "products"
-    template_name = "product/list.html"
+    template_name = "category/product_page.html"
 
 
 class SearchResultView(ListView):
     model = Product
-    template_name = "product/search_result.html"
+    template_name = "category/result.html"
     context_object_name = "products"
 
     def get_queryset(self):
@@ -120,7 +129,7 @@ def user_search(request):
     if request.GET.get("search"):
         q = request.GET.get("search")
         products = []
-        # products.extend(asos.asos_scraper_bot(q))
+        #  products.extend(asos.asos_scraper_bot(q))
         products.extend(scraper.jumia_scraper_bot(q))
         # products.extend(jumia.jumia_scraper_bot(q))
         # products.extend(konga.konga_scraper_bot(q))
@@ -143,3 +152,4 @@ def user_search(request):
         products = Product.objects.all()
 
         return render(request, "product/user_search.html", {"products": products})
+>>>>>>> main

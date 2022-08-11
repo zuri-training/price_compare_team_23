@@ -36,10 +36,6 @@ def documentation(request):
     return render(request, "category/documentation.html")
 
 
-def user_profile(request):
-    return render(request, "product/user_profile.html")
-
-
 def index_view(request):
     products = Product.objects.all()[12:18]
     top = Product.objects.all()[0:1]

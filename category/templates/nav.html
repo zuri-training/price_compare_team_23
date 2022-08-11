@@ -53,7 +53,11 @@
       {% if not user.is_authenticated %}
       <a href="{% url 'accounts:signin' %}" class="header-status">Sign In</a>
       {% else %}
-      <a href="" class="header-status header-myaccount">{{ user.username }}</a>
+      <a
+        href="{% url 'accounts:user_profile' %}"
+        class="header-status header-myaccount"
+        >{{ user.username }}</a
+      >
       {% endif %}
 
       <hr />

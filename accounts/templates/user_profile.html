@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>User Profile</title>
-    <link rel="stylesheet" href="user-profile.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="{% static 'accounts/css/user_profile.css'%}" />
+    <link rel="stylesheet" href="{% static 'category/css/style.css'%}" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
@@ -20,19 +21,31 @@
     <header id="main-header">
       <div class="img-search">
         <img
-          src="img/favicon.svg"
+          src="{% static 'category/images/favicon.svg' %}"
           alt="mobile logo"
           class="shopmore-mobile-logo"
         />
-        <img src="img/logo.svg" alt="shopmore logo" class="shopmore-logo" />
+        <img
+          src="{% static 'category/images/logo.svg' %}"
+          alt="shopmore logo"
+          class="shopmore-logo"
+        />
         <form
           id="form"
           role="search"
           aria-label="Search Site"
           class="header-form"
+          action="{% url 'category:search_results' %}"
+          method="get"
         >
-          <input type="search" placeholder="Search" />
-          <button>
+          {% csrf_token %}
+          <input
+            type="search"
+            placeholder="Search"
+            name="search"
+            value="{{ request.GET.query }}"
+          />
+          <button type="submit">
             <svg viewBox="0 0 1024 1024">
               <path
                 class="path1"
@@ -50,24 +63,35 @@
         </a>
 
         <div class="menu">
-          <a href="" class="active">Home</a>
+          <a href="{% url 'category:home' %}" class="inactive">Home</a>
           <a href="" class="inactive">Product</a>
           <a href="" class="inactive">About</a>
-          <a href="" class="inactive">Contact</a>
-          <a href="" class="inactive">FAQ</a>
+          <a href="{% url 'category:contact_page' %}" class="inactive"
+            >Contact</a
+          >
+          <a href="{% url 'category:faq' %}" class="inactive">FAQ</a>
           <span>|</span>
-          <a href="" class="header-status">Sign In</a>
-          <a href="" class="header-status header-myaccount">My Account</a>
+          {% if not user.is_authenticated %}
+          <a href="{% url 'accounts:signin' %}" class="header-status"
+            >Sign In</a
+          >
+          {% else %}
+          <a
+            href="{% url 'accounts:user_profile' %}"
+            class="header-status header-myaccount"
+            >{{ user.username }}</a
+          >
+          {% endif %}
 
           <hr />
           <div class="mobile-only">
             <div class="mobile-icons">
               <a href="">Settings</a>
-              <img src="img/setting.svg" alt="" />
+              <img src="{% static 'category/images/setting.svg' %}" alt="" />
             </div>
             <div class="mobile-icons">
               <a href="">Name</a>
-              <img src="img/user.svg" alt="" />
+              <img src="{% static 'category/images/user.svg' %}" alt="" />
             </div>
           </div>
         </div>
@@ -77,16 +101,16 @@
     <main id="container">
       <div id="profile1">
         <h2>My Profile</h2>
-        <img src="img/user-profile.png" alt="" id="prof-img" />
+        <img src="{% static 'images/user-profile.png'%}" alt="" id="prof-img" />
         <div id="logo">
-          <img src="notification.png" alt="" id="bell" />
-          <img src="profile-circle.png" alt="" id="user" />
+          <img src="{% static 'images/notification.png'%}" alt="" id="bell" />
+          <img src="{% static 'images/profile-circle.png'%}" alt="" id="user" />
         </div>
       </div>
 
       <div id="profile2">
         <h2>Update Your Profile Information Below.</h2>
-        <form action="" id="form">
+        <form action="" id="form" method="get">
           <label for="fname">First name</label>
           <input
             type="text"
@@ -128,6 +152,19 @@
           <span id="sp4"></span><br />
 
           <div id="box">
+            <label for="Change-password">Old Password</label>
+            <input
+              type="password"
+              name="old_password"
+              placeholder="************"
+              id="password"
+              onkeydown="log6()"
+            />
+            <i class="far fa-eye" id="tg1"></i>
+            <span id="sp6"></span><br />
+          </div>
+
+          <div id="box">
             <label for="Change-password">Change Password</label>
             <input
               type="password"
@@ -152,8 +189,12 @@
             <i class="far fa-eye" id="tg2"></i>
             <span id="sp5"></span><br />
           </div>
-          <button id="btn1">Save Changes</button>
-          <button id="btn2">Log Out</button>
+          <button type="submit" id="btn1">Save Changes</button>
+          <a
+            style="text-decoration: none; color: black; padding: 10px"
+            href="{accounts:logout}"
+            ><button id="btn2">Log Out</button></a
+          >
         </form>
       </div>
     </main>
@@ -189,6 +230,6 @@
       <div class="copyright"><p>Copyright 2022: Zuri Team 23</p></div>
     </footer>
 
-    <script src="user-profile.js"></script>
+    <script src="{% static 'accounts/js/user-profile.js'%}"></script>
   </body>
 </html>

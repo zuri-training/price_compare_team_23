@@ -15,5 +15,4 @@ urlpatterns = [
     path("privacy", views.privacy, name="privacy"),
     path("terms_of_service", views.terms_of_service, name="terms_of_service"),
     path("documentation", views.documentation, name="documentation"),
-    path("user_profile", views.user_profile, name="user_profile"),
 ]

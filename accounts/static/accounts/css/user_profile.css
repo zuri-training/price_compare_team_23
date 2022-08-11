@@ -188,8 +188,14 @@ span img {
 #password1.valid {
   border: 2px solid green;
 }
+#password.valid {
+  border: 2px solid green;
+}
 
 #password1.invalid {
+  border: 2px solid red;
+}
+#password.invalid {
   border: 2px solid red;
 }
 

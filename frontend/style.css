@@ -556,7 +556,7 @@ body {
   font-size: 3rem;
   line-height: 4rem;
   font-weight: 700;
-  background: #5cceeb;
+  background: #1F454E;
   padding: 0rem 2rem;
   color: #ffffff;
 }
@@ -589,15 +589,14 @@ body {
   gap: 2rem;
 }
 
-#faq-main .faq-wrapper h5,
-#faq-main .faq-bottom h5 {
-  font-size: 2rem;
-  line-height: 2.7rem;
-  font-weight: 400;
+#faq-main .faq-wrapper h6 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  color: #12292F;
 }
 
-#faq-main .faq-wrapper p,
-#faq-main .faq-bottom p {
+#faq-main .faq-wrapper p {
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-weight: 400;
@@ -609,15 +608,34 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: url(img/faq-bottom-bg.svg) no-repeat;
   padding: 5rem 0 5rem;
   text-align: center;
+  background-color: #1F454E;
+  width: 60%;
+  margin: 0 auto;
 }
 
-#faq-main .faq-bottom h5,
+#faq-main .faq-bottom h4,
 #faq-main .faq-bottom p {
   color: #dfe7e8;
-  max-width: 47%;
+  max-width: 90%;
+}
+
+#faq-main .faq-bottom h4 {
+  font-size: 2.5rem;
+  line-height: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+#faq-main .faq-bottom p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+
+#faq-main .faq-bottom a {
+  text-decoration: none;
 }
 
 #faq-main .faq-bottom span {

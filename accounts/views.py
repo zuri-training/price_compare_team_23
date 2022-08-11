@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from django.shortcuts import redirect, render
 from .forms import UserRegistrationForm
 from django.contrib.auth.models import User
@@ -63,9 +62,7 @@ def register(request):
 
         return redirect("category:home")
 
-        return redirect("category:home")
     return render(request, "registration/signUp.html")
->>>>>>> main
 
 
 @login_required

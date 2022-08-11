@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponseRedirect
 from .models import Comment, Product
@@ -20,7 +19,6 @@ import time
 #   @ Details about the product
 #   @ Products Listing when potential customers make a search
 #   @ Results of the search made by the customers
-
 
 
 def faq_view(request):
@@ -64,10 +62,14 @@ def product_detail(request, id, product):
         "brand": product.brand,
         "category": product.category,
     }
-    platforms = []
-    platforms.append(get_jumia_product(prd))
+    specs = {
+        "ram_size": product.ram_size,
+        "rom_size": product.rom_size,
+    }
+    jumia = []
     # platforms.append(get_konga_product(prd))
-    # print(platform)
+    jumia.append(get_jumia_product(prd))
+    platforms = []
 
     if request.method == "POST":
         # A comment was posted
@@ -116,6 +118,7 @@ class SearchResultView(ListView):
     model = Product
     template_name = "category/result.html"
     context_object_name = "products"
+    paginate_by: int = 10
 
     def get_queryset(self):
         query = self.request.GET.get("search")
@@ -123,33 +126,3 @@ class SearchResultView(ListView):
             Q(name__icontains=query) | Q(category__icontains=query)
         )
         return list
-
-
-def user_search(request):
-    if request.GET.get("search"):
-        q = request.GET.get("search")
-        products = []
-        #  products.extend(asos.asos_scraper_bot(q))
-        products.extend(scraper.jumia_scraper_bot(q))
-        # products.extend(jumia.jumia_scraper_bot(q))
-        # products.extend(konga.konga_scraper_bot(q))
-        # products.extend(payporte.payporte_scraper_bot(q))
-        # random.shuffle(products)
-        for i in range(len(products)):
-
-            objects = Product.objects.create(
-                brand=products[i]["brand"],
-                price=products[i]["price"],
-                # vendor=products[i]["from"],
-                image_src=products[i]["image"],
-                name=products[i]["name"],
-                category=products[i]["category"],
-            )
-            objects.save()
-        return render(request, "product/user_search.html", {"products": products})
-
-    else:
-        products = Product.objects.all()
-
-        return render(request, "product/user_search.html", {"products": products})
->>>>>>> main

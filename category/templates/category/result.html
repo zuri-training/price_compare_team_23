@@ -60,7 +60,7 @@
           
               <div class="menu">
                 <a href="{% url 'category:home' %}" class="active">Home</a>
-                <a href="" class="inactive">Product</a>
+                <a href="{% url 'category:products'%}" class="inactive">Product</a>
                 <a href="" class="inactive">About</a>
                 <a href="{% url 'category:contact_page' %}" class="inactive">Contact</a>
                 <a href="{% url 'category:faq' %}" class="inactive">FAQ</a>
@@ -68,7 +68,7 @@
                 {% if not user.is_authenticated %}
                 <a href="{% url 'accounts:signin' %}" class="header-status">Sign In</a>
                 {% else %}
-                <a href="" class="header-status header-myaccount">{{ user.username }}</a>
+                <a href="{% url 'accounts:user_profile' %}" class="header-status header-myaccount">{{ user.username }}</a>
                 {% endif %}
           
                 <hr />
@@ -100,7 +100,7 @@
                 </div>
             </section>
 
-            <section>
+            {% comment %} <section>
                 <div class="sec1-0-div">
                     <div class="sec1-1-div">
                         <h1>Shop more items at affordable prices</h1>
@@ -119,17 +119,17 @@
                         </form>
                     </div>
                 </div>
-            </section>
+            </section> {% endcomment %}
 
             <section>
                 <div class="sec2-0-div">
                     <div class="sec2-1-div">
                         <p>Search Results: </p>
-                        <h5 class="big-p">Lenovo ThinkPad T480s</h5>
+                        <h5 class="big-p">{{ request.GET.query}}</h5>
                     </div>
                     <div>
-                        <p class="small-p">5 out of 10</p>
-                    </div>
+                        <p class="small-p">{{products.count}}</p>
+                 </div>
                 </div>
             </section>
 
@@ -147,7 +147,7 @@
                         <div id="sec3-2-div">
                             <div id="sec3-3-div">
                                 <div>
-                                    <P class="ph-name sub-name">Jumia</P>
+                                    <P class="ph-name sub-name">Shopmore</P>
                                 </div>
                                 <div>
                                     <P class="pro-name">{{product.name}}</P>
@@ -392,32 +392,29 @@
 
         <footer id="main-footer">
             <div class="main-footer">
-                <div class="foot-item footer-main-logo"><img src="{% static 'category/result-image/footer-logo.svg' %}"
-                        alt="footer logo"></div>
-                <div class="foot-item footer-mobile"><img src="{% static 'category/result-image/logo.svg' %}"
-                        alt="footer logo"></div>
+                <div class="foot-item footer-main-logo"><img src="{% static 'category/images/footer-logo.svg' %}" alt="footer logo"></div>
+                <div class="foot-item footer-mobile"><img src="{% static 'category/images/logo.svg' %}" alt="footer logo"></div>
                 <div class="footer-item foot-item">
                     <h5>Company</h5>
                     <a href="">About Us</a>
-                    <a href="">Contact Us</a>
+                    <a href="{% url 'category:contact_page' %}">Contact Us</a>
                     <a href="">Help & Support</a>
-                    <a href="">FAQ</a>
+                    <a href="{% url 'category:faq' %}">FAQ</a>
                 </div>
                 <div class="footer-item foot-item">
                     <h5>Community</h5>
                     <a href="">Join Our Facebook Community</a>
+                    <a href="">Join our Affiliate Program</a>
                     <a href="">Follow Us On Twitter</a>
                 </div>
                 <div class="footer-item foot-item">
                     <h5>Terms & Policies</h5>
-                    <a href="">Privacy Notice</a>
-                    <a href="">Terms of Service</a>
-                    <a href="">Documentation</a>
+                    <a href="{% url 'category:privacy' %}">Privacy Notice</a>
+                    <a href="{% url 'category:terms_of_service' %}">Terms of Service</a>
+                    <a href="{% url 'category:documentation' %}">Usage Guidlines</a>
                 </div>
             </div>
-            <div class="copyright">
-                <p>Copyright 2022: Zuri Team 23</p>
-            </div>
+            <div class="copyright"><p>Copyright 2022: Zuri Team 23</p></div>
         </footer>
 
     </body>

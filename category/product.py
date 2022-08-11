@@ -15,12 +15,3 @@ def populatedB():
         # l = Product.objects.create(name=p['name'],brand=p['brand'],category='smartphones',img_src=p['img_src'])
         if created:
             prd.save()
-
-
-def get_konga_product(product):
-    list = konga_scraper_bot(product["name"])
-    #print(list)
-    for item in list :
-        if product['brand'].lower() in item['brand'].lower():
-            #print(item)
-            return item

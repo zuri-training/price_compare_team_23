@@ -17,19 +17,31 @@
     <header id="main-header">
       <div class="img-search">
         <img
-          src="img/favicon.svg"
+          src="{% static 'category/images/favicon.svg' %}"
           alt="mobile logo"
           class="shopmore-mobile-logo"
         />
-        <img src="img/logo.svg" alt="shopmore logo" class="shopmore-logo" />
+        <img
+          src="{% static 'category/images/logo.svg' %}"
+          alt="shopmore logo"
+          class="shopmore-logo"
+        />
         <form
           id="form"
           role="search"
           aria-label="Search Site"
           class="header-form"
+          action="{% url 'category:search_results' %}"
+          method="get"
         >
-          <input type="search" placeholder="Search" />
-          <button>
+          {% csrf_token %}
+          <input
+            type="search"
+            placeholder="Search"
+            name="search"
+            value="{{ request.GET.query }}"
+          />
+          <button type="submit">
             <svg viewBox="0 0 1024 1024">
               <path
                 class="path1"
@@ -47,24 +59,35 @@
         </a>
 
         <div class="menu">
-          <a href="" class="active">Home</a>
+          <a href="{% url 'category:home' %}" class="inactive">Home</a>
           <a href="" class="inactive">Product</a>
           <a href="" class="inactive">About</a>
-          <a href="" class="inactive">Contact</a>
-          <a href="" class="inactive">FAQ</a>
+          <a href="{% url 'category:contact_page' %}" class="inactive"
+            >Contact</a
+          >
+          <a href="{% url 'category:faq' %}" class="inactive">FAQ</a>
           <span>|</span>
-          <a href="" class="header-status">Sign In</a>
-          <a href="" class="header-status header-myaccount">My Account</a>
+          {% if not user.is_authenticated %}
+          <a href="{% url 'accounts:signin' %}" class="header-status"
+            >Sign In</a
+          >
+          {% else %}
+          <a
+            href="{% url 'accounts:user_profile' %}"
+            class="header-status header-myaccount"
+            >{{ user.username }}</a
+          >
+          {% endif %}
 
           <hr />
           <div class="mobile-only">
             <div class="mobile-icons">
               <a href="">Settings</a>
-              <img src="img/setting.svg" alt="" />
+              <img src="{% static 'category/images/setting.svg' %}" alt="" />
             </div>
             <div class="mobile-icons">
               <a href="">Name</a>
-              <img src="img/user.svg" alt="" />
+              <img src="{% static 'category/images/user.svg' %}" alt="" />
             </div>
           </div>
         </div>

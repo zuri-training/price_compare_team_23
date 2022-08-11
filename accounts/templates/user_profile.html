@@ -64,7 +64,7 @@
 
         <div class="menu">
           <a href="{% url 'category:home' %}" class="inactive">Home</a>
-          <a href="" class="inactive">Product</a>
+          <a href="{% url 'category:products'%}" class="inactive">Product</a>
           <a href="" class="inactive">About</a>
           <a href="{% url 'category:contact_page' %}" class="inactive"
             >Contact</a
@@ -101,10 +101,22 @@
     <main id="container">
       <div id="profile1">
         <h2>My Profile</h2>
-        <img src="{% static 'images/user-profile.png'%}" alt="" id="prof-img" />
+        <img
+          src="{% static 'accounts/img/user-profile.png'%}"
+          alt=""
+          id="prof-img"
+        />
         <div id="logo">
-          <img src="{% static 'images/notification.png'%}" alt="" id="bell" />
-          <img src="{% static 'images/profile-circle.png'%}" alt="" id="user" />
+          <img
+            src="{% static 'accounts/img/notification.png'%}"
+            alt=""
+            id="bell"
+          />
+          <img
+            src="{% static 'accounts/img/profile-circle.png'%}"
+            alt=""
+            id="user"
+          />
         </div>
       </div>
 
@@ -191,7 +203,7 @@
           </div>
           <button type="submit" id="btn1">Save Changes</button>
           <a
-            style="text-decoration: none; color: black; padding: 10px"
+            style="text-decoration: none; color: black"
             href="{accounts:logout}"
             ><button id="btn2">Log Out</button></a
           >
@@ -202,17 +214,23 @@
     <footer id="main-footer">
       <div class="main-footer">
         <div class="foot-item footer-main-logo">
-          <img src="img/footer-logo.svg" alt="footer logo" />
+          <img
+            src="{% static 'category/images/footer-logo.svg' %}"
+            alt="footer logo"
+          />
         </div>
         <div class="foot-item footer-mobile">
-          <img src="img/logo.svg" alt="footer logo" />
+          <img
+            src="{% static 'category/images/logo.svg' %}"
+            alt="footer logo"
+          />
         </div>
         <div class="footer-item foot-item">
           <h5>Company</h5>
           <a href="">About Us</a>
-          <a href="">Contact Us</a>
+          <a href="{% url 'category:contact_page' %}">Contact Us</a>
           <a href="">Help & Support</a>
-          <a href="">FAQ</a>
+          <a href="{% url 'category:faq' %}">FAQ</a>
         </div>
         <div class="footer-item foot-item">
           <h5>Community</h5>
@@ -222,9 +240,9 @@
         </div>
         <div class="footer-item foot-item">
           <h5>Terms & Policies</h5>
-          <a href="">Privacy Notice</a>
-          <a href="">Terms of Service</a>
-          <a href="">Usage Guidlines</a>
+          <a href="{% url 'category:privacy' %}">Privacy Notice</a>
+          <a href="{% url 'category:terms_of_service' %}">Terms of Service</a>
+          <a href="{% url 'category:documentation' %}">Usage Guidlines</a>
         </div>
       </div>
       <div class="copyright"><p>Copyright 2022: Zuri Team 23</p></div>

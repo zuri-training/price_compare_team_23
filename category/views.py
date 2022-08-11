@@ -7,7 +7,7 @@ from .scraper import jumia, scraper, konga, asos
 from django.db.models import Q
 from django.views.generic import ListView
 import random
-from .product import populatedB, get_konga_product
+from .product import populatedB
 import time
 
 # import schedule
@@ -106,7 +106,7 @@ class ProductListView(ListView):
     model = Product
     # populatedB()
     context_object_name = "products"
-    template_name = "product/list.html"
+    template_name = "category/product_page.html"
 
 
 class SearchResultView(ListView):

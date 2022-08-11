@@ -6,7 +6,7 @@ from .views import ProductListView, product_detail, SearchResultView
 app_name = "category"
 
 urlpatterns = [
-    path("product", ProductListView.as_view(), name="landing"),
+    path("products", ProductListView.as_view(), name="products"),
     path("<uuid:id>/<slug:product>", product_detail, name="product_detail"),
     path("search/", SearchResultView.as_view(), name="search_results"),
     path("", views.index_view, name="home"),

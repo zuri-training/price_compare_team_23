@@ -9,19 +9,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Details</title>
     <link rel="stylesheet" href="{% static 'category/css/product-details.css' %}">
-    <link rel="shortcut icon" href="{% static 'category/images/favicon.svg' %}" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static 'category/images/product-img/favicon.svg' %}" type="image/x-icon">
 </head>
 
 <body>
     <header id="main-header">
         <div class="img-search">
           <img
-            src="{% static 'category/images/favicon.svg' %}"
+            src="{% static 'category/images/product-img/favicon.svg' %}"
             alt="mobile logo"
             class="shopmore-mobile-logo"
           />
           <img
-            src="{% static 'category/images/logo.svg' %}"
+            src="{% static 'category/images/product-img/logo.svg' %}"
             alt="shopmore logo"
             class="shopmore-logo"
           />
@@ -78,11 +78,11 @@
             <div class="mobile-only">
               <div class="mobile-icons">
                 <a href="">Settings</a>
-                <img src="{% static 'category/images/setting.svg' %}" alt="" />
+                <img src="{% static 'category/images/product-img/setting.svg' %}" alt="" />
               </div>
               <div class="mobile-icons">
                 <a href="">Name</a>
-                <img src="{% static 'category/images/user.svg' %}" alt="" />
+                <img src="{% static 'category/images/product-img/user.svg' %}" alt="" />
               </div>
             </div>
           </div>
@@ -140,7 +140,7 @@
                             </div>
                             <div id="social-img">
                                 {% post_to_facebook "Check it out!" facebook.com "Post to Facebook" %}
-                                <a href="#"><img class="insta" src="./product-img/instagram.jpg" alt=""></a>            
+                                <!-- <a href="#"><img class="insta" src="./product-img/instagram.jpg" alt=""></a>     -->       
                                 {% post_to_twitter "Check it out!" twitter.com "Post to Twitter" %}
                             </div>
                         </div>

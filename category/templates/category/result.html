@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Result</title>
         <link rel="stylesheet" href="{% static 'category/css/result.css' %}">
-        <link rel="shortcut icon" href="{% static 'category/result-image/favicon.svg' %}" type="image/x-icon">
+        <link rel="shortcut icon" href="{% static 'category/images/product-img/favicon.svg' %}" type="image/x-icon">
     </head>
 
     <body>
@@ -17,12 +17,12 @@
         <header id="main-header">
             <div class="img-search">
               <img
-                src="{% static 'category/images/favicon.svg' %}"
+                src="{% static 'category/images/product-img/favicon.svg' %}"
                 alt="mobile logo"
                 class="shopmore-mobile-logo"
               />
               <img
-                src="{% static 'category/images/logo.svg' %}"
+                src="{% static 'category/images/product-img/logo.svg' %}"
                 alt="shopmore logo"
                 class="shopmore-logo"
               />
@@ -160,9 +160,9 @@
                                     alt=""></img>
                                     <img class="img-1 star-mo" src="{% static 'category/images/result-image/star.png' %}"
                                         alt=""></img>
-                                    <img class="img-1 star-mo" src="{% static 'category/images/result-image/star.png' %}"
+                                    <img class="img-1 star-mo" src="{% static 'category/images/images/result-image/star.png' %}"
                                         alt=""></img>
-                                    <img class="img-1 star-mo" src="{% static 'category/images/result-image/star.png' %}"
+                                    <img class="img-1 star-mo" src="{% static 'category/images/images/result-image/star.png' %}"
                                         alt=""></img>
                                     <img class="img-1 star-mo" src="{% static 'category/images/result-image/star2.png' %}"
                                         alt=""></img>
@@ -392,8 +392,8 @@
 
         <footer id="main-footer">
             <div class="main-footer">
-                <div class="foot-item footer-main-logo"><img src="{% static 'category/images/footer-logo.svg' %}" alt="footer logo"></div>
-                <div class="foot-item footer-mobile"><img src="{% static 'category/images/logo.svg' %}" alt="footer logo"></div>
+                <div class="foot-item footer-main-logo"><img src="{% static 'category/images/product-img/footer-logo.svg' %}" alt="footer logo"></div>
+                <div class="foot-item footer-mobile"><img src="{% static 'category/images/product-img/logo.svg' %}" alt="footer logo"></div>
                 <div class="footer-item foot-item">
                     <h5>Company</h5>
                     <a href="">About Us</a>
@@ -404,14 +404,13 @@
                 <div class="footer-item foot-item">
                     <h5>Community</h5>
                     <a href="">Join Our Facebook Community</a>
-                    <a href="">Join our Affiliate Program</a>
                     <a href="">Follow Us On Twitter</a>
                 </div>
                 <div class="footer-item foot-item">
                     <h5>Terms & Policies</h5>
                     <a href="{% url 'category:privacy' %}">Privacy Notice</a>
                     <a href="{% url 'category:terms_of_service' %}">Terms of Service</a>
-                    <a href="{% url 'category:documentation' %}">Usage Guidlines</a>
+                    <a href="{% url 'category:documentation' %}">Documentation</a>
                 </div>
             </div>
             <div class="copyright"><p>Copyright 2022: Zuri Team 23</p></div>

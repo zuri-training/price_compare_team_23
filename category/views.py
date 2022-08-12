@@ -8,6 +8,7 @@ from django.db.models import Q
 from django.views.generic import ListView
 import random
 from .product import populatedB
+from .products import get_ali_express_product
 import time
 
 
@@ -67,9 +68,9 @@ def product_detail(request, id, product):
         "rom_size": product.rom_size,
     }
     jumia = []
-    # platforms.append(get_konga_product(prd))
     jumia.append(get_jumia_product(prd))
     platforms = []
+    platforms.append(get_ali_express_product(prd["name"]))
 
     if request.method == "POST":
         # A comment was posted

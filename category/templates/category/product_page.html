@@ -101,24 +101,25 @@
         <ul class="slides-container" id="slides-container"></ul>
       </section>
 
-      <section>
-        <h4 class="categories-text">Categories</h4>
-        <div id="categories" class="categories"></div>
-        <div class="find-more">
+      <section class="single-category">
+        <h4 class="categories-text">Smartphones</h4>
+        <div id="categories" class="categories single-category">
           {% for product in products %}
-          <div class="product-card categories">
-            <div class="product-image">
-              <img src="{{ product.image_src }}" alt="product image" />
-            </div>
-            <div class="product-info">
-              <h5>{{ product.name }}</h5>
-              <p>{{ product.price }}</p>
-              <a href="{{ product.get_absolute_url }}">View Product</a>
-            </div>
+          <div id="images" class="category-images">
+            <a style="text-decoration: none" href="{{ product.get_absolute_url }}">
+                <div  class="single-product">
+                    <div class="product-image">
+                      <img src="{{ product.image_src }}" alt="product image" />
+                    </div>
+                      <p class="product_name">{{ product.name }}</p>
+                </div>
+              </a>
+          </div>
           </div>
           {% endfor %}
         </div>
-        {% comment %} <a href="#">Find more items</a> {% endcomment %}
+        <div class="find-more"></div>
+        <a href="#">Find more items</a>
       </section>
     </main>
 

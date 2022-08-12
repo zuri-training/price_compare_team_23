@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 # price_compare_team_23
 
 # Price compare
@@ -11,8 +9,6 @@ Shopmore a web application used to compare prices of products from different onl
 # Project Documentation
 
 [Documentation](https://docs.google.com/document/d/1LwY4xf3l5XciiLNhw41vyeaFBxyWQHW0W8_FRE-xsR4/edit)
-
-# Table of Content
 
 # Technology used
 

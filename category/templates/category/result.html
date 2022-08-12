@@ -89,7 +89,7 @@
         <main>
             <section>
                 <div id="input-mo">
-                    <form method="post"  action="{% url 'category:search_results' %}" id="form" role="search" aria-label="Search Site" class="header-form">
+                    <form method="get"  action="{% url 'category:search_results' %}" id="form" role="search" aria-label="Search Site" class="header-form">
                         {% csrf_token %}
                         <input name="search" type="search" placeholder="Search" value="{{ request.GET.query }}">
                         <button type="submit"><svg viewBox="0 0 1024 1024">
@@ -112,9 +112,10 @@
                         <span></span>
                     </div>
                     <div class="sec1-3-div">
-                        <form method="post" action="">
+                        <form method="get" action="{% url 'category:search_results' %}">
+                            {% csrf_token %}
                             <label class="label-2" for="">
-                                <input class="input-2" type="search" placeholder="Find a product">
+                                <input name="search" class="input-2" type="search" placeholder="Find a product">
                                 <button class="button-2" type="submit">Search</button>
                             </label>
                         </form>

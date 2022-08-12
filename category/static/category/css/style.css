@@ -685,6 +685,7 @@ body {
     top: 0;
     padding: 0 2rem;
     height: 4rem;
+    z-index: 100;
   }
 
   #main-header .img-search .shopmore-logo {
@@ -1533,6 +1534,7 @@ body {
   -ms-overflow-style: none; /* hiding the scrollbar for Internet Explorer, Edge */
   scrollbar-width: none; /* hiding the scrollbar for Firefox */
 }
+
 .category-images::-webkit-scrollbar {
   display: none; /* hiding the scrollbar for Chrome, Safari, and Opera */
 }
@@ -1561,11 +1563,81 @@ body {
   font-size: 32px;
 }
 
-.product_name {
-  font-size: 24px;
-  margin: 1.5% 0;
+.single-product .product_name {
+  font-size: 20px;
+  /* margin: 1.5% auto; */
+  /* text-overflow: ellipsis; */
+  /* white-space: pre-wrap; */
+  /* overflow: hidden; */
   color: #6a7b7b;
   text-align: center;
+  /* word-break: break-word; */
+  /* word-wrap: break-word; */
+  /* position: absolute; */
+}
+
+@media screen and (max-width: 850px) {
+  .single-product .product_name {
+    font-size: 10px !important;
+  }
+
+  .single-product {
+    width: 30% !important;
+    flex: 1 0 25% !important;
+  }
+  .single-category .category-text {
+    font-size: 28px !important;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .single-product .product_name {
+    font-size: 18px !important;
+  }
+
+  .single-product {
+    width: 30% !important;
+    flex: 1 0 30% !important;
+  }
+
+  .category-images {
+    gap: 25px !important;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .single-product .product_name {
+    font-size: 15px !important;
+  }
+
+  .single-product {
+    width: 35% !important;
+    flex: 1 0 40% !important;
+  }
+
+  .category-images {
+    gap: 25px !important;
+  }
+  .single-category .category-text {
+    font-size: 25px !important;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .product_name {
+    font-size: 0.8rem !important;
+  }
+
+  .single-category .category-text {
+    font-size: 22px !important;
+  }
+  #product-page .slides-container {
+    height: 25vh;
+  }
+
+  #product-page .slide-arrow {
+    margin: auto -1%;
+  }
 }
 
 @media screen and (max-width: 990px) {
@@ -1578,13 +1650,13 @@ body {
   }
 
   /* First section  */
-  #product-page-header .new-arrivals {
+  #product-page .new-arrivals {
     position: relative;
     overflow: hidden;
     padding: 0 6%;
   }
 
-  #product-page-header .slides-container {
+  #product-page .slides-container {
     height: 40vh;
     width: 100%;
     display: flex;
@@ -1669,7 +1741,7 @@ body {
     margin: 2% 0 3%;
   }
 
-  .category-text {
+  .single-category .category-text {
     font-size: 1.7rem;
     margin-bottom: 1%;
   }

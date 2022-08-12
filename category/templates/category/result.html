@@ -89,9 +89,10 @@
         <main>
             <section>
                 <div id="input-mo">
-                    <form id="form" role="search" aria-label="Search Site" class="header-form">
-                        <input type="search" placeholder="Search">
-                        <button><svg viewBox="0 0 1024 1024">
+                    <form method="post"  action="{% url 'category:search_results' %}" id="form" role="search" aria-label="Search Site" class="header-form">
+                        {% csrf_token %}
+                        <input name="search" type="search" placeholder="Search" value="{{ request.GET.query }}">
+                        <button type="submit"><svg viewBox="0 0 1024 1024">
                                 <path class="path1"
                                     d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z">
                                 </path>
@@ -100,7 +101,7 @@
                 </div>
             </section>
 
-            {% comment %} <section>
+            <section>
                 <div class="sec1-0-div">
                     <div class="sec1-1-div">
                         <h1>Shop more items at affordable prices</h1>
@@ -111,7 +112,7 @@
                         <span></span>
                     </div>
                     <div class="sec1-3-div">
-                        <form action="">
+                        <form method="post" action="">
                             <label class="label-2" for="">
                                 <input class="input-2" type="search" placeholder="Find a product">
                                 <button class="button-2" type="submit">Search</button>
@@ -119,8 +120,7 @@
                         </form>
                     </div>
                 </div>
-            </section> {% endcomment %}
-
+            </section>
             <section>
                 <div class="sec2-0-div">
                     <div class="sec2-1-div">
@@ -156,25 +156,25 @@
                                     <P class="free-s">Free Shipping</P>
                                 </div>
                                 <div class="star">
-                                    <img class="img-1 star-mo" src="{% static 'category/result-image/star.png' %}"
+                                    <img class="img-1 star-mo" src="{% static 'category/images/result-image/star.png' %}"
+                                    alt=""></img>
+                                    <img class="img-1 star-mo" src="{% static 'category/images/result-image/star.png' %}"
                                         alt=""></img>
-                                    <img class="img-1 star-mo" src="{% static 'category/result-image/star.png' %}"
+                                    <img class="img-1 star-mo" src="{% static 'category/images/result-image/star.png' %}"
                                         alt=""></img>
-                                    <img class="img-1 star-mo" src="{% static 'category/result-image/star.png' %}"
+                                    <img class="img-1 star-mo" src="{% static 'category/images/result-image/star.png' %}"
                                         alt=""></img>
-                                    <img class="img-1 star-mo" src="{% static 'category/result-image/star.png' %}"
-                                        alt=""></img>
-                                    <img class="img-1 star-mo" src="{% static 'category/result-image/star2.png' %}"
+                                    <img class="img-1 star-mo" src="{% static 'category/images/result-image/star2.png' %}"
                                         alt=""></img>
                                 </div>
                             </div>
                             <div id="sec3-4-div">
                                 <div id="main-price-div">
-                                    <p class="main_price sub-price"># 855,000.00</p>
+                                    <p class="main_price sub-price"></p>
                                 </div>
-                                <div>
+                                <a href="{{product.get_absolute_url}}">
                                     <button id="checkO">Check Out</button>
-                                </div>
+                                </a>
                             </div>
                         </div>
                     </div>

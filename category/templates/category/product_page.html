@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{% static 'category/css/style.css'%}" />
+    <link rel="stylesheet" href="{% static 'category/css/product_page.css'%}" />
     <link
       rel="shortcut icon"
       href="{%static 'category/images/favicon.svg'%}"
@@ -101,29 +102,33 @@
         <ul class="slides-container" id="slides-container"></ul>
       </section>
 
-      <section class="single-category">
-        <h4 class="categories-text">Smartphones</h4>
-        <div id="categories" class="categories single-category">
-          {% for product in products %}
-          <div id="images" class="category-images">
-            <a style="text-decoration: none" href="{{ product.get_absolute_url }}">
-                <div  class="single-product">
-                    <div class="product-image">
-                      <img src="{{ product.image_src }}" alt="product image" />
-                    </div>
-                      <p class="product_name">{{ product.name }}</p>
-                </div>
-              </a>
+      <section id="categories">
+        <div class="single-category">
+          <h4 class="category-text">Smartphones</h4>
+          <div class="category-images">
+            {% for product in products %}
+
+            <a
+              class="single-product"
+              style="text-decoration: none"
+              href="{{ product.get_absolute_url }}"
+            >
+              <img src="{{ product.image_src }}" alt="product image" />
+              <div class="product_name">
+                {{ product.name | truncatechars:15 }}
+              </div>
+            </a>
+
+            {% endfor %}
           </div>
-          </div>
-          {% endfor %}
         </div>
-        <div class="find-more"></div>
-        <a href="#">Find more items</a>
       </section>
+      <div class="find-more">
+        <a href="#">Find more items</a>
+      </div>
     </main>
 
-    <footer id="main-footer">
+    <footer style="margin: 3% 0" id="main-footer">
       <div class="main-footer">
         <div class="foot-item footer-main-logo">
           <img

@@ -486,6 +486,17 @@ body {
     gap: 30px;
 }
 
+#sec4-0-div .header-status{
+    text-decoration: none;
+    color: #f1f1f1;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.9rem 2.5rem;
+    background: #12292F;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
 #form-2{
     display: flex;
     flex-direction: column;

@@ -201,7 +201,7 @@ body {
 
 .ph-img-div{
     width: 430px;
-    height: 350px;
+    height: auto;
 }
 
 .ph-img{

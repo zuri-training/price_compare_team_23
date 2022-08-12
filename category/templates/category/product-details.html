@@ -9,7 +9,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Details</title>
     <link rel="stylesheet" href="{% static 'category/css/product-details.css' %}">
-    <link rel="stylesheet" href="{% static 'category/css/style.css' %}">
     <link rel="shortcut icon" href="{% static 'category/images/favicon.svg' %}" type="image/x-icon">
 </head>
 
@@ -384,7 +383,7 @@
                             </div>
                             <div id="sec5-2-div">
                                 <div>
-                                    <P class="review">{{ comment.body | linebreaks}}</P>
+                                    <P class="review">{{ comment.body }}</P>
                                 </div>
                                 <div>
                                     <P class="review-name">{{ comment.username }}</P>

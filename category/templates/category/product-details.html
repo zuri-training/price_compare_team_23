@@ -357,30 +357,29 @@
 
     <footer id="main-footer">
         <div class="main-footer">
-            <div class="foot-item footer-main-logo"><img src="{% static 'category/images/product-img/footer-logo.svg' %}" alt="footer logo"></div>
-            <div class="foot-item footer-mobile"><img src="{% static 'category/images/product-img/logo.svg' %}" alt="footer logo"></div>
+            <div class="foot-item footer-main-logo"><img src="{% static 'category/images/footer-logo.svg' %}" alt="footer logo"></div>
+            <div class="foot-item footer-mobile"><img src="{% static 'category/images/logo.svg' %}" alt="footer logo"></div>
             <div class="footer-item foot-item">
                 <h5>Company</h5>
-                <a href="">About Us</a>
-                <a href="">Contact Us</a>
+                <a href="{% url 'category:about_page'%}">About Us</a>
+                <a href="{% url 'category:contact_page' %}">Contact Us</a>
                 <a href="">Help & Support</a>
-                <a href="">FAQ</a>
+                <a href="{% url 'category:faq' %}">FAQ</a>
             </div>
             <div class="footer-item foot-item">
                 <h5>Community</h5>
                 <a href="">Join Our Facebook Community</a>
+                <a href="">Join our Affiliate Program</a>
                 <a href="">Follow Us On Twitter</a>
             </div>
             <div class="footer-item foot-item">
                 <h5>Terms & Policies</h5>
-                <a href="">Privacy Notice</a>
-                <a href="">Terms of Service</a>
-                <a href="">Documentation</a>
+                <a href="{% url 'category:privacy' %}">Privacy Notice</a>
+                <a href="{% url 'category:terms_of_service' %}">Terms of Service</a>
+                <a href="{% url 'category:documentation' %}">Usage Guidlines</a>
             </div>
         </div>
-        <div class="copyright">
-            <p>Copyright 2022: Zuri Team 23</p>
-        </div>
+        <div class="copyright"><p>Copyright 2022: Zuri Team 23</p></div>
     </footer>
 
     <script src="{% static 'category/js/product-details.js' %}"></script>

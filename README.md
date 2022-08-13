@@ -8,6 +8,10 @@ Shopmore a web application used to compare prices of products from different onl
 
 ## Project Documentation
 
+the project contans 2 apps: accounts,category
+
+the settings are in the price_compare_team_23.settings.py file
+
 [Documentation](https://docs.google.com/document/d/1LwY4xf3l5XciiLNhw41vyeaFBxyWQHW0W8_FRE-xsR4/edit)
 
 ## Technology used

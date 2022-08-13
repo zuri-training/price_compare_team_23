@@ -49,6 +49,10 @@ def contact_page(request):
     return render(request, "category/contact.html")
 
 
+def about_page(request):
+    return render(request, "category/about.html")
+
+
 def product_detail(request, id, product):
     product = get_object_or_404(
         Product,

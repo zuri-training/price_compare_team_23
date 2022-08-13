@@ -6,13 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{% static 'category/css/style.css'%}" />
-    <link rel="stylesheet" href="{% static 'category/css/product_page.css'%}" />
     <link
       rel="shortcut icon"
-      href="{%static 'category/images/favicon.svg'%}"
+      href="{% static 'images/favicon.svg'%}"
       type="image/x-icon"
     />
-    <title>Product Page</title>
+    <title>Contact</title>
   </head>
   <body>
     <header id="main-header">
@@ -61,8 +60,8 @@
 
         <div class="menu">
           <a href="{% url 'category:home' %}" class="inactive">Home</a>
-          <a href="{% url 'category:products'%}" class="active">Product</a>
-          <a href="{% url 'category:about_page'%}" class="inactive">About</a>
+          <a href="{% url 'category:products'%}" class="inactive">Product</a>
+          <a href="{% url 'category:contact_page'%}" class="active">About</a>
           <a href="{% url 'category:contact_page' %}" class="inactive"
             >Contact</a
           >
@@ -95,40 +94,89 @@
       </nav>
     </header>
 
-    <main id="product-page">
-      <section class="new-arrivals">
-        <button class="slide-arrow" id="slide-arrow-prev">&#8249;</button>
-        <button class="slide-arrow" id="slide-arrow-next">&#8250;</button>
-        <ul class="slides-container" id="slides-container"></ul>
+    <main id="about">
+      <section class="about_hero">
+        <div>
+          <h1>
+            Let’s help you
+            <span class="save_text">
+              save
+              <img
+                src="{% static 'category/images/underline_save.png'%}"
+                alt=""
+              />
+            </span>
+            more <br class="break_tag" />
+            whilst shopping
+          </h1>
+
+          <a class="get_started_btn" href="#">Get Started</a>
+        </div>
+        <img
+          class="screen_image"
+          src="{%static 'category/images/hero_image.png'%}"
+          alt=""
+        />
       </section>
 
-      <section id="categories">
-        <div class="single-category">
-          <h4 class="category-text">Smartphones</h4>
-          <div class="category-images">
-            {% for product in products %}
+      <section class="about_text">
+        <div class="about_shopmore">
+          <h1>About ShopMore</h1>
+          <p>
+            ShopMore is a platform which enables you to find the best deals when
+            buying products (online & offline)) by comparing it’s prices accross
+            several online platforms. Hence, you save more money by purchasing
+            your favorite product at the cheapest rate you can ever get.
+          </p>
+          <p>
+            ShopMore compares prices with millions of products in more than 70
+            categories. It features several online platforms including Konga,
+            Jumia, Amazon.
+          </p>
+          <p>
+            We are bent on streamlining online shoppers looking for the best
+            deals. We aim to provide only the best prices available online and
+            direct searchers to the platforms having these deals, at no cost. We
+            have no business with specific store merchants and aim only to
+            provide the best for the Nigerian public.
+          </p>
+        </div>
+        <div class="find_the_best">
+          <h2>Find the best deals when shopping</h2>
+          <p>
+            Find the best deals when buying products (online & offline)) by
+            comparing it’s prices accross several online platforms
+          </p>
+        </div>
+        <div class="save_more_money">
+          <h2>Save more money</h2>
+          <p>
+            Save more money from buying your products at cheap rates so you can
+            shop more.
+          </p>
+        </div>
+        <div class="save_more_time_shopping">
+          <h2>Save more time shopping</h2>
+          <p>
+            You spend less time shopping with the help of multi-platform price
+            comparison, all in one platform instead of navigating to and fro
+            various websites while trying to get the best deals
+          </p>
+        </div>
 
-            <a
-              class="single-product"
-              style="text-decoration: none"
-              href="{{ product.get_absolute_url }}"
-            >
-              <img src="{{ product.image_src }}" alt="product image" />
-              <div class="product_name">
-                {{ product.name | truncatechars:15 }}
-              </div>
-            </a>
+        <div class="ready_to_get">
+          <h1>Ready to get the best deals?</h1>
+          <p>
+            Stay updated about the latest and top deals that comes with great
+            discount. Don’t stay in the dark when the deals are ON
+          </p>
 
-            {% endfor %}
-          </div>
+          <a href="#">Subscribe to Our Newsletter</a>
         </div>
       </section>
-      <div class="find-more">
-        <a href="#">Find more items</a>
-      </div>
     </main>
 
-    <footer style="margin: 3% 0" id="main-footer">
+    <footer id="main-footer">
       <div class="main-footer">
         <div class="foot-item footer-main-logo">
           <img
@@ -164,6 +212,7 @@
       </div>
       <div class="copyright"><p>Copyright 2022: Zuri Team 23</p></div>
     </footer>
-    <script src="{% static 'category/js/app.js' %}"></script>
+
+    <script src="{%static 'category/js/app.js'%}"></script>
   </body>
 </html>

@@ -1,6 +1,7 @@
 import requests
 from django.utils.text import slugify
 from bs4 import BeautifulSoup
+from scraper_api import ScraperAPIClient
 
 # use + instead of - for the search query
 def query_slugify(value, seperator="-"):
@@ -50,9 +51,10 @@ def get_jumia_products():
 
     phones = []
     page = 1
-    while page <= 5:
+    while page <= 2:
         URL = f"https://www.jumia.com.ng/smartphones/&sort=lowest-price&page={page}"
-        response = requests.get(URL)
+        client = ScraperAPIClient("fc0603cdc494888c3873340b62d7b5ce")
+        response = client.get(URL)
         parsed_response = BeautifulSoup(response.text, "html.parser")
         for tag in parsed_response.find_all(class_="prd"):
             if tag.a.get("data-brand") != None:
@@ -96,9 +98,10 @@ def get_jumia_product(product):
     prd_category = jumia_category(product["category"])
     phones = []
     page = 1
-    while page <= 2:
+    while page <= 1:
         URL = f"https://www.jumia.com.ng/{prd_category}/?page={page}"
-        response = requests.get(URL)
+        client = ScraperAPIClient("fc0603cdc494888c3873340b62d7b5ce")
+        response = client.get(URL)
         parsed_response = BeautifulSoup(response.text, "html.parser")
         for tag in parsed_response.find_all(class_="prd"):
             if (

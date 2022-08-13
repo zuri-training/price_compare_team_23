@@ -27,7 +27,7 @@
                 </div>
             </div>
             <div class="hero-img">
-                <img src="{% static 'category/images/hero.svg' %}" alt="hero image">
+                <img src="{% static 'category/images/hero.png' %}" alt="hero image">
             </div>
         </section>
 
@@ -71,12 +71,13 @@
             <h4>Top <br>Selling Product</h4>
             <div class="top-selling-flex">
                 {% for product in products %}
+
                 <div class="top-product">
                     <img src="{{ product.image_src }}" alt="{{ product.name }}" class="product-img">
                     <div class="top-selling-details">
                         <div class="brand-price">
                             <h6>{{ product.name | truncatechars:15}}</h6>
-                            <p>N599,000.00</p>
+                            <p>{{ p.jumia_price }}</p>
                         </div>
                         <div class="cart-store">
                             <img src="{% static 'category/images/shopping-cart.svg' %}" alt="shopping cart">
@@ -89,6 +90,7 @@
                     </div>
                 </div>
                 {% endfor %}
+
 
         </section>
 

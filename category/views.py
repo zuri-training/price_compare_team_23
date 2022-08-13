@@ -114,7 +114,7 @@ def product_detail(request, id, product):
 
 class ProductListView(ListView):
     model = Product
-    #  populatedB()
+    populatedB()
     context_object_name = "products"
     template_name = "category/product_page.html"
 
@@ -123,7 +123,7 @@ class SearchResultView(ListView):
     model = Product
     template_name = "category/result.html"
     context_object_name = "products"
-    paginate_by: int = 10
+    paginate_by: int = 20
 
     def get_queryset(self):
         query = self.request.GET.get("search")

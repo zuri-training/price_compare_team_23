@@ -327,7 +327,7 @@ def product_names():
     ]
     names = []
     for product in _products:
-        names.append[product["name"]]
+        names.append(product["name"])
     return names
 
 
@@ -335,25 +335,12 @@ def populatedB():
     list = get_jumia_products()
     names = product_names()
     for p in list:
-        if p["name"] in names:
-            prd, created = Product.objects.get_or_create(
-                name=p["name"],
-                brand=p["brand"],
-                category="smartphones",
-                image_src=p["image_src"],
-            )
-            if created:
-                prd.save()
-
-
-def get_konga_products(product_name):
-    _products = [
-        {
-            "name": "Samsung Galaxy S22 ultra",
-            "brand": "Samsung",
-            "category": "smartphones",
-            "link": "https://www.konga.com/product/samsung-s22-ultra-12gb-ram-256gb-rom-dual-sim-blue-5807738",
-            "price": "₦827,500",
-            "platform_name": "Konga",
-        },
-    ]
+        prd, created = Product.objects.get_or_create(
+            name=p["name"],
+            brand=p["brand"],
+            category="smartphones",
+            image_src=p["image_src"],
+            jumia_price=p["price"],
+        )
+        if created:
+            prd.save()

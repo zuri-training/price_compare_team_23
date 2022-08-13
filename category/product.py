@@ -333,7 +333,6 @@ def product_names():
 
 def populatedB():
     list = get_jumia_products()
-    names = product_names()
     for p in list:
         prd, created = Product.objects.get_or_create(
             name=p["name"],

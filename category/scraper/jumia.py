@@ -51,10 +51,10 @@ def get_jumia_products():
 
     phones = []
     page = 1
-    while page <= 2:
+    while page <= 3:
         URL = f"https://www.jumia.com.ng/smartphones/&sort=lowest-price&page={page}"
         client = ScraperAPIClient("fc0603cdc494888c3873340b62d7b5ce")
-        response = client.get(URL)
+        response = requests.get(URL)
         parsed_response = BeautifulSoup(response.text, "html.parser")
         for tag in parsed_response.find_all(class_="prd"):
             if tag.a.get("data-brand") != None:

@@ -96,7 +96,7 @@ def get_jumia_product(product):
     prd_category = jumia_category(product["category"])
     phones = []
     page = 1
-    while page <= 3:
+    while page <= 2:
         URL = f"https://www.jumia.com.ng/{prd_category}/?page={page}"
         response = requests.get(URL)
         parsed_response = BeautifulSoup(response.text, "html.parser")

@@ -79,7 +79,7 @@ def product_detail(request, id, product):
     if request.method == "POST":
         # A comment was posted
         comment_body = request.POST["body"]
-        if comment_body != None:
+        if comment_body != None or comment_body != "":
             # Create Comment object but don't save to database yet
             new_comment = Comment(body=comment_body)
             # Assign the current post to the comment

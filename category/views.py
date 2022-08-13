@@ -71,8 +71,6 @@ def product_detail(request, id, product):
         "ram_size": product.ram_size,
         "rom_size": product.rom_size,
     }
-    jumia = []
-    jumia.append(get_jumia_product(prd))
     platforms = []
     platforms.append(get_ali_express_product(prd["name"]))
 
@@ -92,7 +90,6 @@ def product_detail(request, id, product):
                     "product": product,
                     "comments": comments,
                     "platforms": platforms,
-                    "jumia": jumia,
                     "new_comment": new_comment,
                     "specs": specs,
                 },
@@ -106,7 +103,6 @@ def product_detail(request, id, product):
             "comments": comments,
             "platforms": platforms,
             "new_comment": new_comment,
-            "jumia": jumia,
             "specs": specs,
         },
     )

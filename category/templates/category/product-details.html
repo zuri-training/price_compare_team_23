@@ -112,11 +112,11 @@
                     <div class="ph-name-div">
                         <h3 class="ph-name">{{ product.name }}</h3>
                     </div>
-                    {% for j in jumia %}
+                   
                     <div id="sec-3-div">
                         <div id="sec-4-div">
                             <div id="konga-div">
-                                <p class="konga">{{ j.platform_name }}</p>
+                                <p class="konga">Jumia</p>
                             </div>
                             <div>
                                 <P class="free">Free Shipping</P>
@@ -131,7 +131,7 @@
                         </div>
                         <div id="sec-5-div">
                             <div id="main-price-div">
-                                <p class="main_price">{{ j.price }}</p>
+                                <p class="main_price">{{ product.jumia_price }}</p>
                             </div>
                             <div>
                                 <a href="{{ j.link }}">
@@ -145,7 +145,6 @@
                             </div>
                         </div>
                     </div>
-                    {% endfor %}
                 </div>
             </div>
         </section>

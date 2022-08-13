@@ -323,5 +323,6 @@ def get_ali_express_product(product_name):
     ]
 
     for product in _products:
-        if product["name"] in product_name:
+        if product["name"] in product_name[: len(product_name) - 1]:
+            print(product["name"])
             return product

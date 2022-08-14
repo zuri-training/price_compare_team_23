@@ -2,6 +2,8 @@
 
 ## Price compare
 
+[Running or deploying](#Running-the-project-or-deploying)
+
 ## General Information
 
 Shopmore a web application used to compare prices of products from different online stores and lead the user to the purchasing page from the store.
@@ -79,9 +81,15 @@ the settings are in the price_compare_team_23.settings.py file
 
 ## How to Contribute
 
-## Running the project
+## Running the project or deploying
 
-1 Clone the repository
+1 Clone the repository and move into the directory
+
+```bash
+
+git clone https://github.com/zuri-training/price_compare_team_23 && cd price_compare_team_23
+
+```
 
 2 Create a virtual environment
 
@@ -92,6 +100,7 @@ python -m venv env
 ```
 
 3 activate the environment:
+
 windows:
 
 ```bash

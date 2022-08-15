@@ -337,7 +337,6 @@ def populatedB():
         prd, created = Product.objects.get_or_create(
             name=p["name"],
             brand=p["brand"],
-            category="smartphones",
             image_src=p["image_src"],
             jumia_price=p["price"],
         )

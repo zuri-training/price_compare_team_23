@@ -326,3 +326,44 @@ def get_ali_express_product(product_name):
         if product["name"] in product_name[: len(product_name) - 1]:
             print(product["name"])
             return product
+
+
+def get_product_konga(product_name):
+    _products = [
+        {
+            "name": "Infinix Hot 11 Play, 4GB/64GB Memory, Android 11",
+            "brand": "Infinix",
+            "category": "smartphones",
+            "link": "https://www.konga.com/product/infinix-hot-11-play-6-82hd-64gb-rom-4gb-ram-dual-sim-4g-lte-fingerprint-6000mah-blue-5575460",
+            "price": "₦79,000",
+            "platform_name": "Konga",
+        },
+        {
+            "name": "itel P17 Pro 4G, 2GB/32GB Memory - Galaxy Blue",
+            "brand": "itel",
+            "category": "smartphones",
+            "link": "https://www.konga.com/product/itel-p17-pro-5-5-screen-32gb-rom-2gb-ram-4g-lte-4000mah-android-11-blue-5726319",
+            "price": "₦49,899",
+            "platform_name": "Konga",
+        },
+        {
+            "name": "Infinix Smart 6 4G, 2GB/32GB Memory - Green",
+            "brand": "Infinix",
+            "category": "smartphones",
+            "link": "https://www.konga.com/product/infinix-smart-6-plus-x6511g-6-6-hd-32gb-rom-2gb-ram-8mp-8mp-4g-lte-5000mah-black-5684007",
+            "price": "₦66,100",
+            "platform_name": "Konga",
+        },
+        {
+            "name": "Samsung Galaxy A13, 4GB/64GB Memory, 5000 MAh Battery",
+            "brand": "Samsung",
+            "category": "smartphones",
+            "link": "https://www.konga.com/product/samsung-galaxy-a13-6-6-64gb-rom-4gb-ram-50mp-dual-sim-4g-lte-fingerprint-5000mah-blue-5680887",
+            "price": "₦102,000",
+            "platform_name": "Konga",
+        },
+    ]
+
+    for product in _products:
+        if product["name"] in product_name[: len(product_name) - 1]:
+            return product

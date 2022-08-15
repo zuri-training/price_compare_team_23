@@ -5,7 +5,7 @@ from .scraper.jumia import get_jumia_product
 from django.db.models import Q
 from django.views.generic import ListView
 from .product import populatedB
-from .products import get_ali_express_product
+from .products import get_ali_express_product, get_product_konga
 
 # import schedule
 
@@ -74,7 +74,8 @@ def product_detail(request, id, product):
         "rom_size": product.rom_size,
     }
     platforms = []
-    # platforms.append(get_jumia_product(prd))
+    print(get_product_konga(prd["name"]))
+    platforms.append(get_product_konga(prd["name"]))
 
     if request.method == "POST":
         # A comment was posted
@@ -121,7 +122,6 @@ class SearchResultView(ListView):
     model = Product
     template_name = "category/result.html"
     context_object_name = "products"
-    paginate_by: int = 20
 
     def get_queryset(self):
         query = self.request.GET.get("search")

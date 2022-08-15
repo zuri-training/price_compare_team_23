@@ -1,0 +1,606 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Header Section */
+
+#main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 6rem;
+  background-color: #f6fcfd;
+  box-shadow: 0px 5px 30px rgba(18, 41, 47, 0.2);
+  padding: 0 2rem 0 6.25rem;
+  width: 100%;
+}
+
+#main-header .img-search .shopmore-mobile-logo {
+  display: none;
+}
+
+.img-search {
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+
+#main-header .header-form {
+  display: flex;
+  align-items: center;
+  width: 60%;
+  height: 2.57rem;
+  border-radius: 0.3125rem;
+  color: #65696a;
+  background-color: #e4eded;
+  transition: box-shadow 0.1s ease-in-out 0s, color 0.1s ease-in-out 0s;
+  border: 0;
+  outline: 0;
+}
+
+#main-header input[type="search"] {
+  all: unset;
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  padding: 0 2rem;
+  width: 100%;
+  height: 100%;
+}
+
+#main-header .img-search button {
+  all: unset;
+  cursor: pointer;
+  width: 2.57rem;
+  height: 2.57rem;
+}
+
+#main-header .img-search svg {
+  display: flex;
+  color: #65696a;
+  fill: currentColor;
+  width: 24px;
+  height: 24px;
+  margin-right: 0.5rem;
+}
+
+#main-header nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 45%;
+}
+
+#main-header nav a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  padding: 0.375rem 0;
+}
+
+#main-header nav .active {
+  color: #12292f;
+  border-bottom: 3px solid #ff8181;
+}
+
+#main-header nav .inactive {
+  color: #6a7b7b;
+  border-bottom: 3px solid transparent;
+}
+
+#main-header span {
+  padding: 0.375rem 0;
+  color: #12292f;
+  display: flex;
+  align-self: flex-start;
+}
+
+#main-header .header-status {
+  border: 2px solid #5cceeb;
+  border-radius: 0.3125rem;
+  padding: 0.375rem 1.625rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #12292f;
+  background: #12292f00;
+  transition: background 0.2s ease;
+}
+
+/* #main-header .header-status:hover {
+    background: #12292F;
+    border: 2px solid #12292F;
+    box-shadow: 0px 5px 15px rgba(31, 69, 78, 0.2);
+    color: #C9EFF8;
+    border: 0;
+} */
+
+#main-header .mobile-only {
+  display: none;
+}
+
+#main-header .mobile-icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+#main-header hr {
+  display: none;
+}
+
+#main-header .header-myaccount {
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+}
+
+/* Hamburger Menu */
+
+#main-header nav .hamburger {
+  display: none;
+}
+
+#main-header .menu {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+/* Footer Section */
+
+#main-footer .main-footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 5rem 0;
+  }
+  
+  #main-footer .footer-mobile {
+    display: none;
+  }
+  
+  #main-footer .footer-item {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    gap: 1rem;
+  }
+  
+  #main-footer .footer-item a {
+    text-decoration: none;
+    color: #475252;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 600;
+  }
+  
+  #main-footer .footer-item h5 {
+    font-size: 2rem;
+    line-height: 2.7rem;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 1rem;
+  }
+  
+  #main-footer .copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #12292f;
+    color: #def5fb;
+    text-align: center;
+    height: 3.6rem;
+  }
+  
+
+
+#landing-main .best-prices {
+  margin-top: 7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#landing-main .best-prices h2 {
+  font-size: 3.5rem;
+  line-height: 4.76rem;
+  font-weight: 700;
+}
+
+#landing-main .best-prices p,
+#landing-main .ready p {
+  color: #475252;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  width: 90%;
+}
+
+#landing-main .best-prices hr,
+#landing-main .best-selling hr,
+#landing-main .top-selling hr {
+  width: 60%;
+  height: 2px;
+  margin: 10rem 0;
+  background-color: #dfe7e8;
+  border: none;
+}
+
+/* Documentation Page */
+
+/* Documentation Section 1 */
+#documentation {
+    background-color: #f1fcfc;
+  }
+#documentation .documentation-1 {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+gap: 2rem;
+padding: 5rem 0;
+background-color: #f1fcfc;
+}
+
+#documentation .documentation-1 .doc-1-head {
+display: flex;
+flex-direction: column;
+gap: 1rem;
+width: 75%;
+margin-bottom: 3rem;
+margin-top: 1%;
+}
+
+#documentation .documentation-1 .doc-1-head h4,
+#documentation .documentation-2 h4 {
+font-size: 2.5rem;
+line-height: 3rem;
+font-weight: 700;
+color: #1f454e;
+}
+
+#documentation .documentation-1 .doc-1-head h6 {
+font-size: 1.5rem;
+line-height: 2rem;
+font-weight: 700;
+color: #2e6776;
+}
+
+#documentation .documentation-1 .doc-1-wrap {
+display: flex;
+gap: 3rem;
+}
+
+#documentation .documentation-1 .doc-1-flex {
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+text-align: center;
+gap: 2rem;
+}
+
+#documentation .documentation-1 .doc-1-flex p {
+font-size: 1.25rem;
+line-height: 1.5rem;
+color: #1f454e;
+}
+
+/* Documentation Section 2 */
+
+#documentation .documentation-2 .doc-2-head {
+margin: 2.5rem auto;
+width: 90%;
+}
+
+#documentation .doc-sec {
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: #def5fb;
+padding: 2rem;
+margin: 3rem auto;
+width: 90%;
+}
+
+#documentation .doc-sec div {
+width: 65%;
+}
+
+#documentation .doc-sec img {
+width: 38%;
+}
+
+#documentation .doc-sec h6 {
+font-size: 1.5rem;
+line-height: 2rem;
+font-weight: 700;
+color: #1f454e;
+margin-bottom: 1rem;
+}
+
+#documentation .doc-sec ul {
+padding-left: 2rem;
+}
+
+#documentation .doc-sec li {
+font-size: 1.25rem;
+line-height: 1.5rem;
+color: #1f454e;
+}
+
+#documentation .documentation-4 .doc-sec {
+background-color: #1f454e;
+}
+
+#documentation .documentation-4 .doc-sec a {
+text-align: center;
+text-decoration: none;
+font-size: 1.25rem;
+line-height: 1.5rem;
+color: #def5fb;
+width: 100%;
+}
+
+#documentation .documentation-8 {
+display: flex;
+justify-content: center;
+gap: 4rem;
+width: 80%;
+margin: 0 auto;
+}
+
+#documentation .documentation-8 .doc-bottom {
+flex-direction: column;
+border: 1px solid #f1fcfc;
+text-align: center;
+}
+
+#documentation .documentation-8 .doc-btm-1 {
+width: 60%;
+}
+
+#documentation .documentation-8 .doc-btm-2 {
+width: 38%;
+}
+
+#documentation .documentation-8 .doc-bottom-btns {
+display: flex;
+width: 100%;
+align-items: center;
+justify-content: center;
+gap: 1rem;
+}
+
+#documentation .documentation-8 .doc-bottom a {
+display: flex;
+align-items: center;
+gap: 0.5rem;
+text-decoration: none;
+border-radius: 5px;
+padding: 1rem 3rem;
+border: 2px solid #5cceeb;
+font-size: 1rem;
+line-height: 1.5rem;
+font-weight: 400;
+color: #12292f;
+height: 3.4rem;
+white-space: nowrap;
+}
+
+#documentation .documentation-8 h6 {
+font-size: 1rem;
+line-height: 1.5rem;
+margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 720px) and (max-width: 950px) {
+#documentation .documentation-1 .doc-1-head h4,
+#documentation .documentation-2 h4 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+}
+
+#documentation .doc-sec {
+    gap: 1rem;
+}
+
+#documentation .documentation-1 .doc-1-head h6 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+#documentation .doc-sec h6 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+#documentation .doc-sec li {
+    font-size: 1rem;
+    line-height: 1.3rem;
+    color: #1f454e;
+}
+
+#documentation .documentation-1 .doc-1-wrap {
+    gap: 0.5rem;
+}
+
+#documentation .documentation-8 .doc-bottom a {
+    padding: 0.5rem 2rem;
+    height: 3rem;
+}
+}
+
+@media screen and (min-width: 350px) and (max-width: 719px) {
+#documentation .documentation-1 .doc-1-head h4,
+#documentation .documentation-2 h4 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+}
+
+#documentation .documentation-1 .doc-1-head h6 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+#documentation .documentation-1 .doc-1-head {
+    width: 90%;
+}
+
+#documentation .documentation-1 .doc-1-wrap {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+#documentation .documentation-1 .doc-1-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    width: 80%;
+}
+
+#documentation .doc-sec {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    width: 90%;
+}
+
+#documentation .doc-sec img {
+    width: 90%;
+}
+
+#documentation .doc-sec div {
+    width: 90%;
+}
+
+#documentation .doc-sec h6 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+#documentation .doc-sec li {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color: #1f454e;
+}
+
+#documentation .documentation-4 .doc-sec a {
+    font-size: 0.92rem;
+    line-height: 1.25rem;
+}
+
+#documentation .documentation-8 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+    gap: 1rem;
+}
+
+#documentation .documentation-8 .doc-btm-1 {
+    width: 100%;
+}
+
+#documentation .documentation-8 .doc-bottom-btns {
+    flex-direction: column;
+}
+
+#documentation .documentation-8 .doc-btm-2 {
+    width: 100%;
+}
+}
+
+/* Privacy Policy */
+#privacy {
+padding: 5rem;
+color: #6a7b7b;
+}
+
+#privacy .privacy-1 {
+display: flex;
+justify-content: space-between;
+margin-top: 5%;
+}
+
+#privacy .privacy-1 p {
+font-size: 1.25rem;
+line-height: 1.5rem;
+font-weight: 400;
+}
+
+#privacy h4 {
+font-size: 2.5rem;
+line-height: 3rem;
+font-weight: 700;
+color: #12292f;
+margin: 1rem 0;
+}
+
+#privacy h5 {
+font-size: 1rem;
+line-height: 1.75rem;
+font-weight: 700;
+}
+
+#privacy ul {
+padding-left: 2rem;
+}
+
+#privacy span {
+font-size: 0.875rem;
+line-height: 1rem;
+}
+
+#privacy .privacy-2 p,
+#privacy .privacy-2 li {
+font-size: 1rem;
+line-height: 1.75rem;
+font-weight: 400;
+margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 599px) {
+#privacy {
+    padding: 5rem 2.5rem;
+}
+#privacy .privacy-1 {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+}
+
+#privacy .privacy-1 p {
+    font-size: 1rem;
+    line-height: 1.25rem;
+}
+
+#privacy h4 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+}
+}

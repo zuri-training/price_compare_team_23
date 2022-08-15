@@ -1,11 +1,16 @@
-<<<<<<< HEAD {% load static %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link
+      rel="shortcut icon"
+      href="{% static 'category/images/favicon.svg' %}"
+      type="image/x-icon"
+    />
+    <title>Sign Up</title>
     <link rel="stylesheet" href="{% static 'accounts/css/style.css' %}" />
     <link
       rel="stylesheet"
@@ -50,11 +55,18 @@
         </a>
 
         <div class="menu">
-          <a href="" class="active">Home</a>
+          <a href="{% url 'category:home' %}" class="inactive">Home</a>
+          <a href="{% url 'category:products'%}" class="inactive">Product</a>
+          <a href="{% url 'category:about_page'%}" class="inactive">About</a>
+          <a href="{% url 'category:contact_page' %}" class="inactive"
+            >Contact</a
+          >
+          <a href="{% url 'category:faq' %}" class="inactive">FAQ</a>
+          {% comment %} <a href="" class="active">Home</a>
           <a href="" class="inactive">Product</a>
           <a href="" class="inactive">About</a>
           <a href="" class="inactive">Contact</a>
-          <a href="" class="inactive">FAQ</a>
+          <a href="" class="inactive">FAQ</a> {% endcomment %}
           <span>|</span>
           <a href="" class="header-status">Sign In</a>
           <a href="" class="header-status header-myaccount">My Account</a>

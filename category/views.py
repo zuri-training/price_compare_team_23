@@ -75,7 +75,6 @@ def product_detail(request, id, product):
     }
     platforms = []
     # platforms.append(get_jumia_product(prd))
-    j = get_jumia_product(prd)
 
     if request.method == "POST":
         # A comment was posted

@@ -52,7 +52,7 @@ class Product(models.Model):
     jumia_price = models.CharField(max_length=20)
 
     slug = models.SlugField(blank=True, max_length=255)
-    category = models.CharField(max_length=64, choices=CATEGORY_CHOICES)
+    product_category = models.CharField(max_length=64, choices=CATEGORY_CHOICES)
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.name)

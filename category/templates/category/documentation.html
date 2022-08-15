@@ -208,12 +208,18 @@
           <h6>Did you find this page useful?</h6>
           <div class="doc-bottom-btns">
             <a href="">
-              <img src="{% static 'images/emoji-smiling.svg'%}" alt="" />
+              <img
+                src="{% static 'category/images/emoji-smiling.svg'%}"
+                alt=""
+              />
               <span>Yes I did</span>
             </a>
 
             <a href="">
-              <img src="images/emoji-sad-face-line.svg" alt="" />
+              <img
+                src="{% static 'category/images/emoji-sad-face-line.svg'%}"
+                alt=""
+              />
               <span>Yes I did</span>
             </a>
           </div>
@@ -221,7 +227,9 @@
 
         <div class="doc-sec doc-bottom doc-btm-2">
           <h6>Download our PDF user guide</h6>
-          <div class="doc-bottom-btns"><a href="">View More</a></div>
+          <div class="doc-bottom-btns">
+            <a href="{% url 'category:user_guide_pdf'%}">View More</a>
+          </div>
         </div>
       </section>
     </main>

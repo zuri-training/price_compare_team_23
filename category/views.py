@@ -1,5 +1,5 @@
 from django.shortcuts import get_object_or_404, render
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, FileResponse
 from .models import Comment, Product
 from .scraper.jumia import get_jumia_product
 from django.db.models import Q
@@ -31,6 +31,14 @@ def terms_of_service(request):
 
 def documentation(request):
     return render(request, "category/documentation.html")
+
+
+def user_guide_pdf(response):
+    return FileResponse(
+        open("pdf/user_guide.pdf", "rb"),
+        as_attachment=True,
+        content_type="application/pdf",
+    )
 
 
 def index_view(request):
@@ -67,6 +75,7 @@ def product_detail(request, id, product):
     }
     platforms = []
     # platforms.append(get_jumia_product(prd))
+    j = get_jumia_product(prd)
 
     if request.method == "POST":
         # A comment was posted
@@ -104,7 +113,7 @@ def product_detail(request, id, product):
 
 class ProductListView(ListView):
     model = Product
-    populatedB()
+    # populatedB()
     context_object_name = "products"
     template_name = "category/product_page.html"
 

@@ -173,9 +173,15 @@
                                 <div id="main-price-div">
                                     <p class="main_price sub-price"></p>
                                 </div>
+                                {% if not user.is_authenticated %}
                                 <a href="{{product.get_absolute_url}}">
                                     <button id="checkO">Check Out</button>
                                 </a>
+                                {% else %}
+                                <a href="{{product.get_absolute_url}}">
+                                    <button id="checkO">Check Out</button>
+                                </a>
+                                {% endif %}
                             </div>
                         </div>
                     </div>

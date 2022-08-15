@@ -60,14 +60,13 @@ def product_detail(request, id, product):
     prd = {
         "name": product.name,
         "brand": product.brand,
-        "category": product.category,
     }
     specs = {
         "ram_size": product.ram_size,
         "rom_size": product.rom_size,
     }
     platforms = []
-    platforms.append(get_ali_express_product(prd["name"]))
+    # platforms.append(get_jumia_product(prd))
 
     if request.method == "POST":
         # A comment was posted
@@ -105,7 +104,7 @@ def product_detail(request, id, product):
 
 class ProductListView(ListView):
     model = Product
-    # populatedB()
+    populatedB()
     context_object_name = "products"
     template_name = "category/product_page.html"
 

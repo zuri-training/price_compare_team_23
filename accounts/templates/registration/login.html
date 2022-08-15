@@ -55,6 +55,7 @@
 
     <main id="login-page">
         <form method="post">
+            {% csrf_token %}
             <div class="containerL">
                 <div class="container_1">
                     <img src="{% static 'accounts/images/login-page.png' %}" alt="">
@@ -65,13 +66,13 @@
                     <div>
                         <p>
                         <label for="email">Username</label><br>
-                        <input type="text" placeholder="Username" autocapitalize="none"  required="True" id="email" class="field">
+                        <input  name="username" type="text" placeholder="Username" autocapitalize="none"  required="True" id="email" class="field">
                         </p>
                     </div><br>
                     <div>
                         <p>
                         <label for="password">Password</label><br>
-                        <input type="password" placeholder="***************" name="password" autocomplete="current-password" required="" id="password" class="field">
+                        <input name="password" type="password" placeholder="***************" name="password" autocomplete="current-password" required="" id="password" class="field">
                         <i class="bi-eye-slash" id="togglePassword"></i>
                         </p>
                         <div class="text"><input type="radio" class="radio"><p>&nbsp;&nbsp;Remember me <span><a href="{% url 'accounts:password_reset' %}">Forgot password?</span></p></div>

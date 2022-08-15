@@ -105,7 +105,7 @@ def product_detail(request, id, product):
 
 class ProductListView(ListView):
     model = Product
-    # populatedB()
+    populatedB()
     context_object_name = "products"
     template_name = "category/product_page.html"
 

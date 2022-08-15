@@ -1,16 +1,11 @@
 from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponseRedirect
 from .models import Comment, Product
-from .forms import CommentForm
 from .scraper.jumia import get_jumia_product
-from .scraper import jumia, scraper, konga, asos
 from django.db.models import Q
 from django.views.generic import ListView
-import random
 from .product import populatedB
 from .products import get_ali_express_product
-import time
-
 
 # import schedule
 
@@ -110,7 +105,7 @@ def product_detail(request, id, product):
 
 class ProductListView(ListView):
     model = Product
-    populatedB()
+    # populatedB()
     context_object_name = "products"
     template_name = "category/product_page.html"
 

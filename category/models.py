@@ -4,8 +4,6 @@ from uuid import uuid4
 from django.urls import reverse
 from django.contrib.auth.models import User
 
-from category.scraper import jumia
-
 
 # ************** Product Model ***********
 
@@ -50,9 +48,8 @@ class Product(models.Model):
     rom_size = models.CharField(max_length=10, choices=ROM_SIZES)
     ram_size = models.CharField(max_length=10, choices=RAM_SIZES)
     jumia_price = models.CharField(max_length=20)
-
     slug = models.SlugField(blank=True, max_length=255)
-    product_category = models.CharField(max_length=64, choices=CATEGORY_CHOICES)
+    # category = models.CharField(max_length=64, choices=CATEGORY_CHOICES)
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.name)

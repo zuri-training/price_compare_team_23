@@ -1449,7 +1449,7 @@ body {
 .one {
   /* background-color: rgb(128, 128, 128, 0.5); */
   /* background-position: center; */
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
 }
 
@@ -1779,155 +1779,186 @@ body {
     font-size: 2rem;
   }
 }
-  /* Login Page and Sign Up Page*/
-  #login-page,
-  #signup-page {
-    margin-top: 10%;
-    display: flex;
-    justify-content: center;
-  }
+/* Login Page and Sign Up Page*/
+#login-page,
+#signup-page {
+  margin-top: 10%;
+  display: flex;
+  justify-content: center;
+}
 
+#login-page .containerS,
+#signup-page .containerS {
+  display: inline-flex;
+  margin: auto;
+  margin-top: auto;
+}
+
+#login-page .containerL,
+#signup-page .containerL {
+  display: inline-flex;
+  width: 100%;
+  gap: 3rem;
+}
+
+#login-page .container_1,
+#signup-page .container1 {
+  width: 50%;
+}
+
+#login-page .container_2 h2,
+#signup-page .container_2 h2 {
+  font-size: xx-large;
+  margin-bottom: 70px;
+}
+
+#login-page .container_2,
+#signup-page .container_2 {
+  display: inline-block;
+  width: 50%;
+}
+#login-page .container_1 img,
+#signup-page .container1 img {
+  width: 100%;
+}
+
+#login-page form,
+#signup-page form {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#login-page .container_2 input,
+#signup-page .container2 input {
+  width: 100%;
+  height: 50px;
+  font-size: medium;
+}
+
+#login-page button,
+#signup-page button {
+  width: 100%;
+  height: 50px;
+  font-size: medium;
+}
+
+#login-page .text .radio,
+#signup-page .text .radio {
+  width: 20px;
+}
+
+#login-page input,
+#signup-page input {
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-top: 10px;
+  padding-left: 30px;
+}
+#login-page input::placeholder,
+#signup-page input::placeholder {
+  color: rgb(196, 190, 190);
+}
+
+#login-page #togglePassword,
+#signup-page #togglePassword {
+  color: rgb(147, 138, 138);
+}
+
+#login-page span,
+#signup-page span,
+#login-page a,
+#signup-page a {
+  color: #5cceeb;
+  text-decoration: none;
+}
+
+#login-page span,
+#signup-page span {
+  padding-left: 166px;
+}
+
+#login-page .containerS h2,
+#signup-page .containerS h2 {
+  color: #5cceeb;
+  font-size: xx-large;
+}
+
+#login-page .signupbtn,
+#signup-page .signupbtn,
+#login-page .loginbtn,
+#signup-page .loginbtn {
+  background-color: #5cceeb;
+  color: white;
+  border: transparent;
+  cursor: pointer;
+}
+
+#login-page .googlebtn,
+#signup-page .googlebtn {
+  background-color: white;
+  color: #5cceeb;
+  border: 1px solid #5cceeb;
+  cursor: pointer;
+}
+
+#login-page .googlebtn a,
+#signup-page .googlebtn a {
+  text-decoration: none;
+}
+
+#login-page form i,
+#signup-page form i {
+  margin-left: -30px;
+  cursor: pointer;
+}
+
+#login-page .text,
+#signup-page .text,
+#login-page .sign,
+#signup-page .sign {
+  display: flex;
+  align-items: center;
+}
+
+#login-page .btn p,
+#signup-page .btn p {
+  text-align: center;
+}
+
+#login-page h3,
+#signup-page h3 {
+  font-size: x-large;
+  margin-bottom: 50px;
+}
+
+#login-page .sign span,
+#signup-page .sign span {
+  padding: 0px;
+}
+
+#login-page .sign .radio,
+#signup-page .sign .radio {
+  width: 20px;
+}
+
+@media (max-width: 700px) {
+  #login-page .containerL,
+  #signup-page .containerL,
   #login-page .containerS,
   #signup-page .containerS {
-    display: inline-flex;
-    margin: auto;
-    margin-top: auto;
-  }
-
-  #login-page .containerL,
-  #signup-page .containerL {
-    display: inline-flex;
-    width: 100%;
-    gap: 3rem;
+    flex-direction: column;
+    align-items: center;
   }
 
   #login-page .container_1,
   #signup-page .container1 {
-    width: 50%;
-  }
-
-  #login-page .container_2 h2,
-  #signup-page .container_2 h2 {
-    font-size: xx-large;
-    margin-bottom: 70px;
+    display: flex;
+    justify-content: center;
+    width: 90%;
   }
 
   #login-page .container_2,
-  #signup-page .container_2 {
-    display: inline-block;
-    width: 50%;
-  }
-  #login-page .container_1 img,
-  #signup-page .container1 img {
-    width: 100%;
-  }
-
-  #login-page form,
-  #signup-page form {
-    font-family: Arial, Helvetica, sans-serif;
-  }
-
-  #login-page .container_2 input,
-  #signup-page .container2 input {
-    width: 100%;
-    height: 50px;
-    font-size: medium;
-  }
-
-  #login-page button,
-  #signup-page button {
-    width: 100%;
-    height: 50px;
-    font-size: medium;
-  }
-
-  #login-page .text .radio,
-  #signup-page .text .radio {
-    width: 20px;
-  }
-
-  #login-page input,
-  #signup-page input {
-    border: 1px solid black;
-    border-radius: 5px;
-    margin-top: 10px;
-    padding-left: 30px;
-  }
-  #login-page input::placeholder,
-  #signup-page input::placeholder {
-    color: rgb(196, 190, 190);
-  }
-
-  #login-page #togglePassword,
-  #signup-page #togglePassword {
-    color: rgb(147, 138, 138);
-  }
-
-  #login-page span,
-  #signup-page span,
-  #login-page a,
-  #signup-page a {
-    color: #5cceeb;
-    text-decoration: none;
-  }
-
-  #login-page span,
-  #signup-page span {
-    padding-left: 166px;
-  }
-
-  #login-page .containerS h2,
-  #signup-page .containerS h2 {
-    color: #5cceeb;
-    font-size: xx-large;
-  }
-
-  #login-page .signupbtn,
-  #signup-page .signupbtn,
-  #login-page .loginbtn,
-  #signup-page .loginbtn {
-    background-color: #5cceeb;
-    color: white;
-    border: transparent;
-    cursor: pointer;
-  }
-
-  #login-page .googlebtn,
-  #signup-page .googlebtn {
-    background-color: white;
-    color: #5cceeb;
-    border: 1px solid #5cceeb;
-    cursor: pointer;
-  }
-
-  #login-page .googlebtn a,
-  #signup-page .googlebtn a {
-    text-decoration: none;
-  }
-
-  #login-page form i,
-  #signup-page form i {
-    margin-left: -30px;
-    cursor: pointer;
-  }
-
-  #login-page .text,
-  #signup-page .text,
-  #login-page .sign,
-  #signup-page .sign {
-    display: flex;
-    align-items: center;
-  }
-
-  #login-page .btn p,
-  #signup-page .btn p {
-    text-align: center;
-  }
-
-  #login-page h3,
-  #signup-page h3 {
-    font-size: x-large;
-    margin-bottom: 50px;
+  #signup-page .container2 {
+    width: 90%;
   }
 
   #login-page .sign span,
@@ -1938,56 +1969,25 @@ body {
   #login-page .sign .radio,
   #signup-page .sign .radio {
     width: 20px;
+    margin: 0px;
   }
 
-  @media (max-width: 700px) {
-    #login-page .containerL,
-    #signup-page .containerL,
-    #login-page .containerS,
-    #signup-page .containerS {
-      flex-direction: column;
-      align-items: center;
-    }
-
-    #login-page .container_1,
-    #signup-page .container1 {
-      display: flex;
-      justify-content: center;
-      width: 90%;
-    }
-
-    #login-page .container_2,
-    #signup-page .container2 {
-      width: 90%;
-    }
-
-    #login-page .sign span,
-    #signup-page .sign span {
-      padding: 0px;
-    }
-
-    #login-page .sign .radio,
-    #signup-page .sign .radio {
-      width: 20px;
-      margin: 0px;
-    }
-
-    #login-page .text,
-    #signup-page .text,
-    #login-page .sign,
-    #signup-page .sign {
-      display: flex;
-    }
-
-    #login-page,
-    #signup-page {
-      margin-top: 30%;
-    }
-
-    #signup-page .container1 {
-      flex-direction: column;
-    }
+  #login-page .text,
+  #signup-page .text,
+  #login-page .sign,
+  #signup-page .sign {
+    display: flex;
   }
+
+  #login-page,
+  #signup-page {
+    margin-top: 30%;
+  }
+
+  #signup-page .container1 {
+    flex-direction: column;
+  }
+}
 
 /* Documentation Page
 
@@ -2156,7 +2156,7 @@ body {
   font-size: 1rem;
   line-height: 1.5rem;
   margin-bottom: 2rem;
-} 
+}
 
 @media screen and (min-width: 720px) and (max-width: 950px) {
   #documentation .documentation-1 .doc-1-head h4,
@@ -2224,9 +2224,8 @@ body {
     justify-content: center;
     gap: 1rem;
     width: 80%;
-  } */
-
-   #documentation .doc-sec {
+  }
+  */ #documentation .doc-sec {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -2270,16 +2269,16 @@ body {
 
   #documentation .documentation-8 .doc-btm-1 {
     width: 100%;
-  } 
+  }
 
-   #documentation .documentation-8 .doc-bottom-btns {
+  #documentation .documentation-8 .doc-bottom-btns {
     flex-direction: column;
   }
 
   #documentation .documentation-8 .doc-btm-2 {
     width: 100%;
   }
-} 
+}
 
 /* Privacy Policy */
 #privacy {
@@ -2349,7 +2348,7 @@ body {
     font-size: 2rem;
     line-height: 2.5rem;
   }
-} 
+}
 
 /* About Us */
 
@@ -2357,7 +2356,7 @@ body {
   background-image: url("../images/hero_background.png");
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
   height: 85vh;
   width: 100%;
   padding: 2.5% 0 0;
@@ -2594,4 +2593,3 @@ body {
     margin: 20% auto 0;
   }
 }
-

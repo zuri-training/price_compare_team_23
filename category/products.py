@@ -331,7 +331,7 @@ def get_ali_express_product(product_name):
 def get_product_konga(product_name):
     _products = [
         {
-            "name": "Infinix Hot 11 Play, 4GB/64GB Memory, Android 11",
+            "name": "Infinix Hot 11 Play, 4GB/64GB Memory, Android 11 - Polar Black",
             "brand": "Infinix",
             "category": "smartphones",
             "link": "https://www.konga.com/product/infinix-hot-11-play-6-82hd-64gb-rom-4gb-ram-dual-sim-4g-lte-fingerprint-6000mah-blue-5575460",
@@ -485,5 +485,5 @@ def get_product_konga(product_name):
     ]
 
     for product in _products:
-        if product["name"] in product_name[: len(product_name) - 1]:
+        if product["name"] == product_name:
             return product

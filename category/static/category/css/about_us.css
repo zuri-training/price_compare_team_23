@@ -210,7 +210,7 @@ body {
   
 
 
-#landing-main .best-prices {
+/* #landing-main .best-prices {
   margin-top: 7rem;
   display: flex;
   flex-direction: column;
@@ -242,7 +242,7 @@ body {
   margin: 10rem 0;
   background-color: #dfe7e8;
   border: none;
-}
+} */
 .about_hero {
     background-image: url("../images/hero_background.png");
     background-position: center;

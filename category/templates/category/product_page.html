@@ -69,7 +69,9 @@
           <a href="{% url 'category:faq' %}" class="inactive">FAQ</a>
           <span>|</span>
           {% if not user.is_authenticated %}
-          <a href="{% url 'accounts:signin' %}" class="header-status">Sign In</a>
+          <a href="{% url 'accounts:signin' %}" class="header-status"
+            >Sign In</a
+          >
           {% else %}
           <a
             href="{% url 'accounts:user_profile' %}"
@@ -78,7 +80,6 @@
           </a>
           <a href="{% url 'accounts:logout' %}" class="inactive">Logout</a>
           {% endif %}
-
 
           <hr />
           <div class="mobile-only">
@@ -100,8 +101,11 @@
         <button class="slide-arrow" id="slide-arrow-prev">&#8249;</button>
         <button class="slide-arrow" id="slide-arrow-next">&#8250;</button>
         <ul class="slides-container" id="slides-container">
-  
-
+          {% for item in carousel %}
+          <li id="big" class="slide one">
+            <img src="{{ item.image_src }}" alt="" />
+          </li>
+          {% endfor %}
         </ul>
       </section>
 
@@ -129,7 +133,8 @@
       <div class="find-more">
         <a href="#">Find more items</a>
       </div>
-    </main><br><br>
+    </main>
+    <br /><br />
 
     <footer style="margin: 3% 0" id="main-footer">
       <div class="main-footer">

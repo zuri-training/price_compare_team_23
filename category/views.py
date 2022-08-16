@@ -74,7 +74,6 @@ def product_detail(request, id, product):
         "rom_size": product.rom_size,
     }
     platforms = []
-    print(get_product_konga(prd["name"]))
     platforms.append(get_product_konga(prd["name"]))
 
     if request.method == "POST":
@@ -113,8 +112,14 @@ def product_detail(request, id, product):
 
 class ProductListView(ListView):
     model = Product
-    #populatedB()
+    # populatedB()
     context_object_name = "products"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["carousel"] = Product.objects.all()[0:5]
+        return context
+
     template_name = "category/product_page.html"
 
 

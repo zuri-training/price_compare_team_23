@@ -1,10 +1,10 @@
 // Hamburger Setup
-const hamburger = document.querySelector('.hamburger');
-const menu = document.querySelector('.menu');
+const hamburger = document.querySelector(".hamburger");
+const menu = document.querySelector(".menu");
 
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('is-active');
-    menu.classList.toggle('is-active');
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("is-active");
+  menu.classList.toggle("is-active");
 });
 
 // Product Page
@@ -15,11 +15,11 @@ const nextButton = document.getElementById("slide-arrow-next");
 const categories = document.getElementById("categories");
 
 // Carousel Section
-let newArrivals = "";
-for (let i = 1; i <= 4; i++) {
-  newArrivals += `<li id="big" class="slide one">${i}</li>`;
-}
-slidesContainer.innerHTML = newArrivals;
+// let newArrivals = "";
+// for (let i = 1; i <= 4; i++) {
+//   newArrivals += `<li id="big" class="slide one">${i}</li>`;
+// }
+// slidesContainer.innerHTML = newArrivals;
 
 nextButton.addEventListener("click", () => {
   let slideWidth = slidesContainer.clientWidth;
@@ -58,7 +58,7 @@ const cats = [
       },
     ],
   },
-  
+
   {
     title: "Mobile devices",
     products: [
@@ -84,7 +84,7 @@ const cats = [
       },
     ],
   },
-  
+
   {
     title: "Home electronics",
     products: [
@@ -110,7 +110,7 @@ const cats = [
       },
     ],
   },
-  
+
   {
     title: "Desktop and laptops",
     products: [
@@ -158,13 +158,14 @@ categories.innerHTML = singleCategory;
 
 // Toggle
 
-const togglePassword = document.querySelector('#togglePassword');
-  const password = document.querySelector('#password');
+const togglePassword = document.querySelector("#togglePassword");
+const password = document.querySelector("#password");
 
-  togglePassword.addEventListener('click', function () {
-    // toggle the type attribute
-    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
-    password.setAttribute('type', type);
-    // toggle the icon
-    this.classList.toggle('bi-eye');
+togglePassword.addEventListener("click", function () {
+  // toggle the type attribute
+  const type =
+    password.getAttribute("type") === "password" ? "text" : "password";
+  password.setAttribute("type", type);
+  // toggle the icon
+  this.classList.toggle("bi-eye");
 });

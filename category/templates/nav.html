@@ -1,4 +1,14 @@
 {% load static %}
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Documentation · ShopMore</title>
+  <link rel="stylesheet" href="{% static 'category/css/documentation.css'%}" />
+  <link rel="stylesheet" href="{% static 'category/css/style.css'%}" />
+  <script src="{% static 'category/js/app.js' %}"></script>
+  <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon" />
+</head>
 <header id="main-header">
   <div class="img-search">
     <img
@@ -58,6 +68,7 @@
         class="header-status header-myaccount"
         >{{ user.username }}
       </a>
+      <a href="{% url 'accounts:logout' %}" class="inactive">Logout</a>
       {% endif %}
 
       <hr />
@@ -73,4 +84,12 @@
       </div>
     </div>
   </nav>
+  <script src="{% static 'category/js/app.js' %}"></script>
+  <div class="container">
+
+    {% block body_block %}
+
+    {% endblock%}
+
+  </div>
 </header>

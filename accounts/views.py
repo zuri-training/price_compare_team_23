@@ -5,6 +5,8 @@ from django.views.generic import ListView
 import django
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
+from django.http import HttpResponse, HttpResponseRedirect
+from django.urls import reverse
 
 
 # Create your views here.
@@ -68,3 +70,4 @@ def register(request):
 @login_required
 def user_logout(request):
     logout(request)
+    return HttpResponseRedirect('home')

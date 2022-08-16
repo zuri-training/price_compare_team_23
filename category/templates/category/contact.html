@@ -67,16 +67,16 @@
           <a href="{% url 'category:faq' %}" class="inactive">FAQ</a>
           <span>|</span>
           {% if not user.is_authenticated %}
-          <a href="{% url 'accounts:signin' %}" class="header-status"
-            >Sign In</a
-          >
+          <a href="{% url 'accounts:signin' %}" class="header-status">Sign In</a>
           {% else %}
           <a
             href="{% url 'accounts:user_profile' %}"
             class="header-status header-myaccount"
-            >{{ user.username }}</a
-          >
+            >{{ user.username }}
+          </a>
+          <a href="{% url 'accounts:logout' %}" class="inactive">Logout</a>
           {% endif %}
+
 
           <hr />
           <div class="mobile-only">

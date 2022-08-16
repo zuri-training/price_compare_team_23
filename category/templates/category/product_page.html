@@ -69,16 +69,16 @@
           <a href="{% url 'category:faq' %}" class="inactive">FAQ</a>
           <span>|</span>
           {% if not user.is_authenticated %}
-          <a href="{% url 'accounts:signin' %}" class="header-status"
-            >Sign In</a
-          >
+          <a href="{% url 'accounts:signin' %}" class="header-status">Sign In</a>
           {% else %}
           <a
             href="{% url 'accounts:user_profile' %}"
             class="header-status header-myaccount"
-            >{{ user.username }}</a
-          >
+            >{{ user.username }}
+          </a>
+          <a href="{% url 'accounts:logout' %}" class="inactive">Logout</a>
           {% endif %}
+
 
           <hr />
           <div class="mobile-only">
@@ -99,7 +99,24 @@
       <section class="new-arrivals">
         <button class="slide-arrow" id="slide-arrow-prev">&#8249;</button>
         <button class="slide-arrow" id="slide-arrow-next">&#8250;</button>
-        <ul class="slides-container" id="slides-container"></ul>
+        <ul class="slides-container" id="slides-container">
+        
+          <script>
+
+            var my_var = "{% static 'images/carousel1.png' %}"
+            
+            var my_var1 = "{% static 'images/carousel2.png' %}"
+            
+            var my_var2 = "{% static 'images/carousel3.png' %}"
+            
+            </script>
+            {% block extrahead %}
+
+            <script src="{% static 'app.js' %}"></script>
+
+          {% endblock %}
+
+        </ul>
       </section>
 
       <section id="categories">
@@ -126,7 +143,7 @@
       <div class="find-more">
         <a href="#">Find more items</a>
       </div>
-    </main>
+    </main><br><br>
 
     <footer style="margin: 3% 0" id="main-footer">
       <div class="main-footer">

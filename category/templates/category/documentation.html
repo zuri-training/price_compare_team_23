@@ -1,18 +1,9 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Documentation · ShopMore</title>
-    <link rel="stylesheet" href="{% static 'category/css/documentation.css'%}" />
-    <link rel="stylesheet" href="{% static 'category/css/style.css'%}" />
-
-    <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon" />
-  </head>
-  <body>
-    <header id="main-header">
+{% extends "nav.html" %}
+ 
+  
+    {% comment %} <header id="main-header">
       <div class="img-search">
         <img
           src="{% static 'category/images/favicon.svg' %}"
@@ -48,8 +39,8 @@
             </svg>
           </button>
         </form>
-      </div>
-      <nav>
+      </div> {% endcomment %}
+      {% comment %} <nav>
         <a href="javascript:void(0);" class="hamburger">
           <div class="line line-one"></div>
           <div class="line line-two"></div>
@@ -65,16 +56,16 @@
           >
           <a href="{% url 'category:faq' %}" class="inactive">FAQ</a>
           <span>|</span>
-          {% if not user.is_authenticated %}
-          <a href="{% url 'accounts:signin' %}" class="header-status"
-            >Sign In</a
-          >
-          {% else %}
+          {% if authenticated %}
           <a
             href="{% url 'accounts:user_profile' %}"
             class="header-status header-myaccount"
-            >{{ user.username }}</a
-          >
+            >{{ user.username }}
+          </a>
+          <a href="{% url 'category:logout' %}" class="inactive">Logout</a>
+          
+          {% else %}
+          <a href="{% url 'accounts:signin' %}" class="header-status">Sign In</a>
           {% endif %}
 
           <hr />
@@ -90,8 +81,8 @@
           </div>
         </div>
       </nav>
-    </header>
-
+    </header> {% endcomment %}
+    {% block body_block %}
     <main id="documentation">
       <section class="documentation-1">
         <div class="doc-1-head">
@@ -274,5 +265,5 @@
     </footer>
 
     <script src="{%static 'category/js/app.js'%}"></script>
-  </body>
-</html>
+    {% endblock %}
+  

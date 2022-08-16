@@ -23,11 +23,10 @@ const carouselImages = [
 ];
 
 // Carousel Section
-let newArrivals = "";
-for (let i = 0; i < carouselImages.length; i++) {
-  newArrivals += `<li id="big" style="background-image: url("../images/${carouselImages[i]}")" class="slide one"></li>`;
-}
-slidesContainer.innerHTML = newArrivals;
+// let newArrivals = "";
+// for (let i = 0; i < carouselImages.length; i++) {
+//   newArrivals += `<li id="big" style="background-image: url("../images/${carouselImages[i]}")" class="slide one"></li>`;
+// }
 
 nextButton.addEventListener("click", () => {
   let slideWidth = slidesContainer.clientWidth;

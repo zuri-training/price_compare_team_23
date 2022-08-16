@@ -115,6 +115,12 @@ class ProductListView(ListView):
     model = Product
     # populatedB()
     context_object_name = "products"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["carousel"] = Product.objects.all()[0:5]
+        return context
+
     template_name = "category/product_page.html"
 
 

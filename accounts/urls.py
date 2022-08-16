@@ -9,7 +9,7 @@ app_name = "accounts"
 urlpatterns = [
     path("signup/", views.register, name="signUp"),
     path("login/", signin, name="signin"),
-    path("logout/", auth_views.LogoutView.as_view(), name="logout"),
+    #path("logout/", auth_views.LogoutView.as_view(), name="logout"),
     path(
         "password_change/",
         auth_views.PasswordChangeView.as_view(),
@@ -45,5 +45,5 @@ urlpatterns = [
         name="password_reset_complete",
     ),
     path("user_profile", views.user_profile, name="user_profile"),
-    path("logout/", auth_views.LogoutView.as_view(), name="logout"),
+    path("logout/", views.user_logout, name="logout"),
 ]

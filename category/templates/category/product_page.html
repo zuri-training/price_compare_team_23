@@ -76,8 +76,9 @@
           <a
             href="{% url 'accounts:user_profile' %}"
             class="header-status header-myaccount"
-            >{{ user.username }}</a
-          >
+            >{{ user.username }}
+          </a>
+          <a href="{% url 'accounts:logout' %}" class="inactive">Logout</a>
           {% endif %}
 
           <hr />
@@ -133,6 +134,7 @@
         <a href="#">Find more items</a>
       </div>
     </main>
+    <br /><br />
 
     <footer style="margin: 3% 0" id="main-footer">
       <div class="main-footer">

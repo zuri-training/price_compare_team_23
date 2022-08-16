@@ -113,7 +113,7 @@ def product_detail(request, id, product):
 
 class ProductListView(ListView):
     model = Product
-    # populatedB()
+    #populatedB()
     context_object_name = "products"
 
     def get_context_data(self, **kwargs):

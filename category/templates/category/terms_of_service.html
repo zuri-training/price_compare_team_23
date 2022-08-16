@@ -27,14 +27,15 @@
             </a>
 
             <div class="menu">
-                <a href="index.html" class="active">Home</a>
-                <a href="product-page.html" class="inactive">Product</a>
-                <a href="about.html" class="inactive">About</a>
-                <a href="contact.html" class="inactive">Contact</a>
-                <a href="faq.html" class="inactive">FAQ</a>
+                <a href="{% url 'category:home' %}" class="inactive">Home</a>
+                <a href="{% url 'category:products'%}" class="inactive">Product</a>
+                <a href="{% url 'category:about_page'%}" class="inactive">About</a>
+                <a href="{% url 'category:contact_page' %}" class="inactive">Contact</a>
+                <a href="{% url 'category:faq' %}" class="inactive">FAQ</a>
                 <span>|</span>
-                <a href="login.html" class="header-status">Sign In</a>
-                <a href="user-profile.html" class="header-status header-myaccount">My Account</a>
+                
+                <a href="{% url 'accounts:signin' %}" class="header-status">Sign In</a>
+                <a href="" class="header-status header-myaccount">My Account</a>
 
                 <hr>
                 <div class="mobile-only">

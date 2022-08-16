@@ -70,4 +70,4 @@ def register(request):
 @login_required
 def user_logout(request):
     logout(request)
-    return HttpResponseRedirect('home')
+    return HttpResponseRedirect('/')
